@@ -26,10 +26,6 @@
     },
     "message": "Möchten Sie wirklich den gesamten $folderName$ Ordner, $subFolderCount$ Unterordner und $bookmarkCount$ Lesezeichen löschen?"
   },
-  "extName": {
-    "description": "Der Name der Erweiterung.",
-    "message": "Neat Bookmarks"
-  },
   "noTitle": {
     "description": "Lesezeichen oder Ordner ohne Namen oder Adresse.",
     "message": "(kein Name)"
@@ -55,7 +51,7 @@
     "message": "Einen neuen Tab öffnen"
   },
   "optionConfirmOpenFolder": {
-    "message": "Sie öffnen nun sehr viele Lesezeichen von diesem Ordner."
+    "message": "Bestätigung beim Öffnen mehrerer Lesezeichen aus einem Verzeichnis anfordern."
   },
   "editFolder": {
     "message": "Ordner bearbeiten"
@@ -92,7 +88,7 @@
     "message": "Schließe nicht genutzte Ordner beim Öffnen des Ordners."
   },
   "accessibility": {
-    "message": "Erreichbarkeit"
+    "message": "Accessibility-Einstellungen"
   },
   "deleteEllipsis": {
     "message": "Löschen..."
@@ -107,13 +103,6 @@
       }
     },
     "message": "Möchten Sie wirklich den gesamten $folderName$ Ordner mit $bookmarkCount$ Lesezeichen löschen?"
-  },
-  "advancedOptions": {
-    "message": "Erweiterte Einstellungen"
-  },
-  "extDesc": {
-    "description": "Die Beschreibung der Erweiterung.",
-    "message": "Ein Neat Bookmarks Pop-Up."
   },
   "save": {
     "message": "Speichern"
@@ -142,15 +131,6 @@
   "optionRememberPrevState": {
     "message": "Behalte vorherigen Status (Scroll-Position und geöffnete Lesezeichen)."
   },
-  "optionsFooterText": {
-    "placeholders": {
-      "authorName": {
-        "content": "$1"
-      }
-    },
-    "description": "Hier können Sie Ihre Einstellungen vornehmen.",
-    "message": "Von zsdr erstellt."
-  },
   "openBookmarksNewWindow": {
     "message": "Alle Lesezeichen in einem neuen Fenster öffnen"
   },
@@ -164,7 +144,7 @@
     "message": "Incognito-Fenster öffnen"
   },
   "general": {
-    "message": "Generell"
+    "message": "Allgemeine Einstellungen"
   },
   "openNewWindow": {
     "message": "Ein neues Fenster öffnen"

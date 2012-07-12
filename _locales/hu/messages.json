@@ -30,10 +30,6 @@
     "description": "Cím nélküli könyvjelzők http(s) URL nélkül, vagy cím nélküli mappák.",
     "message": "(nincs cím)"
   },
-  "extName": {
-    "description": "A bővítmény neve.",
-    "message": "Neat könyvjelzők."
-  },
   "edit": {
     "message": "Szerkesztés..."
   },
@@ -92,7 +88,7 @@
     "message": "Nem használt mappák becsukása, amikor egy új mappa nyílik meg."
   },
   "accessibility": {
-    "message": "Megközelíthetőség"
+    "message": "Megközelíthetőség beállítások"
   },
   "deleteEllipsis": {
     "message": "Törlés..."
@@ -108,15 +104,8 @@
     },
     "message": "Biztososan ki szeretné törölni a $folderName$ nevű mappát és $bookmarkCount$ könyvjelzőt benne?"
   },
-  "advancedOptions": {
-    "message": "Haladó beállítások"
-  },
   "save": {
     "message": "Mentés"
-  },
-  "extDesc": {
-    "description": "A bővítmény leírása.",
-    "message": "Egy elegáns popup könyvjelző fa. "
   },
   "confirmOpenBookmarksNewWindow": {
     "placeholders": {
@@ -142,15 +131,6 @@
   "optionRememberPrevState": {
     "message": "Előző állapot megjegyzése (görgetés pozíció és megnyitott mappák)."
   },
-  "optionsFooterText": {
-    "placeholders": {
-      "authorName": {
-        "content": "$1"
-      }
-    },
-    "description": "Lábléc szöveg a Beállítások oldalon",
-    "message": "Készítette: $authorName$."
-  },
   "optionOpenNewTab": {
     "message": "Középső egérgomb, vagy Ctrl+bal egérgomb használatakor egy könyvjelzőt megnyitva a böngésző nem ugrik át az Új fülre (hanem egy marad az aktív fülön). "
   },
@@ -167,7 +147,7 @@
     "message": "Megnyitás Új ablakban"
   },
   "general": {
-    "message": "Általános"
+    "message": "Általános beállítások"
   },
   "optionZoom": {
     "message": "Közelítés"

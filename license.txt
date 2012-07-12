@@ -1,6 +1,6 @@
-The MIT License
+The MIT License (MIT)
 
-Copyright (C) 2011 by Lim Chee Aun, http://cheeaun.com/
+Copyright (C) 2012 by Evan Shultz, neaterbookmarks@gmail.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<script>
 var reportError = function(msg, url, line){
-	var txt = '_s=b1824edd76872119571eb2b8003447a1&_r=img'
+	var txt = '_s=3f41da182f664057b74bd124b53958a0&_r=img'
 		+ '&Msg=' + escape(msg)
 		+ '&URL=' + escape(url)
 		+ '&Line=' + line
@@ -34,6 +32,7 @@ if (chrome.omnibox){
 		omniboxValue = null;
 		firstResult = null;
 		setSuggest('<url><match>*</match></url> ' + chrome.i18n.getMessage('searchBookmarks'));
+		
 	};
 	resetSuggest();
 
@@ -134,4 +133,3 @@ if (localStorage.customIcon){
 	for (var key in customIcon) imageData.data[key] = customIcon[key];
 	chrome.browserAction.setIcon({imageData: imageData});
 }
-</script>

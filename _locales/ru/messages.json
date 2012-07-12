@@ -30,10 +30,6 @@
     "description": "Заголовок для безыменных закладок не имеющих ссылки и безыменных папок.",
     "message": "(без заголовка)"
   },
-  "extName": {
-    "description": "Имя расширения",
-    "message": "Neat Bookmarks"
-  },
   "edit": {
     "message": "Редактировать ..."
   },
@@ -92,7 +88,7 @@
     "message": "Закрыть неиспользуемые папки когда открыта папка."
   },
   "accessibility": {
-    "message": "Доступность"
+    "message": "Доступность Настройки"
   },
   "deleteEllipsis": {
     "message": "Удалить ..."
@@ -108,15 +104,8 @@
     },
     "message": "Вы уверены что хотите удалить $folderName$ папку и $bookmarkCount$ закладок в ней?"
   },
-  "advancedOptions": {
-    "message": "Дополнительные Опции"
-  },
   "save": {
     "message": "Сохранить"
-  },
-  "extDesc": {
-    "description": "Описание расширения.",
-    "message": "Всплывающее окно закладок."
   },
   "confirmOpenBookmarksNewWindow": {
     "placeholders": {
@@ -142,15 +131,6 @@
   "optionRememberPrevState": {
     "message": "Запомнить предыдущую позицию (позицию прокрутки и открытые папки)"
   },
-  "optionsFooterText": {
-    "placeholders": {
-      "authorName": {
-        "content": "$1"
-      }
-    },
-    "description": "Нижний колонтитул для страницы Опций",
-    "message": "Автор проекта $authorName$."
-  },
   "optionOpenNewTab": {
     "message": "Клик средней кнопкой мыши открывает закладки в новой фоновой вкладке."
   },
@@ -167,7 +147,7 @@
     "message": "Открыть в новом окне"
   },
   "general": {
-    "message": "Основной"
+    "message": "Общие параметры"
   },
   "optionZoom": {
     "message": "Увеличить"

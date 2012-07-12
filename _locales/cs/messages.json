@@ -26,10 +26,6 @@
     },
     "message": "Chcete smazat adresář $folderName$, $subFolderCount$ podadresářů a $bookmarkCount$ záložek v nich?"
   },
-  "extName": {
-    "description": "Jméno rozšíření.",
-    "message": "Elegantní záložky"
-  },
   "noTitle": {
     "description": "Titulek pro nepojmenované záložky bez http(s) adresy nebo nepojmenované adresáře.",
     "message": "(bez titulku)"
@@ -108,13 +104,6 @@
     },
     "message": "Chcete smazat adresář $folderName$ a $bookmarkCount$ záložek v něm?"
   },
-  "advancedOptions": {
-    "message": "Pokročilé nastavení"
-  },
-  "extDesc": {
-    "description": "Popis rozšíření.",
-    "message": "Elegantní vyskakovací okno se záložkami."
-  },
   "save": {
     "message": "Uložit"
   },
@@ -142,15 +131,6 @@
   "optionRememberPrevState": {
     "message": "Pamatovat předchozí stav (posun a otevřené adresáře)."
   },
-  "optionsFooterText": {
-    "placeholders": {
-      "authorName": {
-        "content": "$1"
-      }
-    },
-    "description": "Patička stránky s nastavením",
-    "message": "Vytvořil $authorName$."
-  },
   "openBookmarksNewWindow": {
     "message": "Otevřít všechny záložky v novém okně"
   },
@@ -164,7 +144,10 @@
     "message": "Otevřít anonymní okno"
   },
   "general": {
-    "message": "Obecné"
+    "message": "Obecná nastavení"
+  },
+  "accessibility": {
+    "message": "Přístupnost Nastavení"
   },
   "openNewWindow": {
     "message": "Otevřít v novém okně"

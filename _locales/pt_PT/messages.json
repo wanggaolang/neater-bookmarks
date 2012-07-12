@@ -30,10 +30,6 @@
     "description": "Título para marcadores sem título e sem http(s) URL ou pastas sem título.",
     "message": "(sem título)"
   },
-  "extName": {
-    "description": "Nome da extensão.",
-    "message": "Neat Bookmarks"
-  },
   "edit": {
     "message": "Editar..."
   },
@@ -92,7 +88,7 @@
     "message": "Fecha pastas não utilizadas quando abre uma nova pasta."
   },
   "accessibility": {
-    "message": "Acessibilidade"
+    "message": "Configurações de Acessibilidade"
   },
   "deleteEllipsis": {
     "message": "Apagar..."
@@ -108,15 +104,8 @@
     },
     "message": "Tem a certeza que pretende apagar a pasta $folderName$ e $bookmarkCount$ marcador(es) incluídos?"
   },
-  "advancedOptions": {
-    "message": "Opções Avançadas"
-  },
   "save": {
     "message": "Gravar"
-  },
-  "extDesc": {
-    "description": "Descrição de extensão.",
-    "message": "Um prático gestor de marcadores de estilo popup."
   },
   "confirmOpenBookmarksNewWindow": {
     "placeholders": {
@@ -142,15 +131,6 @@
   "optionRememberPrevState": {
     "message": "Memoriza o estado anterior (posição vertical e pastas abertas)."
   },
-  "optionsFooterText": {
-    "placeholders": {
-      "authorName": {
-        "content": "$1"
-      }
-    },
-    "description": "Texto de rodapé para a página de Opções",
-    "message": "Criado por $authorName$."
-  },
   "optionOpenNewTab": {
     "message": "click-botão do meio do rato ou control-click abre marcador num novo separador em 2º plano (em vez de 1º plano)."
   },
@@ -167,7 +147,7 @@
     "message": "Abrir numa Nova Janela"
   },
   "general": {
-    "message": "Geral"
+    "message": "Definições Gerais"
   },
   "optionZoom": {
     "message": "Zoom"

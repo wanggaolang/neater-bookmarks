@@ -107,27 +107,24 @@ $extend(Element.prototype, {
 });
 
 (function(){
-
-var inserters = {
-	before: function(context, element){
-		var parent = element.parentNode;
-		if (parent) parent.insertBefore(context, element);
-	},
-	after: function(context, element){
-		var parent = element.parentNode;
-		if (parent) parent.insertBefore(context, element.nextSibling);
-	},
-	bottom: function(context, element){
-		element.appendChild(context);
-	},
-	top: function(context, element){
-		element.insertBefore(context, element.firstChild);
-	}
-};
-
-Element.prototype.inject = function(el, where){
-	inserters[where || 'bottom'](this, el);
-	return this;
-};
-
+	var inserters = {
+		before: function(context, element){
+			var parent = element.parentNode;
+			if (parent) parent.insertBefore(context, element);
+		},
+		after: function(context, element){
+			var parent = element.parentNode;
+			if (parent) parent.insertBefore(context, element.nextSibling);
+		},
+		bottom: function(context, element){
+			element.appendChild(context);
+		},
+		top: function(context, element){
+			element.insertBefore(context, element.firstChild);
+		}
+	};
+	Element.prototype.inject = function(el, where){
+		inserters[where || 'bottom'](this, el);
+		return this;
+	};
 })();

@@ -26,10 +26,6 @@
     },
     "message": "$folderName$ フォルダと $subFolderCount$ 個のサブフォルダと $bookmarkCount$ 個のブックマークを削除します。よろしいですか。"
   },
-  "extName": {
-    "description": "拡張名",
-    "message": "Neat Bookmarks"
-  },
   "noTitle": {
     "description": "名前の無いブックマークのための名前",
     "message": "無題"
@@ -92,7 +88,7 @@
     "message": "フォルダを開くとき、アクティブでないフォルダを閉じる"
   },
   "accessibility": {
-    "message": "アクセシビリティ"
+    "message": "アクセシビリティ設定"
   },
   "deleteEllipsis": {
     "message": "削除..."
@@ -107,13 +103,6 @@
       }
     },
     "message": "$folderName$ フォルダと $bookmarkCount$ 個のブックマークを削除します。よろしいですか。"
-  },
-  "advancedOptions": {
-    "message": "拡張オプション"
-  },
-  "extDesc": {
-    "description": "詳細な説明",
-    "message": "すっきりしたツリー構造のブックマーク"
   },
   "save": {
     "message": "保存"
@@ -142,15 +131,6 @@
   "optionRememberPrevState": {
     "message": "スクロール位置と開いたフォルダの情報を保持する"
   },
-  "optionsFooterText": {
-    "placeholders": {
-      "authorName": {
-        "content": "$1"
-      }
-    },
-    "description": "オプションページのフッターテキスト",
-    "message": "作成者 $authorName$."
-  },
   "openBookmarksNewWindow": {
     "message": "すべてのブックマークを新しいウィンドウで開く"
   },
@@ -164,7 +144,7 @@
     "message": "シークレットウィンドウで開く"
   },
   "general": {
-    "message": "全般"
+    "message": "一般的な設定"
   },
   "openNewWindow": {
     "message": "新しいウィンドウで開く"

@@ -30,10 +30,6 @@
     "description": "没 http(s) 开头的书签或没有命名的文件夹的统一标题",
     "message": "（无标题）"
   },
-  "extName": {
-    "description": "扩展名",
-    "message": "Neat Bookmarks"
-  },
   "edit": {
     "message": "編輯 ..."
   },
@@ -92,7 +88,7 @@
     "message": "展开文件夹时折叠其他文件夹"
   },
   "accessibility": {
-    "message": "辅助功能"
+    "message": "辅助功能设置"
   },
   "deleteEllipsis": {
     "message": "删除 ..."
@@ -108,15 +104,8 @@
     },
     "message": "您确定要删除文件夹[$folderName$]（包含 $bookmarkCount$ 个书签）？"
   },
-  "advancedOptions": {
-    "message": "高级选项"
-  },
   "save": {
     "message": "保存"
-  },
-  "extDesc": {
-    "description": "扩展描述",
-    "message": "灵巧实用的侧置书签扩展"
   },
   "confirmOpenBookmarksNewWindow": {
     "placeholders": {
@@ -142,15 +131,6 @@
   "optionRememberPrevState": {
     "message": "记住上次状态（滚动条位置、所打开文件夹）"
   },
-  "optionsFooterText": {
-    "placeholders": {
-      "authorName": {
-        "content": "$1"
-      }
-    },
-    "description": "选项页的页脚信息",
-    "message": "作者：$authorName$"
-  },
   "optionOpenNewTab": {
     "message": "用鼠标中键或按住 Ctrl 键左击在后台打开书签"
   },
@@ -167,7 +147,7 @@
     "message": "在新窗口中打开"
   },
   "general": {
-    "message": "常规功能"
+    "message": "常规设置"
   },
   "optionZoom": {
     "message": "缩放"

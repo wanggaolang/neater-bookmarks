@@ -30,10 +30,6 @@
     "description": "無 http(s) 開頭的書籤或無命名的資料夾的預設標題",
     "message": "（無標題）"
   },
-  "extName": {
-    "description": "擴充功能名稱",
-    "message": "Neat Bookmarks"
-  },
   "edit": {
     "message": "編輯 ..."
   },
@@ -92,7 +88,7 @@
     "message": "展開資料夾時收合其他資料夾"
   },
   "accessibility": {
-    "message": "輔助功能"
+    "message": "輔助功能設置"
   },
   "deleteEllipsis": {
     "message": "刪除 ..."
@@ -108,15 +104,8 @@
     },
     "message": "您確定要刪除資料夾[$folderName$]（包含 $bookmarkCount$ 個書籤）？"
   },
-  "advancedOptions": {
-    "message": "進階設定"
-  },
   "save": {
     "message": "儲存"
-  },
-  "extDesc": {
-    "description": "擴充功能描述",
-    "message": "靈巧實用的側置書籤擴充功能"
   },
   "confirmOpenBookmarksNewWindow": {
     "placeholders": {
@@ -142,15 +131,6 @@
   "optionRememberPrevState": {
     "message": "記住上次狀態（滾動軸位置、已展開資料夾）"
   },
-  "optionsFooterText": {
-    "placeholders": {
-      "authorName": {
-        "content": "$1"
-      }
-    },
-    "description": "設定頁的頁腳訊息",
-    "message": "作者：$authorName$"
-  },
   "optionOpenNewTab": {
     "message": "用滑鼠中鍵或按住 Ctrl 鍵左擊在背景開啟書籤"
   },
@@ -167,7 +147,7 @@
     "message": "在新視窗中開啟"
   },
   "general": {
-    "message": "一般功能"
+    "message": "常規設置"
   },
   "optionZoom": {
     "message": "縮放"

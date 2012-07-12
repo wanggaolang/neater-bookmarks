@@ -1,10 +1,10 @@
 {
 	"extName": {
-		"message": "Neat Bookmarks",
+		"message": "Neater Bookmarks",
 		"description": "The extension name."
 	},
 	"extDesc": {
-		"message": "A neat bookmarks tree popup.",
+		"message": "A neater bookmarks tree popup.",
 		"description": "The extension description."
 	},
 	"searchBookmarks": {
@@ -154,14 +154,37 @@
 	"options": {
 		"message": "Options"
 	},
-	"advancedOptions": {
-		"message": "Advanced Options"
-	},
 	"general": {
-		"message": "General"
+		"message": "General Settings"
 	},
 	"accessibility": {
-		"message": "Accessibility"
+		"message": "Accessibility Settings"
+	},
+	"resetSettings": {
+		"message": "Reset Settings"
+	},
+	"resetText": {
+		"message": "Reset all Neater Bookmarks options to default."
+	},
+	"reset": {
+		"message": "Reset"
+	},
+	"customIcon": {
+		"message": "Custom Icon"
+	},
+	"customIconText": {
+		"message": "The icon must be 19&times;19 or it will be resized."
+	},
+	"customStyles": {
+		"message": "Custom Styles"
+	},
+	"customStylesText": {
+		"message": "This requires some CSS skills. Hack at your own risk. Code sharing is encouraged via $linkGithubGist$.",
+		"placeholders": {
+			"linkGithubGist": {
+				"content": "$1"
+			}
+		}
 	},
 	"optionClickNewTab": {
 		"message": "Left-click opens bookmark in new tab."
@@ -185,11 +208,17 @@
 		"message": "Zoom"
 	},
 	"optionsFooterText": {
-		"message": "Built by $authorName$.",
+		"message": "By $authorName$, based on $neatBookmarksGithub$ by $authorNameOriginal$.",
 		"description": "Footer text for the Options page",
 		"placeholders": {
 			"authorName": {
 				"content": "$1"
+			},
+			"neatBookmarksGithub": {
+				"content": "$2"
+			},
+			"authorNameOriginal": {
+				"content": "$3"
 			}
 		}
 	}

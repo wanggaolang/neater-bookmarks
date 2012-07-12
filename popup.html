@@ -2,9 +2,9 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="neat.css">
 <div id="container">
-<div id="search" role="search"><input id="search-input" type="search" results="0" autofocus></div>
-<div id="tree" tabindex="-1"></div>
-<div id="results" tabindex="-1" style="display: none;"></div>
+	<div id="search" role="search"><input id="search-input" type="search" results="0" autofocus></div>
+	<div id="tree" tabindex="-1"></div>
+	<div id="results" tabindex="-1" style="display: none"></div>
 </div>
 <div id="drop-overlay"></div>
 <div id="bookmark-clone"></div>
@@ -32,12 +32,12 @@
 <div id="confirm-dialog" class="dialog" role="dialog">
 	<p id="confirm-dialog-text" class="dialog-text"></p>
 	<div class="buttons">
-	<button id="confirm-dialog-button-1" onclick="ConfirmDialog.fn1(); ConfirmDialog.close();"></button>
-	<button id="confirm-dialog-button-2" onclick="ConfirmDialog.fn2(); ConfirmDialog.close();"></button>
+	<button id="confirm-dialog-button-1"></button>
+	<button id="confirm-dialog-button-2"></button>
 	</div>
 </div>
 <div id="edit-dialog" class="dialog" role="dialog">
-	<form onsubmit="EditDialog.close(); return false;">
+	<form>
 	<p id="edit-dialog-text" class="dialog-text"></p>
 	<input id="edit-dialog-name">
 	<input type="url" id="edit-dialog-url" aria-required="true" required>
@@ -46,10 +46,5 @@
 	</div>
 	</form>
 </div>
-<script>
-onerror = function(){chrome.extension.sendRequest({error: [].slice.call(arguments)}) };
-if (localStorage.popupHeight) document.body.style.height = localStorage.popupHeight + 'px';
-if (localStorage.popupWidth) document.body.style.width = localStorage.popupWidth + 'px';
-</script>
 <script src="neatools.js"></script>
 <script src="neat.js"></script>

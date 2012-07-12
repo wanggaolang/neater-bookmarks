@@ -26,10 +26,6 @@
     },
     "message": "Jeste li sigurni da želite obrisati mapu oznaka \"$folderName$\" koja sadrži $subFolderCount$ podmapa/e/u i $bookmarkCount$ zabilješki/e?"
   },
-  "extName": {
-    "description": "Ime ekstenzije",
-    "message": "Praktične oznake"
-  },
   "noTitle": {
     "description": "Naziv za oznaku(bookmark) koji nema URL-a ili ima neimenovanih prozora",
     "message": "(neimenovano)"
@@ -92,7 +88,7 @@
     "message": "Zatvori nekorištene mape kad otvaram novu mapu"
   },
   "accessibility": {
-    "message": "Dostupnost"
+    "message": "Postavke pristupačnosti"
   },
   "deleteEllipsis": {
     "message": "Obriši..."
@@ -107,13 +103,6 @@
       }
     },
     "message": "Jeste li sigurni da želite obrisati mapu oznaka \"$folderName$\" koja sadrži $bookmarkCount$ zabilježaka/zabilješke ?"
-  },
-  "advancedOptions": {
-    "message": "Napredne opcije"
-  },
-  "extDesc": {
-    "description": "Opis ekstenzije (dodatka).",
-    "message": "Praktičan prikaz oznaka u pop-up prozoru."
   },
   "save": {
     "message": "Spremi"
@@ -142,15 +131,6 @@
   "optionRememberPrevState": {
     "message": "Zapamti prijašnje stanje (poziciju u iskočnom prozoru i mape koje su bile otvorene)"
   },
-  "optionsFooterText": {
-    "placeholders": {
-      "authorName": {
-        "content": "$1"
-      }
-    },
-    "description": "Tekst na dnu stranice koji se može vidjeti kada pristupimo opcijama(Options)",
-    "message": "Izradio $authorName$"
-  },
   "openBookmarksNewWindow": {
     "message": "Otvori sve oznake u novom prozoru"
   },
@@ -164,7 +144,7 @@
     "message": "Otvori u Inkognito prozoru"
   },
   "general": {
-    "message": "Općenito"
+    "message": "Opće postavke"
   },
   "openNewWindow": {
     "message": "Otvori u novom prozoru"

@@ -1,3 +1,10 @@
+window.addEventListener('load', init, false);
+
+function init() {
+	if (localStorage.popupHeight) document.body.style.height = localStorage.popupHeight + 'px';
+	if (localStorage.popupWidth) document.body.style.width = localStorage.popupWidth + 'px';
+};
+
 (function(window){
 	var document = window.document;
 	var chrome = window.chrome;
@@ -395,6 +402,17 @@
 	$tree.addEventListener('click', resetHeight);
 	$tree.addEventListener('keyup', resetHeight);
 	
+	// Confirm dialog event listeners
+	$('confirm-dialog-button-1').addEventListener('click', function(){
+		ConfirmDialog.fn1();
+		ConfirmDialog.close();
+	}, false);
+	
+	$('confirm-dialog-button-2').addEventListener('click', function(){
+		ConfirmDialog.fn2();
+		ConfirmDialog.close();
+	}, false);
+	
 	// Confirm dialog
 	var ConfirmDialog = {
 		open: function(opts){
@@ -414,6 +432,12 @@
 		fn2: function(){}
 	};
 	
+	// Edit dialog event listener
+	$('edit-dialog').addEventListener('submit', function(){
+		EditDialog.close();
+		return false;
+	}, false);
+
 	// Edit dialog
 	var EditDialog = window.EditDialog = {
 		open: function(opts){
@@ -443,7 +467,7 @@
 			var url = urlInput.value;
 			if (!urlInput.validity.valid){
 				urlInput.value = 'http://' + url;
-				if (!urlInput.validity.valid) url = ''; // if still invalid, fuck it.
+				if (!urlInput.validity.valid) url = ''; // if still invalid, forget it.
 				url = 'http://' + url;
 			}
 			EditDialog.fn($('edit-dialog-name').value, url);
@@ -1480,4 +1504,16 @@
 		style.textContent = localStorage.userstyle;
 		style.inject(document.body);
 	}
+	
+	if (localStorage.popupHeight){
+		document.body.style.height = localStorage.popupHeight + 'px';
+	}
+	
+	if (localStorage.popupWidth){
+		document.body.style.width = localStorage.popupWidth + 'px';
+	}
 })(window);
+
+onerror = function(){
+	chrome.extension.sendRequest({error: [].slice.call(arguments)})
+};

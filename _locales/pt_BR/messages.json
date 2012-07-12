@@ -30,10 +30,6 @@
     "description": "Título para favoritos sem título e sem URL http(s) ou pastas sem título.",
     "message": "(sem título)"
   },
-  "extName": {
-    "description": "Nome da extensão.",
-    "message": "Neat Bookmarks"
-  },
   "edit": {
     "message": "Editar..."
   },
@@ -92,7 +88,7 @@
     "message": "Fechar pastas não utilizadas quando abrir uma nova pasta."
   },
   "accessibility": {
-    "message": "Acessibilidade"
+    "message": "Configurações de Acessibilidade"
   },
   "deleteEllipsis": {
     "message": "Apagar..."
@@ -108,15 +104,8 @@
     },
     "message": "Você tem certeza que quer apagar a pasta $folderName$ e $bookmarkCount$ favorito(s) incluído(s)?"
   },
-  "advancedOptions": {
-    "message": "Opções Avançadas"
-  },
   "save": {
     "message": "Salvar"
-  },
-  "extDesc": {
-    "description": "Descrição da extensão.",
-    "message": "Um prático gerenciador de favoritos de estilo pop-up."
   },
   "confirmOpenBookmarksNewWindow": {
     "placeholders": {
@@ -142,15 +131,6 @@
   "optionRememberPrevState": {
     "message": "Lembrar do estado anterior (posição e pastas abertas)."
   },
-  "optionsFooterText": {
-    "placeholders": {
-      "authorName": {
-        "content": "$1"
-      }
-    },
-    "description": "Texto de rodapé para a página de Opções",
-    "message": "Criado por $authorName$."
-  },
   "optionOpenNewTab": {
     "message": "Clique com o botão do meio do mouse ou control-clique abre o favorito em um nova guia em 2º plano (em vez de 1º plano)."
   },
@@ -167,7 +147,7 @@
     "message": "Abrir em uma nova janela"
   },
   "general": {
-    "message": "Geral"
+    "message": "Definições Gerais"
   },
   "optionZoom": {
     "message": "Zoom"

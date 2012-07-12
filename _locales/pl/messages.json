@@ -26,10 +26,6 @@
     },
     "message": "Czy jesteś pewien, że chcesz usunąć folder $folderName$, $subFolderCount$ podfolderów i $bookmarkCount$ zakładek w nich zawartych?"
   },
-  "extName": {
-    "description": "Nazwa rozszerzenia",
-    "message": "Zgrabne zakładki"
-  },
   "noTitle": {
     "description": "Tytuł dla zakładek bez tytułu bez adresów URL lub folderów bez tytułu",
     "message": "(bez tytułu)"
@@ -92,7 +88,7 @@
     "message": "Zamknij nieużywane foldery, podczas otwierania folderu"
   },
   "accessibility": {
-    "message": "Dostępność"
+    "message": "DUstawienia dostępności"
   },
   "deleteEllipsis": {
     "message": "Usuń..."
@@ -107,13 +103,6 @@
       }
     },
     "message": "Czy jesteś pewien, że chcesz usunąć folder $folderName$ i $bookmarkCount$ zakładek zawartych w tym folderze?"
-  },
-  "advancedOptions": {
-    "message": "Opcje zaawansowane"
-  },
-  "extDesc": {
-    "description": "Opis rozszerzenia",
-    "message": "Okienko z drzewkiem zgrabnych zakładek"
   },
   "save": {
     "message": "Zapisz"
@@ -142,15 +131,6 @@
   "optionRememberPrevState": {
     "message": "Pamiętaj poprzedni stan (pozycja przewijania i otwarte foldery)"
   },
-  "optionsFooterText": {
-    "placeholders": {
-      "authorName": {
-        "content": "$1"
-      }
-    },
-    "description": "Tekst stopki dla strony z opcjami",
-    "message": "Stworzone przez $authorName$"
-  },
   "openBookmarksNewWindow": {
     "message": "Otwórz wszystkie zakładki w nowym oknie"
   },
@@ -164,7 +144,7 @@
     "message": "Otwórz w oknie incognito"
   },
   "general": {
-    "message": "Ogólne"
+    "message": "Ustawienia ogólne"
   },
   "openNewWindow": {
     "message": "Otwórz w nowym oknie"

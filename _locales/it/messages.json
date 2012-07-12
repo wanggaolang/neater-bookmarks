@@ -26,10 +26,6 @@
     },
     "message": "Eliminare la cartella $folderName$, le $subFolderCount$ sottocartelle e i $bookmarkCount$ preferiti contenuti in essa?"
   },
-  "extName": {
-    "description": "Nome dell'estensione.",
-    "message": "Neat Bookmarks"
-  },
   "noTitle": {
     "description": "Nome dei preferiti senza nome non contenente indirizzi Web http(s) o delle cartelle senza nome.",
     "message": "(senza nome)"
@@ -92,7 +88,7 @@
     "message": "All'apertura di una cartella, chiudi tutte le altre."
   },
   "accessibility": {
-    "message": "Accessibilità"
+    "message": "Impostazioni di accessibilità"
   },
   "deleteEllipsis": {
     "message": "Elimina..."
@@ -107,13 +103,6 @@
       }
     },
     "message": "Eliminare la cartella $folderName$ e i $bookmarkCount$ preferiti contenuti in essa?"
-  },
-  "advancedOptions": {
-    "message": "Opzioni avanzate"
-  },
-  "extDesc": {
-    "description": "Descrizione dell'estensione.",
-    "message": "Una pratica estensione per la gestione dei preferiti."
   },
   "save": {
     "message": "Salva"
@@ -142,15 +131,6 @@
   "optionRememberPrevState": {
     "message": "Memorizza lo stato della finestra di Neat Bookmarks (posizione di scorrimento dell'elenco e cartelle aperte)."
   },
-  "optionsFooterText": {
-    "placeholders": {
-      "authorName": {
-        "content": "$1"
-      }
-    },
-    "description": "Testo in basso alla pagina Opzioni",
-    "message": "Creato da $authorName$."
-  },
   "openBookmarksNewWindow": {
     "message": "Apri tutti i preferiti in un'altra finestra"
   },
@@ -164,7 +144,7 @@
     "message": "Apri in una finestra di navigazione in incognito"
   },
   "general": {
-    "message": "Generale"
+    "message": "Impostazioni generali"
   },
   "openNewWindow": {
     "message": "Apri in un'altra finestra"

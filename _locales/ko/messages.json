@@ -26,10 +26,6 @@
     },
     "message": "정말 $subFolderCount$ 개의 하위 폴더와 $bookmarkCount$ 개의 북마크가 들어있는 $folderName$ 폴더를 삭제하시겠습니까?"
   },
-  "extName": {
-    "description": "확장 프로그램 이름",
-    "message": "Neat Bookmarks"
-  },
   "noTitle": {
     "description": "http(s) 형식이 아닌 URL(주소)이거나 제목없는 폴더에 있는 제목없는 북마크에 대한 제목",
     "message": "(제목 없음)"
@@ -92,7 +88,7 @@
     "message": "한 폴더를 펼칠 때 다른 폴더는 접기"
   },
   "accessibility": {
-    "message": "보기 옵션"
+    "message": "アクセシビリティ設定"
   },
   "deleteEllipsis": {
     "message": "삭제하기..."
@@ -107,13 +103,6 @@
       }
     },
     "message": "정말 $bookmarkCount$ 개의 북마크가 들어있는 $folderName$ 폴더를 삭제하시겠습니까?"
-  },
-  "advancedOptions": {
-    "message": "고급 옵션"
-  },
-  "extDesc": {
-    "description": "확장 프로그램에 대한 설명",
-    "message": "깔끔하게 정리된 북마크 트리를 팝업으로 보여줍니다."
   },
   "save": {
     "message": "저장"
@@ -142,15 +131,6 @@
   "optionRememberPrevState": {
     "message": "(스크롤한 위치와 열렸던 폴더에 대한) 이전 상태 기억하기"
   },
-  "optionsFooterText": {
-    "placeholders": {
-      "authorName": {
-        "content": "$1"
-      }
-    },
-    "description": "옵션 설정 페이지의 꼬리말",
-    "message": "만든이 : $authorName$."
-  },
   "openBookmarksNewWindow": {
     "message": "새로운 창으로 모든 북마크 열기"
   },
@@ -164,7 +144,7 @@
     "message": "시크릿 창으로 열기"
   },
   "general": {
-    "message": "일반 옵션"
+    "message": "일반 설정"
   },
   "openNewWindow": {
     "message": "새로운 창으로 열기"
