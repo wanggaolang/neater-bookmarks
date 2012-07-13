@@ -1,0 +1,170 @@
+{
+  "confirmDeleteFolderBookmarks": {
+    "message": "هل تود حذف المجلد $folderName$ الذي يحتوي على $bookmarkCount$  وصلات",
+    "placeholders": {
+      "bookmarkCount": {
+        "content": "$2"
+      },
+      "folderName": {
+        "content": "$1"
+      }
+    }
+  },
+  "confirmDeleteFolderSubfolders": {
+    "message": null,
+    "placeholders": {
+      "folderName": {
+        "content": "$1"
+      },
+      "subFolderCount": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmDeleteFolderSubfoldersBookmarks": {
+    "message": null,
+    "placeholders": {
+      "bookmarkCount": {
+        "content": "$3"
+      },
+      "folderName": {
+        "content": "$1"
+      },
+      "subFolderCount": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmOpenBookmarks": {
+    "description": null,
+    "message": "هل انت متأكد انك تريد فتح جميع ال $count$ وصلات",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "confirmOpenBookmarksNewIncognitoWindow": {
+    "description": null,
+    "message": null,
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "confirmOpenBookmarksNewWindow": {
+    "description": "هل انت متأكد انك تريد فتح جميع الوصلات في نافذة جديدة؟",
+    "message": null,
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "delete": {
+    "message": "حذف"
+  },
+  "deleteEllipsis": {
+    "message": "حذف ..."
+  },
+  "edit": {
+    "message": "تعديل..."
+  },
+  "editBookmark": {
+    "message": "تعديل وصلة"
+  },
+  "editFolder": {
+    "message": "تعديل مجلد"
+  },
+  "errorOccured": {
+    "message": "للأسف, حصل خطأ"
+  },
+  "ignore": {
+    "message": "تجاهل"
+  },
+  "name": {
+    "description": "اسم الوصلة او المجلد",
+    "message": "الاسم"
+  },
+  "noTitle": {
+    "description": null,
+    "message": null
+  },
+  "nope": {
+    "message": "لا"
+  },
+  "open": {
+    "description": null,
+    "message": "فتح"
+  },
+  "openBookmarks": {
+    "message": "فتح جميع الوصلات"
+  },
+  "openBookmarksIncognitoWindow": {
+    "message": null
+  },
+  "openBookmarksNewWindow": {
+    "message": null
+  },
+  "openIncognitoWindow": {
+    "message": null
+  },
+  "openNewTab": {
+    "message": null
+  },
+  "openNewWindow": {
+    "message": null
+  },
+  "optionClickNewTab": {
+    "message": null
+  },
+  "optionCloseUnusedFolders": {
+    "message": null
+  },
+  "optionConfirmOpenFolder": {
+    "message": null
+  },
+  "optionOpenNewTab": {
+    "message": null
+  },
+  "optionPopupStays": {
+    "message": null
+  },
+  "optionRememberPrevState": {
+    "message": null
+  },
+  "optionZoom": {
+    "message": null
+  },
+  "options": {
+    "message": "خيارات"
+  },
+  "parentFolder": {
+    "description": null,
+    "message": null,
+    "placeholders": {
+      "folderName": {
+        "example": null,
+        "content": "$1"
+      }
+    }
+  },
+  "reportError": {
+    "message": "بلغ عن خطأ"
+  },
+  "reportedToDeveloper": {
+    "description": null,
+    "message": null
+  },
+  "save": {
+    "message": "حفظ"
+  },
+  "searchBookmarks": {
+    "description": null,
+    "message": null
+  },
+  "url": {
+    "message": null
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "confirmDeleteFolderBookmarks": {
+    "message": null,
+    "placeholders": {
+      "bookmarkCount": {
+        "content": "$2"
+      },
+      "folderName": {
+        "content": "$1"
+      }
+    }
+  },
+  "confirmDeleteFolderSubfolders": {
+    "message": null,
+    "placeholders": {
+      "folderName": {
+        "content": "$1"
+      },
+      "subFolderCount": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmDeleteFolderSubfoldersBookmarks": {
+    "message": null,
+    "placeholders": {
+      "bookmarkCount": {
+        "content": "$3"
+      },
+      "folderName": {
+        "content": "$1"
+      },
+      "subFolderCount": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmOpenBookmarks": {
+    "description": null,
+    "message": null,
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "confirmOpenBookmarksNewIncognitoWindow": {
+    "description": null,
+    "message": null,
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "confirmOpenBookmarksNewWindow": {
+    "description": null,
+    "message": null,
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "delete": {
+    "message": null
+  },
+  "deleteEllipsis": {
+    "message": null
+  },
+  "edit": {
+    "message": null
+  },
+  "editBookmark": {
+    "message": null
+  },
+  "editFolder": {
+    "message": null
+  },
+  "errorOccured": {
+    "message": null
+  },
+  "ignore": {
+    "message": null
+  },
+  "name": {
+    "description": null,
+    "message": null
+  },
+  "noTitle": {
+    "description": null,
+    "message": null
+  },
+  "nope": {
+    "message": null
+  },
+  "open": {
+    "description": null,
+    "message": null
+  },
+  "openBookmarks": {
+    "message": null
+  },
+  "openBookmarksIncognitoWindow": {
+    "message": null
+  },
+  "openBookmarksNewWindow": {
+    "message": null
+  },
+  "openIncognitoWindow": {
+    "message": null
+  },
+  "openNewTab": {
+    "message": null
+  },
+  "openNewWindow": {
+    "message": null
+  },
+  "optionClickNewTab": {
+    "message": null
+  },
+  "optionCloseUnusedFolders": {
+    "message": null
+  },
+  "optionConfirmOpenFolder": {
+    "message": null
+  },
+  "optionOpenNewTab": {
+    "message": null
+  },
+  "optionPopupStays": {
+    "message": null
+  },
+  "optionRememberPrevState": {
+    "message": null
+  },
+  "optionZoom": {
+    "message": null
+  },
+  "options": {
+    "message": null
+  },
+  "parentFolder": {
+    "description": null,
+    "message": null,
+    "placeholders": {
+      "folderName": {
+        "example": null,
+        "content": "$1"
+      }
+    }
+  },
+  "reportError": {
+    "message": null
+  },
+  "reportedToDeveloper": {
+    "description": null,
+    "message": null
+  },
+  "save": {
+    "message": null
+  },
+  "searchBookmarks": {
+    "description": null,
+    "message": null
+  },
+  "url": {
+    "message": null
+  }
+}

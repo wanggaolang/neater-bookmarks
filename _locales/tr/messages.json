@@ -1,0 +1,170 @@
+{
+  "confirmDeleteFolderBookmarks": {
+    "message": "$folderName$ klasörünü ve içindeki $bookmarkCount$ yer imini silmek istediğine emin misin?",
+    "placeholders": {
+      "bookmarkCount": {
+        "content": "$2"
+      },
+      "folderName": {
+        "content": "$1"
+      }
+    }
+  },
+  "confirmDeleteFolderSubfolders": {
+    "message": "$folderName$ klasörünü ve içindeki $subFolderCount$ alt klasörü silmek istediğine emin misin?",
+    "placeholders": {
+      "folderName": {
+        "content": "$1"
+      },
+      "subFolderCount": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmDeleteFolderSubfoldersBookmarks": {
+    "message": "$folderName$ klasörünü, $subFolderCount$ alt klasörü ve içindeki $bookmarkCount$ yer imini silmek istediğine emin misin?",
+    "placeholders": {
+      "bookmarkCount": {
+        "content": "$3"
+      },
+      "folderName": {
+        "content": "$1"
+      },
+      "subFolderCount": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmOpenBookmarks": {
+    "description": "Tüm yer imlerini açmak için onaylama iletisi.",
+    "message": "Tüm $count$ yer imini açmak istediğine emin misin?",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "confirmOpenBookmarksNewIncognitoWindow": {
+    "description": "Tüm yer imlerini yeni bir gizli pencerede açmak için onaylama iletisi.",
+    "message": "Tüm $count$ yer imini yeni bir gizli pencerede açmak istediğine emin misin?",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "confirmOpenBookmarksNewWindow": {
+    "description": "Tüm yer imlerini yeni bir pencerede açmak için onaylama iletisi.",
+    "message": "Tüm $count$ yer imini yeni bir pencerede açmak istediğine emin misin?",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "delete": {
+    "message": "Sil"
+  },
+  "deleteEllipsis": {
+    "message": "Sil..."
+  },
+  "edit": {
+    "message": "Düzenle..."
+  },
+  "editBookmark": {
+    "message": "Yer imini düzenle"
+  },
+  "editFolder": {
+    "message": "Klasörü düzenle"
+  },
+  "errorOccured": {
+    "message": "Üzgünüz, bir hata oluştu."
+  },
+  "ignore": {
+    "message": "Yoksay"
+  },
+  "name": {
+    "description": "Yer imi ya da klasör adı.",
+    "message": "Ad"
+  },
+  "noTitle": {
+    "description": "Başlıksız http(s) URL'si olmayan yer imleri ya da başlıksız klasörler için başlık.",
+    "message": "(başlık yok)"
+  },
+  "nope": {
+    "message": "Hayır"
+  },
+  "open": {
+    "description": "Yer imlerini açma eylemi.",
+    "message": "Aç"
+  },
+  "openBookmarks": {
+    "message": "Tüm Yer İmlerini Aç"
+  },
+  "openBookmarksIncognitoWindow": {
+    "message": "Tüm Yer İmlerini Gizli Pencerede Aç"
+  },
+  "openBookmarksNewWindow": {
+    "message": "Tüm Yer İmlerini Yeni Pencerede Aç"
+  },
+  "openIncognitoWindow": {
+    "message": "Gizli Pencerede Aç"
+  },
+  "openNewTab": {
+    "message": "Yeni Sekmede Aç"
+  },
+  "openNewWindow": {
+    "message": "Yeni Pencerede Aç"
+  },
+  "optionClickNewTab": {
+    "message": "Sol tıklama yer imini yeni sekmede açsın."
+  },
+  "optionCloseUnusedFolders": {
+    "message": "Bir klasör açılırken kullanılmayan klasörleri kapat."
+  },
+  "optionConfirmOpenFolder": {
+    "message": "Bir klasörden bir çok yer imi açılırken onaylamayı görüntüle."
+  },
+  "optionOpenNewTab": {
+    "message": "Orta-tıklama ya da ctrl-tıklama yer imini yeni arka alan sekmesinde açsın (ön alan sekmesi yerine)."
+  },
+  "optionPopupStays": {
+    "message": "Açılır pencere yer imleri açılırken (sol tıklama) açık kalsın."
+  },
+  "optionRememberPrevState": {
+    "message": "Önceki durumu (kaydırma konumunu ve açılmış klasörleri) hatırla."
+  },
+  "optionZoom": {
+    "message": "Yakınlaştırma"
+  },
+  "options": {
+    "message": "Seçenekler"
+  },
+  "parentFolder": {
+    "description": "Ana klasör bilgisi arama sonuçları listesindeki yer imleri araç ipucusunda görüntülenir.",
+    "message": "Ana klasör: \"$folderName$\"",
+    "placeholders": {
+      "folderName": {
+        "example": "Yer imleri çubuğu",
+        "content": "$1"
+      }
+    }
+  },
+  "reportError": {
+    "message": "Hata Bildir"
+  },
+  "reportedToDeveloper": {
+    "description": "Uzantıda oluşan bir hata için geliştiriciye bir ileti bildirilmiştir.",
+    "message": "Geliştiriciye bu bildirilmiştir."
+  },
+  "save": {
+    "message": "Kaydet"
+  },
+  "searchBookmarks": {
+    "description": "Arama alanı için yer tutucu metin.",
+    "message": "Yer İmleri Ara"
+  },
+  "url": {
+    "message": "URL"
+  }
+}
