@@ -1,4 +1,7 @@
 {
+  "accessibility": {
+    "message": "Ulaşılabilirlik Ayarları"
+  },
   "confirmDeleteFolderBookmarks": {
     "message": "$folderName$ klasörünü ve içindeki $bookmarkCount$ yer imini silmek istediğine emin misin?",
     "placeholders": {
@@ -10,9 +13,12 @@
       }
     }
   },
-  "confirmDeleteFolderSubfolders": {
-    "message": "$folderName$ klasörünü ve içindeki $subFolderCount$ alt klasörü silmek istediğine emin misin?",
+  "confirmDeleteFolderSubfoldersBookmarks": {
+    "message": "$folderName$ klasörünü, $subFolderCount$ alt klasörü ve içindeki $bookmarkCount$ yer imini silmek istediğine emin misin?",
     "placeholders": {
+      "bookmarkCount": {
+        "content": "$3"
+      },
       "folderName": {
         "content": "$1"
       },
@@ -21,12 +27,9 @@
       }
     }
   },
-  "confirmDeleteFolderSubfoldersBookmarks": {
-    "message": "$folderName$ klasörünü, $subFolderCount$ alt klasörü ve içindeki $bookmarkCount$ yer imini silmek istediğine emin misin?",
+  "confirmDeleteFolderSubfolders": {
+    "message": "$folderName$ klasörünü ve içindeki $subFolderCount$ alt klasörü silmek istediğine emin misin?",
     "placeholders": {
-      "bookmarkCount": {
-        "content": "$3"
-      },
       "folderName": {
         "content": "$1"
       },
@@ -62,14 +65,28 @@
       }
     }
   },
-  "delete": {
-    "message": "Sil"
+  "customIcon": {
+    "message": "İsteğe Göre Simge"
+  },
+  "customIconText": {
+    "message": "Simge 19×19 olmalı, değilse yeniden boyutlandırılacak."
+  },
+  "customStyles": {
+    "message": "İsteğe Göre Biçemler"
+  },
+  "customStylesText": {
+    "message": "Bu biraz CSS becerisi gerektirir. Kendi riskinizle hackleyin. Kod paylaşımı $linkGithubGist$ üzerinden desteklenir.",
+    "placeholders": {
+      "linkGithubGist": {
+        "content": "$1"
+      }
+    }
   },
   "deleteEllipsis": {
     "message": "Sil..."
   },
-  "edit": {
-    "message": "Düzenle..."
+  "delete": {
+    "message": "Sil"
   },
   "editBookmark": {
     "message": "Yer imini düzenle"
@@ -77,8 +94,22 @@
   "editFolder": {
     "message": "Klasörü düzenle"
   },
+  "edit": {
+    "message": "Düzenle..."
+  },
   "errorOccured": {
     "message": "Üzgünüz, bir hata oluştu."
+  },
+  "extDesc": {
+    "description": "Uzantı tanımı.",
+    "message": "Daha düzenli bir ağaç açılır penceresi."
+  },
+  "extName": {
+    "description": "Uzantı adı.",
+    "message": "Daha Düzenli Yer İmleri"
+  },
+  "general": {
+    "message": "Genel Ayarlar"
   },
   "ignore": {
     "message": "Yoksay"
@@ -87,25 +118,25 @@
     "description": "Yer imi ya da klasör adı.",
     "message": "Ad"
   },
-  "noTitle": {
-    "description": "Başlıksız http(s) URL'si olmayan yer imleri ya da başlıksız klasörler için başlık.",
-    "message": "(başlık yok)"
-  },
   "nope": {
     "message": "Hayır"
   },
-  "open": {
-    "description": "Yer imlerini açma eylemi.",
-    "message": "Aç"
-  },
-  "openBookmarks": {
-    "message": "Tüm Yer İmlerini Aç"
+  "noTitle": {
+    "description": "Başlıksız klasörler ya da http(s) URL'si olmayan başlıksız yer imleri için başlık.",
+    "message": "(başlık yok)"
   },
   "openBookmarksIncognitoWindow": {
     "message": "Tüm Yer İmlerini Gizli Pencerede Aç"
   },
+  "openBookmarks": {
+    "message": "Tüm Yer İmlerini Aç"
+  },
   "openBookmarksNewWindow": {
     "message": "Tüm Yer İmlerini Yeni Pencerede Aç"
+  },
+  "open": {
+    "description": "Yer imlerini açma eylemi.",
+    "message": "Aç"
   },
   "openIncognitoWindow": {
     "message": "Gizli Pencerede Aç"
@@ -129,33 +160,113 @@
     "message": "Orta-tıklama ya da ctrl-tıklama yer imini yeni arka alan sekmesinde açsın (ön alan sekmesi yerine)."
   },
   "optionPopupStays": {
-    "message": "Açılır pencere yer imleri açılırken (sol tıklama) açık kalsın."
+    "message": "Açılır pencere yer imleri (sol tıklama ile) açılırken açık kalsın."
   },
   "optionRememberPrevState": {
     "message": "Önceki durumu (kaydırma konumunu ve açılmış klasörleri) hatırla."
   },
-  "optionZoom": {
-    "message": "Yakınlaştırma"
+  "optionsFooterText1": {
+    "description": "Seçenekler sayfası için altbilgi metni",
+    "message": "Geliştiricinin $neaterEmail$ adresine e-posta gönderin",
+    "placeholders": {
+      "neaterEmail": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsFooterText2": {
+    "message": "$extName$ açık kaynaklıdır! $neaterGithub$",
+    "placeholders": {
+      "extName": {
+        "content": "$1"
+      },
+      "neaterGithub": {
+        "content": "$2"
+      }
+    }
+  },
+  "optionsFooterText3": {
+    "message": "SSS: $neaterFaq$",
+    "placeholders": {
+      "neaterFaq": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsFooterText4": {
+    "message": "Sorunları görüntüle ya da yeni bir tane sun: $neaterIssues$",
+    "placeholders": {
+      "neaterIssues": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsFooterText5": {
+    "message": "İsteğe göre simgelere gözatın: $neaterIcons$",
+    "placeholders": {
+      "neaterIcons": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsFooterText6": {
+    "message": "$extName$ çevirisine $neaterTranslate$ üzerinden yardım edin.",
+    "placeholders": {
+      "extName": {
+        "content": "$1"
+      },
+      "neaterTranslate": {
+        "content": "$2"
+      }
+    }
+  },
+  "optionsFooterText7": {
+    "message": "$linkCheeAun$ tarafından yapılan $neatGithub$ taban alınmıştır.",
+    "placeholders": {
+      "linkCheeAun": {
+        "content": "$2"
+      },
+      "neatGithub": {
+        "content": "$1"
+      }
+    }
   },
   "options": {
     "message": "Seçenekler"
+  },
+  "optionZoom": {
+    "message": "Yakınlaştırma"
   },
   "parentFolder": {
     "description": "Ana klasör bilgisi arama sonuçları listesindeki yer imleri araç ipucusunda görüntülenir.",
     "message": "Ana klasör: \"$folderName$\"",
     "placeholders": {
       "folderName": {
-        "example": "Yer imleri çubuğu",
-        "content": "$1"
+        "content": "$1",
+        "example": "Yer imleri çubuğu"
       }
     }
-  },
-  "reportError": {
-    "message": "Hata Bildir"
   },
   "reportedToDeveloper": {
     "description": "Uzantıda oluşan bir hata için geliştiriciye bir ileti bildirilmiştir.",
     "message": "Geliştiriciye bu bildirilmiştir."
+  },
+  "reportError": {
+    "message": "Hata Bildir"
+  },
+  "reset": {
+    "message": "Sıfırla"
+  },
+  "resetSettings": {
+    "message": "Sıfırlama Ayarları"
+  },
+  "resetText": {
+    "message": "Tüm $extName$ seçeneklerini öntanımlıya sıfırla.",
+    "placeholders": {
+      "extName": {
+        "content": "$1"
+      }
+    }
   },
   "save": {
     "message": "Kaydet"

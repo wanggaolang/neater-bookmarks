@@ -1,6 +1,9 @@
 {
+  "accessibility": {
+    "message": "Поставувања"
+  },
   "confirmDeleteFolderBookmarks": {
-    "message": null,
+    "message": "Дали сте сигурни дека сакате да го избришете $folderName$ папка и $bookmarkCount$ ознака (и) во неа?",
     "placeholders": {
       "bookmarkCount": {
         "content": "$2"
@@ -10,19 +13,8 @@
       }
     }
   },
-  "confirmDeleteFolderSubfolders": {
-    "message": null,
-    "placeholders": {
-      "folderName": {
-        "content": "$1"
-      },
-      "subFolderCount": {
-        "content": "$2"
-      }
-    }
-  },
   "confirmDeleteFolderSubfoldersBookmarks": {
-    "message": null,
+    "message": "Дали сте сигурни дека сакате да го избришете $folderName$ папка, $subFolderCount$ под-фолдер (а) и $bookmarkCount$ ознака (и) во неа?",
     "placeholders": {
       "bookmarkCount": {
         "content": "$3"
@@ -35,9 +27,20 @@
       }
     }
   },
+  "confirmDeleteFolderSubfolders": {
+    "message": "Дали сте сигурни дека сакате да го избришете $folderName$ папка и $subFolderCount$ под-фолдер (а) во неа?",
+    "placeholders": {
+      "folderName": {
+        "content": "$1"
+      },
+      "subFolderCount": {
+        "content": "$2"
+      }
+    }
+  },
   "confirmOpenBookmarks": {
-    "description": null,
-    "message": null,
+    "message": "Дали сте сигурни дека сакате да го отворите сите $count$ обележувачи?",
+    "description": "Confirmation message for opening all bookmarks.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -45,8 +48,8 @@
     }
   },
   "confirmOpenBookmarksNewIncognitoWindow": {
-    "description": null,
-    "message": null,
+    "message": "Дали сте сигурни дека сакате да го отворите сите $count$ обележувачи во нов прозорец инкогнито?",
+    "description": "Confirmation message for opening all bookmarks in a new incognito window.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -54,117 +57,225 @@
     }
   },
   "confirmOpenBookmarksNewWindow": {
-    "description": null,
-    "message": null,
+    "message": "Дали сте сигурни дека сакате да го отворите сите $count$ обележувачи во нов прозорец?",
+    "description": "Confirmation message for opening all bookmarks in a new window.",
     "placeholders": {
       "count": {
         "content": "$1"
       }
     }
   },
-  "delete": {
-    "message": null
+  "customIcon": {
+    "message": "Своја икона"
   },
-  "deleteEllipsis": {
-    "message": null
+  "customIconText": {
+    "message": "Иконата мора да биде 19 × 19 или тоа ќе биде променета."
   },
-  "edit": {
-    "message": null
+  "customStyles": {
+    "message": "Прилагодено Стилови"
   },
-  "editBookmark": {
-    "message": null
-  },
-  "editFolder": {
-    "message": null
-  },
-  "errorOccured": {
-    "message": null
-  },
-  "ignore": {
-    "message": null
-  },
-  "name": {
-    "description": null,
-    "message": null
-  },
-  "noTitle": {
-    "description": null,
-    "message": null
-  },
-  "nope": {
-    "message": null
-  },
-  "open": {
-    "description": null,
-    "message": null
-  },
-  "openBookmarks": {
-    "message": null
-  },
-  "openBookmarksIncognitoWindow": {
-    "message": null
-  },
-  "openBookmarksNewWindow": {
-    "message": null
-  },
-  "openIncognitoWindow": {
-    "message": null
-  },
-  "openNewTab": {
-    "message": null
-  },
-  "openNewWindow": {
-    "message": null
-  },
-  "optionClickNewTab": {
-    "message": null
-  },
-  "optionCloseUnusedFolders": {
-    "message": null
-  },
-  "optionConfirmOpenFolder": {
-    "message": null
-  },
-  "optionOpenNewTab": {
-    "message": null
-  },
-  "optionPopupStays": {
-    "message": null
-  },
-  "optionRememberPrevState": {
-    "message": null
-  },
-  "optionZoom": {
-    "message": null
-  },
-  "options": {
-    "message": null
-  },
-  "parentFolder": {
-    "description": null,
-    "message": null,
+  "customStylesText": {
+    "message": "Ова бара некои CSS вештини. Се пробие на ваш сопствен ризик. Код за споделување, се охрабруваат преку $linkGithubGist$ .",
     "placeholders": {
-      "folderName": {
-        "example": null,
+      "linkGithubGist": {
         "content": "$1"
       }
     }
   },
-  "reportError": {
-    "message": null
+  "deleteEllipsis": {
+    "message": "Избришете ..."
+  },
+  "delete": {
+    "message": "Избришете"
+  },
+  "editBookmark": {
+    "message": "Измени обележите"
+  },
+  "editFolder": {
+    "message": "Измени папка"
+  },
+  "edit": {
+    "message": "Измени ..."
+  },
+  "errorOccured": {
+    "message": "Упс, грешка грешка."
+  },
+  "extDesc": {
+    "message": "А neater обележувачи дрво скокачки прозорец.",
+    "description": "The extension description."
+  },
+  "extName": {
+    "message": "Neater Ознаки",
+    "description": "The extension name."
+  },
+  "general": {
+    "message": "Општи поставувања"
+  },
+  "ignore": {
+    "message": "Игнорирај"
+  },
+  "name": {
+    "message": "Име",
+    "description": "Name of bookmark or folder."
+  },
+  "nope": {
+    "message": "Не бе"
+  },
+  "noTitle": {
+    "message": "(Нема наслов)",
+    "description": "The title for untitled bookmarks with no http(s) URL or untitled folders."
+  },
+  "openBookmarksIncognitoWindow": {
+    "message": "Отвори ги сите обележувачи во инкогнито прозорецот"
+  },
+  "openBookmarks": {
+    "message": "Отвори ги сите обележувачи"
+  },
+  "openBookmarksNewWindow": {
+    "message": "Отвори ги сите обележувачи во нов прозорец"
+  },
+  "open": {
+    "message": "Отворете",
+    "description": "Action to open bookmarks."
+  },
+  "openIncognitoWindow": {
+    "message": "Отвори во инкогнито прозорецот"
+  },
+  "openNewTab": {
+    "message": "Отвори во ново јазиче"
+  },
+  "openNewWindow": {
+    "message": "Отвори во нов прозорец"
+  },
+  "optionClickNewTab": {
+    "message": "Лево кликнете отвора обележувач во нов таб."
+  },
+  "optionCloseUnusedFolders": {
+    "message": "Затвори неискористени папки при отварање фолдер."
+  },
+  "optionConfirmOpenFolder": {
+    "message": "Прикаже потврда кога се отвара многу обележувачите од папка."
+  },
+  "optionOpenNewTab": {
+    "message": "Среден клик или контрола-клик се отвора во нов обележувач заднинско јазиче (наместо на преден план)."
+  },
+  "optionPopupStays": {
+    "message": "Скокачки останува отворен при отварање (лево-клик) обележувачи."
+  },
+  "optionRememberPrevState": {
+    "message": "Запомни претходната состојба (дојдете позиција и го отвори папки)."
+  },
+  "optionsFooterText1": {
+    "message": "Е-пошта на инвеститорот во $neaterEmail$",
+    "description": "Footer text for the Options page",
+    "placeholders": {
+      "neaterEmail": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsFooterText2": {
+    "message": "$extName$ е со отворен код! $neaterGithub$",
+    "placeholders": {
+      "extName": {
+        "content": "$1"
+      },
+      "neaterGithub": {
+        "content": "$2"
+      }
+    }
+  },
+  "optionsFooterText3": {
+    "message": "Најчесто поставувани прашања: $neaterFaq$",
+    "placeholders": {
+      "neaterFaq": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsFooterText4": {
+    "message": "Прикажи ги прашања или да поднесат нов: $neaterIssues$",
+    "placeholders": {
+      "neaterIssues": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsFooterText5": {
+    "message": "Разгледате сопствени икони: $neaterIcons$",
+    "placeholders": {
+      "neaterIcons": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsFooterText6": {
+    "message": "Помош преведе $extName$ во $neaterTranslate$",
+    "placeholders": {
+      "extName": {
+        "content": "$1"
+      },
+      "neaterTranslate": {
+        "content": "$2"
+      }
+    }
+  },
+  "optionsFooterText7": {
+    "message": "Врз основа на $neatGithub$ од $linkCheeAun$",
+    "placeholders": {
+      "neatGithub": {
+        "content": "$1"
+      },
+      "linkCheeAun": {
+        "content": "$2"
+      }
+    }
+  },
+  "options": {
+    "message": "Опци"
+  },
+  "optionZoom": {
+    "message": "Зум"
+  },
+  "parentFolder": {
+    "message": "Папка: \" $folderName$ \"",
+    "description": "Parent folder information displayed in the tooltip of bookmarks in search results list.",
+    "placeholders": {
+      "folderName": {
+        "content": "$1",
+        "example": "Bookmarks bar"
+      }
+    }
   },
   "reportedToDeveloper": {
-    "description": null,
-    "message": null
+    "message": "Ова е забележано на инвеститорот.",
+    "description": "A message for an error occured in the extension, has been reported to the developer."
+  },
+  "reportError": {
+    "message": "Извештај Грешка"
+  },
+  "reset": {
+    "message": "Ресетирање"
+  },
+  "resetSettings": {
+    "message": "Ресетирање Подесувања"
+  },
+  "resetText": {
+    "message": "Ресетирате сите $extName$ опции за стандардните.",
+    "placeholders": {
+      "extName": {
+        "content": "$1"
+      }
+    }
   },
   "save": {
-    "message": null
+    "message": "Зачувај"
   },
   "searchBookmarks": {
-    "description": null,
-    "message": null
+    "message": "Пребарување Ознаки",
+    "description": "Placeholder text for search field."
   },
   "url": {
-    "message": null
+    "message": "Рачно"
   }
 }
