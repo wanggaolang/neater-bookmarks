@@ -1,6 +1,7 @@
 window.addEventListener('load', init, false);
 
 function init() {
+	// i18n of text strings
 	$('extName').innerHTML = chrome.i18n.getMessage('extName');
 	$('options').innerHTML = chrome.i18n.getMessage('options');
 	$('general').innerHTML = chrome.i18n.getMessage('general');
@@ -144,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		chrome.browserAction.setIcon({path: 'icon.png'});
 		dontLoad = true;
 		customIconPreview.src = 'icon.png';
-		alert('Neater Bookmarks has been reset.');
+		alert(_m('extName') + ' has been reset.');
 		location.reload();
 	}, false);
 	
@@ -160,6 +161,12 @@ document.addEventListener('DOMContentLoaded', function(){
 document.addEventListener('DOMContentLoaded', function(){
 	var resetButton = document.querySelectorAll('reset-button');
 	resetButton.addEventListener('click', trackButtonClick);
+	
+	// check if options can be saved locally
+	if (window.localStorage == null) {
+		alert("LocalStorage must be enabled for managing options.");
+		return;
+	}
 });
 
 onerror = function(){

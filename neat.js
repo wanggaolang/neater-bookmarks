@@ -196,7 +196,7 @@ function init() {
 	
 	// Events for the tree
 	$tree.addEventListener('scroll', function(){
-		localStorage.scrollTop = $tree.scrollTop;
+		localStorage.scrollTop = $tree.scrollTop; // store "depth" of scroll (from top of popup) at each scroll event
 	});
 	$tree.addEventListener('focus', function(e){
 		var el = e.target;
@@ -1415,15 +1415,17 @@ function init() {
 		resizerDown = false;
 		adaptBookmarkTooltips();
 	});
-	setTimeout(function(){ // delaying execution due to stupid Chrome Linux bug
+	// Code for right-side resizing when used as a sidebar (in CoolNovo, nee Chrome Plus)
+	// Unused in Chrome, and in fact make the popup auto-resize to bookmark name length which is annoying
+	/*setTimeout(function(){ // delaying execution due to stupid Chrome Linux bug
 		window.addEventListener('resize', function(){ // in case there's a resizer *outside* the popup page
 			if (resizerDown) return;
 			var width = window.innerWidth;
-			body.style.width = width + 'px';
+			//body.style.width = width + 'px';
 			localStorage.popupWidth = width;
 			clearMenu();
 		});
-	}, 1000);
+	}, 1000);*/
 	
 	// Closing dialogs on escape
 	var closeDialogs = function(){
@@ -1493,24 +1495,18 @@ function init() {
 	// Fix stupid Chrome build 536 bug
 	if (version.build >= 536) body.addClass('chrome-536');
 	
-	// Fix stupid wrong offset of the page, on Chrome Mac
-	setTimeout(function(){
-		var top = body.scrollTop;
-		if (top != 0) body.scrollTop = 0;
-	}, 1500);
+	// Fix stupid wrong offset of the page on Mac
+	if (os == 'mac'){
+		setTimeout(function(){
+			var top = body.scrollTop;
+			if (top != 0) body.scrollTop = 0;
+		}, 1500);
+	}
 	
 	if (localStorage.userstyle){
 		var style = document.createElement('style');
 		style.textContent = localStorage.userstyle;
 		style.inject(document.body);
-	}
-	
-	if (localStorage.popupHeight){
-		document.body.style.height = localStorage.popupHeight + 'px';
-	}
-	
-	if (localStorage.popupWidth){
-		document.body.style.width = localStorage.popupWidth + 'px';
 	}
 })(window);
 
