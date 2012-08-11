@@ -103,6 +103,7 @@ body.linux input{
 	outline: 0;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	overflow: hidden;
 }
 #results ul li a *,
 #tree ul li a *,
