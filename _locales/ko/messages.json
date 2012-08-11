@@ -102,7 +102,7 @@
   },
   "extDesc": {
     "description": "확장 프로그램 설명.",
-    "message": "북마크를 깔끔하게 트리 형식 파업으로 보여줍니다."
+    "message": "북마크를 깔끔한 트리 형식의 팝업으로 보여줍니다."
   },
   "extName": {
     "description": "확장프로그램 이름.",
