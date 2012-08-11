@@ -195,7 +195,7 @@ function init() {
 	});
 	
 	// Events for the tree
-	$tree.addEventListener('scroll', function(){
+	$tree.addEventListener('mousewheel', function(){
 		localStorage.scrollTop = $tree.scrollTop; // store "depth" of scroll (from top of popup) at each scroll event
 	});
 	$tree.addEventListener('focus', function(e){
