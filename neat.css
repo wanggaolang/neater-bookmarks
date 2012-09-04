@@ -2,7 +2,7 @@ body{
 	direction: __MSG_@@bidi_dir__;
 	font: menu;
 	color: #000;
-	background-color: #fff;
+	background-color: #eee;
 	margin: 0;
 	padding: 0;
 	cursor: default;
@@ -86,7 +86,6 @@ body.linux input{
 #results ul li,
 #tree ul,
 #tree ul li{
-	background-color: #eee; /* for all visible popup area, instead of only area visible before scrolling */
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -387,3 +386,15 @@ menu[type=context].hide-editables #folder-delete{
 	top: 0;
 	opacity: 1;
 }
+
+/* current Gmail-style scrollbar */
+/*::-webkit-scrollbar {
+	width: 9px;
+	background: #eee; /* same color as the background */
+/*}
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0,0,0,0.2);
+	border-top: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 1px solid rgba(0,0,0,0.07);
+	border-left: 1px solid rgba(0,0,0,0.1);
+}*/

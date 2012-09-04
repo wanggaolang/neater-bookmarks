@@ -140,3 +140,15 @@ fieldset p{
 	margin-top: 40px;
 	line-height: 2em;
 }
+
+/* current Gmail-style scrollbar */
+/*::-webkit-scrollbar {
+	width: 7px;
+	background: #eee; /* same color as the background */
+/*}
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0,0,0,0.2);
+	border-top: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 1px solid rgba(0,0,0,0.07);
+	border-left: 1px solid rgba(0,0,0,0.1);
+}*/
