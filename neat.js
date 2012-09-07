@@ -389,6 +389,7 @@ function init() {
 		var zoomLevel = localStorage.zoom ? localStorage.zoom.toInt()/100 : 1;
 		setTimeout(function(){
 			var neatTree = $tree.firstElementChild;
+			if (neatTree.offsetHeight == null) neatTree.offsetHeight = 0;
 			var fullHeight = (neatTree.offsetHeight + $tree.offsetTop + 16)*zoomLevel;
 			// Slide up faster than down
 			body.style.webkitTransitionDuration = (fullHeight < window.innerHeight) ? '.3s' : '.1s';
@@ -1177,7 +1178,7 @@ function init() {
 	$bookmarkContextMenu.addEventListener('mouseout', contextMouseOut);
 	$folderContextMenu.addEventListener('mouseout', contextMouseOut);
 	
-	// Drag and drop, baby
+	// Drag and drop
 	var draggedBookmark = null;
 	var draggedOut = false;
 	var canDrop = false;
@@ -1209,7 +1210,7 @@ function init() {
 		e.preventDefault();
 		var el = e.target;
 		var clientX = e.clientX;
-		var clientY = e.clientY;
+		var clientY = e.clientY + document.body.scrollTop;
 		if (el == draggedBookmark){
 			bookmarkClone.style.left = '-999px';
 			dropOverlay.style.left = '-999px';
@@ -1258,7 +1259,9 @@ function init() {
 			bookmarkClone.style.top = clientY + 'px';
 			bookmarkClone.style.left = (rtl ? (clientX-bookmarkClone.offsetWidth) : clientX) + 'px';
 			var elRect = el.getBoundingClientRect();
-			var top = (clientY >= elRect.top+elRect.height/2) ? elRect.bottom : elRect.top;
+			var elRectTop = elRect.top+document.body.scrollTop;
+			var elRectBottom = elRect.bottom+document.body.scrollTop;
+			var top = (clientY >= elRectTop+elRect.height/2) ? elRectBottom : elRectTop;
 			dropOverlay.className = 'bookmark';
 			dropOverlay.style.top = top + 'px';
 			dropOverlay.style.left = rtl ? '0px' : el.style.webkitPaddingStart.toInt() + 16 + 'px';
@@ -1269,19 +1272,19 @@ function init() {
 			bookmarkClone.style.top = clientY + 'px';
 			bookmarkClone.style.left = clientX + 'px';
 			var elRect = el.getBoundingClientRect();
+			var elRectHeight = elRect.height;
 			var top = null;
-			var elRectTop = elRect.top, elRectHeight = elRect.height;
 			var elParent = el.parentNode;
 			if (elParent.dataset.parentid != '0'){
 				if (clientY < elRectTop+elRectHeight*.3){
-					top = elRect.top;
+					top = elRectTop;
 				} else if (clientY > elRectTop+elRectHeight*.7 && !elParent.hasClass('open')){
-					top = elRect.bottom;
+					top = elRectBottom;
 				}
 			}
 			if (top == null){
 				dropOverlay.className = 'folder';
-				dropOverlay.style.top = elRect.top + 'px';
+				dropOverlay.style.top = elRectTop + 'px';
 				dropOverlay.style.left = '0px';
 				dropOverlay.style.width = elRect.width + 'px';
 				dropOverlay.style.height = elRect.height + 'px';
@@ -1319,10 +1322,11 @@ function init() {
 		}
 		var draggedBookmarkParent = draggedBookmark.parentNode;
 		var draggedID = draggedBookmarkParent.id.replace('neat-tree-item-', '');
-		var clientY = e.clientY/zoomLevel;
+		var clientY = (e.clientY + document.body.scrollTop)/zoomLevel;
 		if (el.tagName == 'A'){
 			var elRect = el.getBoundingClientRect();
-			var moveBottom = (clientY >= elRect.top+elRect.height/2);
+			var elRectTop = elRect.top + document.body.scrollTop;
+			var moveBottom = (clientY >= elRectTop+elRect.height/2);
 			chrome.bookmarks.get(id, function(node){
 				if (!node || !node.length) return;
 				node = node[0];
