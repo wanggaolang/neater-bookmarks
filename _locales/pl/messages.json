@@ -1,45 +1,89 @@
 {
-  "nope": {
-    "message": "Nie"
+  "accessibility": {
+    "message": "DUstawienia dostępności"
   },
-  "name": {
-    "description": "Nazwa zakładki lub folderu.",
-    "message": "Nazwa"
-  },
-  "openBookmarksIncognitoWindow": {
-    "message": "Otwórz wszystkie zakładki w oknie incognito"
-  },
-  "reportError": {
-    "message": "Zgłoś błąd"
-  },
-  "confirmDeleteFolderSubfoldersBookmarks": {
+  "confirmDeleteFolderBookmarks": {
+    "message": "Czy jesteś pewien, że chcesz usunąć folder $folderName$ i $bookmarkCount$ zakładek zawartych w tym folderze?",
     "placeholders": {
-      "subFolderCount": {
+      "bookmarkCount": {
         "content": "$2"
       },
+      "folderName": {
+        "content": "$1"
+      }
+    }
+  },
+  "confirmDeleteFolderSubfoldersBookmarks": {
+    "message": "Czy jesteś pewien, że chcesz usunąć folder $folderName$, $subFolderCount$ podfolderów i $bookmarkCount$ zakładek w nich zawartych?",
+    "placeholders": {
       "bookmarkCount": {
         "content": "$3"
       },
       "folderName": {
         "content": "$1"
+      },
+      "subFolderCount": {
+        "content": "$2"
       }
-    },
-    "message": "Czy jesteś pewien, że chcesz usunąć folder $folderName$, $subFolderCount$ podfolderów i $bookmarkCount$ zakładek w nich zawartych?"
+    }
   },
-  "noTitle": {
-    "description": "Tytuł dla zakładek bez tytułu bez adresów URL lub folderów bez tytułu",
-    "message": "(bez tytułu)"
+  "confirmDeleteFolderSubfolders": {
+    "message": "Czy jesteś pewien, że chcesz usunąć folder $folderName$ i $subFolderCount$ podfolderów?",
+    "placeholders": {
+      "folderName": {
+        "content": "$1"
+      },
+      "subFolderCount": {
+        "content": "$2"
+      }
+    }
   },
-  "edit": {
-    "message": "Edytuj..."
+  "confirmOpenBookmarks": {
+    "description": "Komunikat potwierdzenia otwarcia wszystkich zakładek",
+    "message": "Czy jesteś pewien, że chcesz otworzyć wszystkie ($count$) zakładki?",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "open": {
-    "description": "Akcja otwierania zakładek",
-    "message": "Otwórz"
+  "confirmOpenBookmarksNewIncognitoWindow": {
+    "description": "Komunikat potwierdzenia otwarcia wszystkich zakładek w nowym oknie incognito",
+    "message": "Czy jesteś pewien, że chcesz otworzyć wszystkie ($count$) zakładki w nowym oknie incognito?",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "searchBookmarks": {
-    "description": "Tekst zastępczy w polu wyszukiwania",
-    "message": "Przeszukaj zakładki"
+  "confirmOpenBookmarksNewWindow": {
+    "description": "Komunikat potwierdzenia otwarcia wszystkich zakładek w nowym oknie",
+    "message": "Czy jesteś pewien, że chcesz otworzyć wszystkie ($count$) zakładki w nowym oknie?",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "customIcon": {
+    "message": null
+  },
+  "customIconText": {
+    "message": null
+  },
+  "customStyles": {
+    "message": null
+  },
+  "customStylesText": {
+    "message": null,
+    "placeholders": {
+      "linkGithubGist": {
+        "content": null
+      }
+    }
+  },
+  "deleteEllipsis": {
+    "message": "Usuń..."
   },
   "delete": {
     "message": "Usuń"
@@ -47,126 +91,191 @@
   "editBookmark": {
     "message": "Edytuj zakładkę"
   },
-  "openNewTab": {
-    "message": "Otwórz w nowej karcie"
-  },
-  "optionConfirmOpenFolder": {
-    "message": "Wyświetl potwierdzenie podczas otwierania dużej ilości zakładek z folderu"
-  },
   "editFolder": {
     "message": "Edytuj folder"
   },
-  "parentFolder": {
-    "placeholders": {
-      "folderName": {
-        "example": "Pasek zakładek",
-        "content": "$1"
-      }
-    },
-    "description": "Informacje o folderze nadrzędnym wyświetlane w dymku zakładek w wynikach wyszukiwania.",
-    "message": "Folder nadrzędny: \"$folderName$\""
-  },
-  "confirmOpenBookmarksNewIncognitoWindow": {
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    },
-    "description": "Komunikat potwierdzenia otwarcia wszystkich zakładek w nowym oknie incognito",
-    "message": "Czy jesteś pewien, że chcesz otworzyć wszystkie ($count$) zakładki w nowym oknie incognito?"
-  },
-  "url": {
-    "message": "URL"
+  "edit": {
+    "message": "Edytuj..."
   },
   "errorOccured": {
     "message": "Ups, wystąpił błąd."
   },
-  "optionPopupStays": {
-    "message": "Okienko pozostaje otwarte podczas otwierania (lewy przycisk myszy) zakładek"
+  "extDesc": {
+    "description": null,
+    "message": null
   },
-  "optionCloseUnusedFolders": {
-    "message": "Zamknij nieużywane foldery, podczas otwierania folderu"
-  },
-  "accessibility": {
-    "message": "DUstawienia dostępności"
-  },
-  "deleteEllipsis": {
-    "message": "Usuń..."
-  },
-  "confirmDeleteFolderBookmarks": {
-    "placeholders": {
-      "folderName": {
-        "content": "$1"
-      },
-      "bookmarkCount": {
-        "content": "$2"
-      }
-    },
-    "message": "Czy jesteś pewien, że chcesz usunąć folder $folderName$ i $bookmarkCount$ zakładek zawartych w tym folderze?"
-  },
-  "save": {
-    "message": "Zapisz"
-  },
-  "confirmOpenBookmarksNewWindow": {
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    },
-    "description": "Komunikat potwierdzenia otwarcia wszystkich zakładek w nowym oknie",
-    "message": "Czy jesteś pewien, że chcesz otworzyć wszystkie ($count$) zakładki w nowym oknie?"
-  },
-  "confirmOpenBookmarks": {
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    },
-    "description": "Komunikat potwierdzenia otwarcia wszystkich zakładek",
-    "message": "Czy jesteś pewien, że chcesz otworzyć wszystkie ($count$) zakładki?"
-  },
-  "openBookmarks": {
-    "message": "Otwórz wszystkie zakładki"
-  },
-  "optionRememberPrevState": {
-    "message": "Pamiętaj poprzedni stan (pozycja przewijania i otwarte foldery)"
-  },
-  "openBookmarksNewWindow": {
-    "message": "Otwórz wszystkie zakładki w nowym oknie"
-  },
-  "optionOpenNewTab": {
-    "message": "Kliknięcie środkowym przyciskiem myszy lub wciśnięcie CTRL na klawiaturze i kliknięcie otwiera zakładkę na nowej karcie w tle (zamiast na pierwszym planie)"
-  },
-  "ignore": {
-    "message": "Ignoruj"
-  },
-  "openIncognitoWindow": {
-    "message": "Otwórz w oknie incognito"
+  "extName": {
+    "description": null,
+    "message": null
   },
   "general": {
     "message": "Ustawienia ogólne"
   },
+  "ignore": {
+    "message": "Ignoruj"
+  },
+  "name": {
+    "description": "Nazwa zakładki lub folderu.",
+    "message": "Nazwa"
+  },
+  "nope": {
+    "message": "Nie"
+  },
+  "noTitle": {
+    "description": "Tytuł dla zakładek bez tytułu bez adresów URL lub folderów bez tytułu",
+    "message": "(bez tytułu)"
+  },
+  "openBookmarksIncognitoWindow": {
+    "message": "Otwórz wszystkie zakładki w oknie incognito"
+  },
+  "openBookmarks": {
+    "message": "Otwórz wszystkie zakładki"
+  },
+  "openBookmarksNewWindow": {
+    "message": "Otwórz wszystkie zakładki w nowym oknie"
+  },
+  "open": {
+    "description": "Akcja otwierania zakładek",
+    "message": "Otwórz"
+  },
+  "openIncognitoWindow": {
+    "message": "Otwórz w oknie incognito"
+  },
+  "openNewTab": {
+    "message": "Otwórz w nowej karcie"
+  },
   "openNewWindow": {
     "message": "Otwórz w nowym oknie"
-  },
-  "optionZoom": {
-    "message": "Przybliżanie"
   },
   "optionClickNewTab": {
     "message": "Kliknięcie lewym przyciskiem myszy otwiera zakładkę w nowej karcie"
   },
+  "optionCloseUnusedFolders": {
+    "message": "Zamknij nieużywane foldery, podczas otwierania folderu"
+  },
+  "optionConfirmOpenFolder": {
+    "message": "Wyświetl potwierdzenie podczas otwierania dużej ilości zakładek z folderu"
+  },
+  "optionOpenNewTab": {
+    "message": "Kliknięcie środkowym przyciskiem myszy lub wciśnięcie CTRL na klawiaturze i kliknięcie otwiera zakładkę na nowej karcie w tle (zamiast na pierwszym planie)"
+  },
+  "optionPopupStays": {
+    "message": "Okienko pozostaje otwarte podczas otwierania (lewy przycisk myszy) zakładek"
+  },
+  "optionRememberPrevState": {
+    "message": "Pamiętaj poprzedni stan (pozycja przewijania i otwarte foldery)"
+  },
+  "optionsFooterText1": {
+    "description": null,
+    "message": null,
+    "placeholders": {
+      "neaterEmail": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText2": {
+    "message": null,
+    "placeholders": {
+      "extName": {
+        "content": null
+      },
+      "neaterGithub": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText3": {
+    "message": null,
+    "placeholders": {
+      "neaterFaq": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText4": {
+    "message": null,
+    "placeholders": {
+      "neaterIssues": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText5": {
+    "message": null,
+    "placeholders": {
+      "neaterIcons": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText6": {
+    "message": null,
+    "placeholders": {
+      "extName": {
+        "content": null
+      },
+      "neaterTranslate": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText7": {
+    "message": null,
+    "placeholders": {
+      "linkCheeAun": {
+        "content": null
+      },
+      "neatGithub": {
+        "content": null
+      }
+    }
+  },
   "options": {
     "message": "Opcje"
   },
-  "confirmDeleteFolderSubfolders": {
+  "optionZoom": {
+    "message": "Przybliżanie"
+  },
+  "parentFolder": {
+    "description": "Informacje o folderze nadrzędnym wyświetlane w dymku zakładek w wynikach wyszukiwania.",
+    "message": "Folder nadrzędny: \"$folderName$\"",
     "placeholders": {
-      "subFolderCount": {
-        "content": "$2"
-      },
       "folderName": {
-        "content": "$1"
+        "content": "$1",
+        "example": "Pasek zakładek"
       }
-    },
-    "message": "Czy jesteś pewien, że chcesz usunąć folder $folderName$ i $subFolderCount$ podfolderów?"
+    }
+  },
+  "reportedToDeveloper": {
+    "description": null,
+    "message": null
+  },
+  "reportError": {
+    "message": "Zgłoś błąd"
+  },
+  "reset": {
+    "message": null
+  },
+  "resetSettings": {
+    "message": null
+  },
+  "resetText": {
+    "message": null,
+    "placeholders": {
+      "extName": {
+        "content": null
+      }
+    }
+  },
+  "save": {
+    "message": "Zapisz"
+  },
+  "searchBookmarks": {
+    "description": "Tekst zastępczy w polu wyszukiwania",
+    "message": "Przeszukaj zakładki"
+  },
+  "url": {
+    "message": "URL"
   }
 }

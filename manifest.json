@@ -1,6 +1,6 @@
 {
 	"name": "__MSG_extName__",
-	"version": "0.9.4",
+	"version": "0.9.5",
 	"manifest_version": 2,
 	"description": "__MSG_extDesc__",
 	"icons": {
@@ -17,7 +17,10 @@
 		"scripts": ["background.js"]
 	},
 	"permissions": [
-		"<all_urls>", "chrome://favicon/", "bookmarks", "tabs"
+		"<all_urls>",
+		"chrome://favicon/",
+		"bookmarks",
+		"tabs"
 	],
 	"minimum_chrome_version": "9",
 	"default_locale": "en",

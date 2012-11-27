@@ -1,9 +1,9 @@
 {
   "accessibility": {
-    "message": "Les paramètres d'accessibilité"
+    "message": "輔助功能設置"
   },
   "confirmDeleteFolderBookmarks": {
-    "message": "Êtes-vous certain de bien vouloir supprimer le répertoire $folderName$ et $bookmarkCount$ signet(s) les contenant?",
+    "message": "您確定要刪除資料夾[$folderName$]（包含 $bookmarkCount$ 個書籤）？",
     "placeholders": {
       "bookmarkCount": {
         "content": "$2"
@@ -14,7 +14,7 @@
     }
   },
   "confirmDeleteFolderSubfoldersBookmarks": {
-    "message": "Êtes-vous certain de bien vouloir supprimer le répertoire $folderName$, $subFolderCount$ sous-répertoire(s) et $bookmarkCount$ signets les contenant?",
+    "message": "您確定要刪除資料夾[$folderName$]（包含 $subFolderCount$ 個子目錄和 $bookmarkCount$ 個書籤）？",
     "placeholders": {
       "bookmarkCount": {
         "content": "$3"
@@ -28,7 +28,7 @@
     }
   },
   "confirmDeleteFolderSubfolders": {
-    "message": "Êtes-vous certain de bien vouloir supprimer le répertoire $folderName$ et $subFolderCount$ sous-répertoire(s) les contenant?",
+    "message": "您確定要刪除資料夾[$folderName$]（包含 $subFolderCount$ 個子目錄）？",
     "placeholders": {
       "folderName": {
         "content": "$1"
@@ -39,8 +39,8 @@
     }
   },
   "confirmOpenBookmarks": {
-    "description": "Message de confirmation pour ouvrir tous les signets.",
-    "message": "Etes-vous certain de bien vouloir ouvrir tous les $count$ signets?",
+    "description": "開啟所有書籤時的確認訊息",
+    "message": "您確定要開啟 $count$ 個書籤？",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -48,8 +48,8 @@
     }
   },
   "confirmOpenBookmarksNewIncognitoWindow": {
-    "description": "Message de confirmation pour ouvrir tous les signets dans une nouvelle fenêtre de navigation incognito.",
-    "message": "Etes-vous certain de bien vouloir ouvrir tous les $count$ signets dans une nouvelle fenêtre incognito?",
+    "description": "在無痕式視窗中開啟所有書籤時的確認訊息",
+    "message": "您確定要在無痕式視窗中開啟 $count$ 個書籤？",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -57,8 +57,8 @@
     }
   },
   "confirmOpenBookmarksNewWindow": {
-    "description": "Message de confirmation pour ouvrir tous les signets dans une nouvelle fenêtre de navigation.",
-    "message": "Etes-vous certain de bien vouloir ouvrir tous les $count$ signets dans une nouvelle fenêtre?",
+    "description": "在新視窗中開啟所有書籤時的確認訊息",
+    "message": "您確定要在新視窗中開啟 $count$ 個書籤？",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -83,22 +83,22 @@
     }
   },
   "deleteEllipsis": {
-    "message": "Supprimer..."
+    "message": "刪除 ..."
   },
   "delete": {
-    "message": "Supprimer"
+    "message": "刪除"
   },
   "editBookmark": {
-    "message": "Éditer le signet"
+    "message": "編輯書籤"
   },
   "editFolder": {
-    "message": "Éditer le répertoire"
+    "message": "編輯資料夾"
   },
   "edit": {
-    "message": "Éditer..."
+    "message": "編輯 ..."
   },
   "errorOccured": {
-    "message": "Oups, une erreur s'est produite."
+    "message": "有錯誤出現"
   },
   "extDesc": {
     "description": null,
@@ -109,61 +109,61 @@
     "message": null
   },
   "general": {
-    "message": "Paramètres généraux"
+    "message": "常規設置"
   },
   "ignore": {
-    "message": "Ignorer"
+    "message": "忽略"
   },
   "name": {
-    "description": "Nom du signet ou du dossier.",
-    "message": "Nom"
+    "description": "書籤名或資料夾名",
+    "message": "名稱"
   },
   "nope": {
-    "message": "Non"
+    "message": "取消"
   },
   "noTitle": {
-    "description": "Le titre donné aux répertoires ou signets sans noms.",
-    "message": "(Sans titre)"
+    "description": "無 http(s) 開頭的書籤或無命名的資料夾的預設標題",
+    "message": "（無標題）"
   },
   "openBookmarksIncognitoWindow": {
-    "message": "Ouvrir tous les signets dans une nouvelle fenêtre incognito"
+    "message": "在無痕式視窗中開啟所有書籤"
   },
   "openBookmarks": {
-    "message": "Ouvrir tous les signets"
+    "message": "開啟所有書籤"
   },
   "openBookmarksNewWindow": {
-    "message": "Ouvrir tous les signets dans une nouvelle fenêtre"
+    "message": "在新視窗中開啟所有書籤"
   },
   "open": {
-    "description": "Action pour ouvrir les signets.",
-    "message": "Ouvrir"
+    "description": "開啟書籤的動作",
+    "message": "開啟"
   },
   "openIncognitoWindow": {
-    "message": "Ouvrir dans une fenêtre incognito"
+    "message": "在無痕式視窗中開啟"
   },
   "openNewTab": {
-    "message": "Ouvrir dans un nouvel onglet"
+    "message": "在新分頁中開啟"
   },
   "openNewWindow": {
-    "message": "Ouvrir dans une nouvelle fenêtre"
+    "message": "在新視窗中開啟"
   },
   "optionClickNewTab": {
-    "message": "Clic gauche ouvre le signet dans un nouvel onglet."
+    "message": "左擊書籤在新分頁中開啟"
   },
   "optionCloseUnusedFolders": {
-    "message": "Fermer les répertoires non utilisés lors de l'ouverture d’un répertoire."
+    "message": "展開資料夾時收合其他資料夾"
   },
   "optionConfirmOpenFolder": {
-    "message": "Afficher un message de confirmation lors de l’ouverture de beaucoup de signets d’un dossier."
+    "message": "開啟多個書籤前需確認"
   },
   "optionOpenNewTab": {
-    "message": "Clic milieu ou Ctrl-clic ouvre le signet dans un nouvel onglet en arrière-plan (au lieu d’en premier plan)."
+    "message": "用滑鼠中鍵或按住 Ctrl 鍵左擊在背景開啟書籤"
   },
   "optionPopupStays": {
-    "message": "La popup reste ouverte lors de l'ouverture (clic gauche) de signets."
+    "message": "開啟（滑鼠左擊）書籤時 Popup 頁面不關閉"
   },
   "optionRememberPrevState": {
-    "message": "Se rappeler de l’état précédent (position dans la page et répertoires ouverts)."
+    "message": "記住上次狀態（滾動軸位置、已展開資料夾）"
   },
   "optionsFooterText1": {
     "description": null,
@@ -232,18 +232,18 @@
     }
   },
   "options": {
-    "message": "Options"
+    "message": "設定"
   },
   "optionZoom": {
-    "message": "Zoom"
+    "message": "縮放"
   },
   "parentFolder": {
-    "description": "L’information des répertoires parents est affichée dans l’infobulle des signets dans la liste des résultats.",
-    "message": "Répertoire parent: \"$folderName$\"",
+    "description": "搜索結果列表中提示書籤所在目錄",
+    "message": "所在目錄：$folderName$",
     "placeholders": {
       "folderName": {
         "content": "$1",
-        "example": "Barre de favoris"
+        "example": "書籤欄"
       }
     }
   },
@@ -252,7 +252,7 @@
     "message": null
   },
   "reportError": {
-    "message": "Signaler l’erreur"
+    "message": "報告此錯誤"
   },
   "reset": {
     "message": null
@@ -269,13 +269,13 @@
     }
   },
   "save": {
-    "message": "Enregistrer"
+    "message": "儲存"
   },
   "searchBookmarks": {
-    "description": "Texte d’information du champ de recherche.",
-    "message": "Rechercher Signets"
+    "description": "搜索框裡的提示文字",
+    "message": "搜尋書籤"
   },
   "url": {
-    "message": "URL"
+    "message": "網址"
   }
 }

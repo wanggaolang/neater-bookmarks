@@ -1,6 +1,9 @@
 {
+  "accessibility": {
+    "message": null
+  },
   "confirmDeleteFolderBookmarks": {
-    "message": "هل تود حذف المجلد $folderName$ الذي يحتوي على $bookmarkCount$  وصلات",
+    "message": "هل تود حذف المجلد $folderName$ الذي يحتوي على $bookmarkCount$  وصلات؟",
     "placeholders": {
       "bookmarkCount": {
         "content": "$2"
@@ -10,19 +13,8 @@
       }
     }
   },
-  "confirmDeleteFolderSubfolders": {
-    "message": null,
-    "placeholders": {
-      "folderName": {
-        "content": "$1"
-      },
-      "subFolderCount": {
-        "content": "$2"
-      }
-    }
-  },
   "confirmDeleteFolderSubfoldersBookmarks": {
-    "message": null,
+    "message": "هل تود حذف المجلد $folderName$ مع ما يحتوي من $subFolderCount$  مجلدات فرعية و $bookmarkCount$ وصلات؟",
     "placeholders": {
       "bookmarkCount": {
         "content": "$3"
@@ -35,9 +27,20 @@
       }
     }
   },
+  "confirmDeleteFolderSubfolders": {
+    "message": "هل تود حذف المجلد $folderName$ مع ما يحتوي من $subFolderCount$  مجلدات فرعية؟",
+    "placeholders": {
+      "folderName": {
+        "content": "$1"
+      },
+      "subFolderCount": {
+        "content": "$2"
+      }
+    }
+  },
   "confirmOpenBookmarks": {
     "description": null,
-    "message": "هل انت متأكد انك تريد فتح جميع ال $count$ وصلات",
+    "message": "هل انت متأكد انك تريد فتح  $count$ وصلات معا؟",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -46,7 +49,7 @@
   },
   "confirmOpenBookmarksNewIncognitoWindow": {
     "description": null,
-    "message": null,
+    "message": "هل انت متأكد انك تريد فتح  $count$ وصلات معا في متصفح حفظ الخصوصية؟",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -55,21 +58,35 @@
   },
   "confirmOpenBookmarksNewWindow": {
     "description": "هل انت متأكد انك تريد فتح جميع الوصلات في نافذة جديدة؟",
-    "message": null,
+    "message": "هل انت متأكد انك تريد فتح $count$ وصلات في نافذة جديدة؟",
     "placeholders": {
       "count": {
         "content": "$1"
       }
     }
   },
-  "delete": {
-    "message": "حذف"
+  "customIcon": {
+    "message": "أيقونة مخصصة"
+  },
+  "customIconText": {
+    "message": "ابعاد الايقونة يجب ان تكون 19x19 او سيتم تغير مقاسها"
+  },
+  "customStyles": {
+    "message": null
+  },
+  "customStylesText": {
+    "message": null,
+    "placeholders": {
+      "linkGithubGist": {
+        "content": null
+      }
+    }
   },
   "deleteEllipsis": {
     "message": "حذف ..."
   },
-  "edit": {
-    "message": "تعديل..."
+  "delete": {
+    "message": "حذف"
   },
   "editBookmark": {
     "message": "تعديل وصلة"
@@ -77,8 +94,22 @@
   "editFolder": {
     "message": "تعديل مجلد"
   },
+  "edit": {
+    "message": "تعديل..."
+  },
   "errorOccured": {
     "message": "للأسف, حصل خطأ"
+  },
+  "extDesc": {
+    "description": null,
+    "message": null
+  },
+  "extName": {
+    "description": null,
+    "message": null
+  },
+  "general": {
+    "message": null
   },
   "ignore": {
     "message": "تجاهل"
@@ -87,43 +118,43 @@
     "description": "اسم الوصلة او المجلد",
     "message": "الاسم"
   },
+  "nope": {
+    "message": "لا"
+  },
   "noTitle": {
     "description": null,
     "message": null
   },
-  "nope": {
-    "message": "لا"
+  "openBookmarksIncognitoWindow": {
+    "message": "فتح جميع الوصلات في متصفح حفظ الخصوصية"
+  },
+  "openBookmarks": {
+    "message": "فتح جميع الوصلات"
+  },
+  "openBookmarksNewWindow": {
+    "message": "فتح جميع الوصلات في صفحة جديدة"
   },
   "open": {
     "description": null,
     "message": "فتح"
   },
-  "openBookmarks": {
-    "message": "فتح جميع الوصلات"
-  },
-  "openBookmarksIncognitoWindow": {
-    "message": null
-  },
-  "openBookmarksNewWindow": {
-    "message": null
-  },
   "openIncognitoWindow": {
-    "message": null
+    "message": "فتح متصفح حفظ الخصوصية"
   },
   "openNewTab": {
-    "message": null
+    "message": "فتح في تاب جديد"
   },
   "openNewWindow": {
-    "message": null
+    "message": "فتح في نافذة جديدة"
   },
   "optionClickNewTab": {
-    "message": null
+    "message": "زر الفارة الايسر للفتح في تاب جديد"
   },
   "optionCloseUnusedFolders": {
-    "message": null
+    "message": "اغلاق المجلدات غير المستعملة عند فتح مجلد جديد"
   },
   "optionConfirmOpenFolder": {
-    "message": null
+    "message": "عرض رسالة تاكيد عند فتح الكثير من الوصلات معا"
   },
   "optionOpenNewTab": {
     "message": null
@@ -134,37 +165,117 @@
   "optionRememberPrevState": {
     "message": null
   },
-  "optionZoom": {
-    "message": null
+  "optionsFooterText1": {
+    "description": null,
+    "message": "راسل مطور البرنامج على $neaterEmail$",
+    "placeholders": {
+      "neaterEmail": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText2": {
+    "message": "$extName$ هذا البرنامج مفتوح المصدر $neaterGithub$",
+    "placeholders": {
+      "extName": {
+        "content": null
+      },
+      "neaterGithub": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText3": {
+    "message": "الاسئلة المتكررة $neaterFaq$",
+    "placeholders": {
+      "neaterFaq": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText4": {
+    "message": "عرض المشاكل او التبليغ عن جديد $neaterIssues$",
+    "placeholders": {
+      "neaterIssues": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText5": {
+    "message": "استعراض الايقونات المخصصة $neaterIcons$",
+    "placeholders": {
+      "neaterIcons": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText6": {
+    "message": "ساعدنا في ترجمة $extName$ هنا $neaterTranslate$",
+    "placeholders": {
+      "extName": {
+        "content": null
+      },
+      "neaterTranslate": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText7": {
+    "message": null,
+    "placeholders": {
+      "linkCheeAun": {
+        "content": null
+      },
+      "neatGithub": {
+        "content": null
+      }
+    }
   },
   "options": {
     "message": "خيارات"
+  },
+  "optionZoom": {
+    "message": "تكبير"
   },
   "parentFolder": {
     "description": null,
     "message": null,
     "placeholders": {
       "folderName": {
-        "example": null,
-        "content": "$1"
+        "content": "$1",
+        "example": "شريط الوصلات"
       }
     }
+  },
+  "reportedToDeveloper": {
+    "description": "لقد تم ارسال رسالة بمعلومات الخطاء الى مطور البرنامج",
+    "message": "لقد تم ابلاغ مطور البرنامج"
   },
   "reportError": {
     "message": "بلغ عن خطأ"
   },
-  "reportedToDeveloper": {
-    "description": null,
-    "message": null
+  "reset": {
+    "message": "اعادة الى الوضع الاصلي"
+  },
+  "resetSettings": {
+    "message": "اعادة الاعدادات الى الوضع الاصلي"
+  },
+  "resetText": {
+    "message": "اعادة جميع اعدادات البرنامج $extName$ الى الوضع الاصلي",
+    "placeholders": {
+      "extName": {
+        "content": null
+      }
+    }
   },
   "save": {
     "message": "حفظ"
   },
   "searchBookmarks": {
     "description": null,
-    "message": null
+    "message": "ابحث عن وصلة"
   },
   "url": {
-    "message": null
+    "message": "URL:"
   }
 }

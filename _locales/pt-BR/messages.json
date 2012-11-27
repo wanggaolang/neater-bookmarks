@@ -1,9 +1,9 @@
 {
   "accessibility": {
-    "message": "Les paramètres d'accessibilité"
+    "message": "Configurações de Acessibilidade"
   },
   "confirmDeleteFolderBookmarks": {
-    "message": "Êtes-vous certain de bien vouloir supprimer le répertoire $folderName$ et $bookmarkCount$ signet(s) les contenant?",
+    "message": "Você tem certeza que quer apagar a pasta $folderName$ e $bookmarkCount$ favorito(s) incluído(s)?",
     "placeholders": {
       "bookmarkCount": {
         "content": "$2"
@@ -14,7 +14,7 @@
     }
   },
   "confirmDeleteFolderSubfoldersBookmarks": {
-    "message": "Êtes-vous certain de bien vouloir supprimer le répertoire $folderName$, $subFolderCount$ sous-répertoire(s) et $bookmarkCount$ signets les contenant?",
+    "message": "Você tem certeza que quer apagar a pasta $folderName$, $subFolderCount$ sub-pasta(s) e $bookmarkCount$ favorito(s) incluído(s)?",
     "placeholders": {
       "bookmarkCount": {
         "content": "$3"
@@ -28,7 +28,7 @@
     }
   },
   "confirmDeleteFolderSubfolders": {
-    "message": "Êtes-vous certain de bien vouloir supprimer le répertoire $folderName$ et $subFolderCount$ sous-répertoire(s) les contenant?",
+    "message": "Você tem certeza que quer apagar a pasta $folderName$ e $subFolderCount$ sub-pasta(s) incluída(s)?",
     "placeholders": {
       "folderName": {
         "content": "$1"
@@ -39,8 +39,8 @@
     }
   },
   "confirmOpenBookmarks": {
-    "description": "Message de confirmation pour ouvrir tous les signets.",
-    "message": "Etes-vous certain de bien vouloir ouvrir tous les $count$ signets?",
+    "description": "Mensagem de confirmação para abertura de todos os favoritos.",
+    "message": "Você tem certeza que quer abrir todos os $count$ favoritos?",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -48,8 +48,8 @@
     }
   },
   "confirmOpenBookmarksNewIncognitoWindow": {
-    "description": "Message de confirmation pour ouvrir tous les signets dans une nouvelle fenêtre de navigation incognito.",
-    "message": "Etes-vous certain de bien vouloir ouvrir tous les $count$ signets dans une nouvelle fenêtre incognito?",
+    "description": "Mensagem de confirmação para abertura de todos os favoritos em uma nova janela anônima.",
+    "message": "Você tem certeza que quer abrir todos os $count$ favoritos em uma nova janela anônima?",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -57,8 +57,8 @@
     }
   },
   "confirmOpenBookmarksNewWindow": {
-    "description": "Message de confirmation pour ouvrir tous les signets dans une nouvelle fenêtre de navigation.",
-    "message": "Etes-vous certain de bien vouloir ouvrir tous les $count$ signets dans une nouvelle fenêtre?",
+    "description": "Mensagem de confirmação para abertura de todos os favoritos em uma nova janela.",
+    "message": "Você tem certeza que quer abrir todos os $count$ favoritos em uma nova janela?",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -83,22 +83,22 @@
     }
   },
   "deleteEllipsis": {
-    "message": "Supprimer..."
+    "message": "Apagar..."
   },
   "delete": {
-    "message": "Supprimer"
+    "message": "Apagar"
   },
   "editBookmark": {
-    "message": "Éditer le signet"
+    "message": "Editar favorito"
   },
   "editFolder": {
-    "message": "Éditer le répertoire"
+    "message": "Editar pasta"
   },
   "edit": {
-    "message": "Éditer..."
+    "message": "Editar..."
   },
   "errorOccured": {
-    "message": "Oups, une erreur s'est produite."
+    "message": "Oops, ocorreu um erro."
   },
   "extDesc": {
     "description": null,
@@ -109,61 +109,61 @@
     "message": null
   },
   "general": {
-    "message": "Paramètres généraux"
+    "message": "Definições Gerais"
   },
   "ignore": {
-    "message": "Ignorer"
+    "message": "Ignorar"
   },
   "name": {
-    "description": "Nom du signet ou du dossier.",
-    "message": "Nom"
+    "description": "Nome do favorito ou pasta.",
+    "message": "Nome"
   },
   "nope": {
-    "message": "Non"
+    "message": "Nãaoo"
   },
   "noTitle": {
-    "description": "Le titre donné aux répertoires ou signets sans noms.",
-    "message": "(Sans titre)"
+    "description": "Título para favoritos sem título e sem URL http(s) ou pastas sem título.",
+    "message": "(sem título)"
   },
   "openBookmarksIncognitoWindow": {
-    "message": "Ouvrir tous les signets dans une nouvelle fenêtre incognito"
+    "message": "Abrir todos os favoritos em uma janela anônima"
   },
   "openBookmarks": {
-    "message": "Ouvrir tous les signets"
+    "message": "Abrir todos os favoritos"
   },
   "openBookmarksNewWindow": {
-    "message": "Ouvrir tous les signets dans une nouvelle fenêtre"
+    "message": "Abrir todos os favoritos em uma nova janela"
   },
   "open": {
-    "description": "Action pour ouvrir les signets.",
-    "message": "Ouvrir"
+    "description": "Ação para abrir favoritos",
+    "message": "Abrir"
   },
   "openIncognitoWindow": {
-    "message": "Ouvrir dans une fenêtre incognito"
+    "message": "Abrir em uma janela anônima"
   },
   "openNewTab": {
-    "message": "Ouvrir dans un nouvel onglet"
+    "message": "Abrir em uma nova guia"
   },
   "openNewWindow": {
-    "message": "Ouvrir dans une nouvelle fenêtre"
+    "message": "Abrir em uma nova janela"
   },
   "optionClickNewTab": {
-    "message": "Clic gauche ouvre le signet dans un nouvel onglet."
+    "message": "Clique com o botão esquerdo do mouse abre favorito em uma nova guia"
   },
   "optionCloseUnusedFolders": {
-    "message": "Fermer les répertoires non utilisés lors de l'ouverture d’un répertoire."
+    "message": "Fechar pastas não utilizadas quando abrir uma nova pasta."
   },
   "optionConfirmOpenFolder": {
-    "message": "Afficher un message de confirmation lors de l’ouverture de beaucoup de signets d’un dossier."
+    "message": "Mostrar confirmação quando abrir vários favoritos de uma pasta."
   },
   "optionOpenNewTab": {
-    "message": "Clic milieu ou Ctrl-clic ouvre le signet dans un nouvel onglet en arrière-plan (au lieu d’en premier plan)."
+    "message": "Clique com o botão do meio do mouse ou control-clique abre o favorito em um nova guia em 2º plano (em vez de 1º plano)."
   },
   "optionPopupStays": {
-    "message": "La popup reste ouverte lors de l'ouverture (clic gauche) de signets."
+    "message": "O pop-up continua aberto quando abrir um favorito (clicando com o botão esquerdo) ."
   },
   "optionRememberPrevState": {
-    "message": "Se rappeler de l’état précédent (position dans la page et répertoires ouverts)."
+    "message": "Lembrar do estado anterior (posição e pastas abertas)."
   },
   "optionsFooterText1": {
     "description": null,
@@ -232,18 +232,18 @@
     }
   },
   "options": {
-    "message": "Options"
+    "message": "Opções"
   },
   "optionZoom": {
     "message": "Zoom"
   },
   "parentFolder": {
-    "description": "L’information des répertoires parents est affichée dans l’infobulle des signets dans la liste des résultats.",
-    "message": "Répertoire parent: \"$folderName$\"",
+    "description": "Informação da pasta principal mostrada em dicas dos marcadores nas listas dos resultados das pesquisas.",
+    "message": "Pasta principal: \"$folderName$\"",
     "placeholders": {
       "folderName": {
         "content": "$1",
-        "example": "Barre de favoris"
+        "example": "Barra de favoritos"
       }
     }
   },
@@ -252,7 +252,7 @@
     "message": null
   },
   "reportError": {
-    "message": "Signaler l’erreur"
+    "message": "Reportar erro"
   },
   "reset": {
     "message": null
@@ -269,11 +269,11 @@
     }
   },
   "save": {
-    "message": "Enregistrer"
+    "message": "Salvar"
   },
   "searchBookmarks": {
-    "description": "Texte d’information du champ de recherche.",
-    "message": "Rechercher Signets"
+    "description": "Texto contido no campo de pesquisa.",
+    "message": "Procurar favoritos"
   },
   "url": {
     "message": "URL"

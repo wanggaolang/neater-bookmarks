@@ -1,45 +1,89 @@
 {
-  "nope": {
-    "message": "Ani nápad"
+  "accessibility": {
+    "message": "Přístupnost Nastavení"
   },
-  "name": {
-    "description": "Jméno adresáře se záložkami.",
-    "message": "Jméno"
-  },
-  "openBookmarksIncognitoWindow": {
-    "message": "Otevřít všechny záložky v anonymním okně"
-  },
-  "reportError": {
-    "message": "Nahlásit chybu"
-  },
-  "confirmDeleteFolderSubfoldersBookmarks": {
+  "confirmDeleteFolderBookmarks": {
+    "message": "Chcete smazat adresář $folderName$ a $bookmarkCount$ záložek v něm?",
     "placeholders": {
-      "subFolderCount": {
+      "bookmarkCount": {
         "content": "$2"
       },
+      "folderName": {
+        "content": "$1"
+      }
+    }
+  },
+  "confirmDeleteFolderSubfoldersBookmarks": {
+    "message": "Chcete smazat adresář $folderName$, $subFolderCount$ podadresářů a $bookmarkCount$ záložek v nich?",
+    "placeholders": {
       "bookmarkCount": {
         "content": "$3"
       },
       "folderName": {
         "content": "$1"
+      },
+      "subFolderCount": {
+        "content": "$2"
       }
-    },
-    "message": "Chcete smazat adresář $folderName$, $subFolderCount$ podadresářů a $bookmarkCount$ záložek v nich?"
+    }
   },
-  "noTitle": {
-    "description": "Titulek pro nepojmenované záložky bez http(s) adresy nebo nepojmenované adresáře.",
-    "message": "(bez titulku)"
+  "confirmDeleteFolderSubfolders": {
+    "message": "Chcete smazat adresář $folderName$ a $subFolderCount$ podadresářů v něm?",
+    "placeholders": {
+      "folderName": {
+        "content": "$1"
+      },
+      "subFolderCount": {
+        "content": "$2"
+      }
+    }
   },
-  "edit": {
-    "message": "Upravit..."
+  "confirmOpenBookmarks": {
+    "description": "Potvrzení otevření všech záložek.",
+    "message": "Chcete otevřít všech $count$ záložek?",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "open": {
-    "description": "Akce pro otevření záložek.",
-    "message": "Otevřít"
+  "confirmOpenBookmarksNewIncognitoWindow": {
+    "description": "Potvrzení otevření všech záložek v novém anonymním okně.",
+    "message": "Chcete otevřít všech $count$ záložek záložek v novém anonymním okně?",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "searchBookmarks": {
-    "description": "Text rezervující místo pro pole vyhledávání.",
-    "message": "Prohledat záložky"
+  "confirmOpenBookmarksNewWindow": {
+    "description": "Potvrzení otevření všech záložek v novém okně.",
+    "message": "Chcete otevřít všech $count$ záložek záložek v novém okně?",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "customIcon": {
+    "message": null
+  },
+  "customIconText": {
+    "message": null
+  },
+  "customStyles": {
+    "message": null
+  },
+  "customStylesText": {
+    "message": null,
+    "placeholders": {
+      "linkGithubGist": {
+        "content": null
+      }
+    }
+  },
+  "deleteEllipsis": {
+    "message": "Smazat..."
   },
   "delete": {
     "message": "Smazat"
@@ -47,129 +91,191 @@
   "editBookmark": {
     "message": "Upravit záložku"
   },
-  "openNewTab": {
-    "message": "Otevřít v nové kartě"
-  },
-  "optionConfirmOpenFolder": {
-    "message": "Zobrazovat dotaz při otevírání mnoha záložek."
-  },
   "editFolder": {
     "message": "Upravit adresář"
   },
-  "parentFolder": {
-    "placeholders": {
-      "folderName": {
-        "example": "Lišta záložek",
-        "content": "$1"
-      }
-    },
-    "description": "Zobrazení informací o nadřazeném adresáři v bublině ve výsledcích hledání.",
-    "message": "Nadřazený adresář: \"$folderName$\""
-  },
-  "confirmOpenBookmarksNewIncognitoWindow": {
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    },
-    "description": "Potvrzení otevření všech záložek v novém anonymním okně.",
-    "message": "Chcete otevřít všech $count$ záložek záložek v novém anonymním okně?"
-  },
-  "url": {
-    "message": "Adresa"
+  "edit": {
+    "message": "Upravit..."
   },
   "errorOccured": {
     "message": "Nastala nějaká chyba."
   },
-  "optionPopupStays": {
-    "message": "Vyskakovací okno zůstává otevřené při otevírání záložek levým tlačítkem."
+  "extDesc": {
+    "description": null,
+    "message": null
   },
-  "optionCloseUnusedFolders": {
-    "message": "Při otevírání adresáře ostatní zavřít."
-  },
-  "accessibility": {
-    "message": "Přístupnost"
-  },
-  "deleteEllipsis": {
-    "message": "Smazat..."
-  },
-  "confirmDeleteFolderBookmarks": {
-    "placeholders": {
-      "folderName": {
-        "content": "$1"
-      },
-      "bookmarkCount": {
-        "content": "$2"
-      }
-    },
-    "message": "Chcete smazat adresář $folderName$ a $bookmarkCount$ záložek v něm?"
-  },
-  "save": {
-    "message": "Uložit"
-  },
-  "confirmOpenBookmarksNewWindow": {
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    },
-    "description": "Potvrzení otevření všech záložek v novém okně.",
-    "message": "Chcete otevřít všech $count$ záložek záložek v novém okně?"
-  },
-  "confirmOpenBookmarks": {
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    },
-    "description": "Potvrzení otevření všech záložek.",
-    "message": "Chcete otevřít všech $count$ záložek?"
-  },
-  "openBookmarks": {
-    "message": "Otevřít všechny záložky"
-  },
-  "optionRememberPrevState": {
-    "message": "Pamatovat předchozí stav (posun a otevřené adresáře)."
-  },
-  "openBookmarksNewWindow": {
-    "message": "Otevřít všechny záložky v novém okně"
-  },
-  "optionOpenNewTab": {
-    "message": "Kliknutí prostředním tlačítkem, nebo s přidržením klávesy Ctrl otevře záložku v kartě na pozadí (místo otevření karty v popředí)."
-  },
-  "ignore": {
-    "message": "Ignorovat"
-  },
-  "openIncognitoWindow": {
-    "message": "Otevřít anonymní okno"
+  "extName": {
+    "description": null,
+    "message": null
   },
   "general": {
     "message": "Obecná nastavení"
   },
-  "accessibility": {
-    "message": "Přístupnost Nastavení"
+  "ignore": {
+    "message": "Ignorovat"
+  },
+  "name": {
+    "description": "Jméno adresáře se záložkami.",
+    "message": "Jméno"
+  },
+  "nope": {
+    "message": "Ani nápad"
+  },
+  "noTitle": {
+    "description": "Titulek pro nepojmenované záložky bez http(s) adresy nebo nepojmenované adresáře.",
+    "message": "(bez titulku)"
+  },
+  "openBookmarksIncognitoWindow": {
+    "message": "Otevřít všechny záložky v anonymním okně"
+  },
+  "openBookmarks": {
+    "message": "Otevřít všechny záložky"
+  },
+  "openBookmarksNewWindow": {
+    "message": "Otevřít všechny záložky v novém okně"
+  },
+  "open": {
+    "description": "Akce pro otevření záložek.",
+    "message": "Otevřít"
+  },
+  "openIncognitoWindow": {
+    "message": "Otevřít anonymní okno"
+  },
+  "openNewTab": {
+    "message": "Otevřít v nové kartě"
   },
   "openNewWindow": {
     "message": "Otevřít v novém okně"
   },
-  "optionZoom": {
-    "message": "Zvětšení"
-  },
   "optionClickNewTab": {
     "message": "Kliknutí levým tlačítkem otevře záložku v nové kartě."
+  },
+  "optionCloseUnusedFolders": {
+    "message": "Při otevírání adresáře ostatní zavřít."
+  },
+  "optionConfirmOpenFolder": {
+    "message": "Zobrazovat dotaz při otevírání mnoha záložek."
+  },
+  "optionOpenNewTab": {
+    "message": "Kliknutí prostředním tlačítkem, nebo s přidržením klávesy Ctrl otevře záložku v kartě na pozadí (místo otevření karty v popředí)."
+  },
+  "optionPopupStays": {
+    "message": "Vyskakovací okno zůstává otevřené při otevírání záložek levým tlačítkem."
+  },
+  "optionRememberPrevState": {
+    "message": "Pamatovat předchozí stav (posun a otevřené adresáře)."
+  },
+  "optionsFooterText1": {
+    "description": null,
+    "message": null,
+    "placeholders": {
+      "neaterEmail": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText2": {
+    "message": null,
+    "placeholders": {
+      "extName": {
+        "content": null
+      },
+      "neaterGithub": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText3": {
+    "message": null,
+    "placeholders": {
+      "neaterFaq": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText4": {
+    "message": null,
+    "placeholders": {
+      "neaterIssues": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText5": {
+    "message": null,
+    "placeholders": {
+      "neaterIcons": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText6": {
+    "message": null,
+    "placeholders": {
+      "extName": {
+        "content": null
+      },
+      "neaterTranslate": {
+        "content": null
+      }
+    }
+  },
+  "optionsFooterText7": {
+    "message": null,
+    "placeholders": {
+      "linkCheeAun": {
+        "content": null
+      },
+      "neatGithub": {
+        "content": null
+      }
+    }
   },
   "options": {
     "message": "Nastavení"
   },
-  "confirmDeleteFolderSubfolders": {
+  "optionZoom": {
+    "message": "Zvětšení"
+  },
+  "parentFolder": {
+    "description": "Zobrazení informací o nadřazeném adresáři v bublině ve výsledcích hledání.",
+    "message": "Nadřazený adresář: \"$folderName$\"",
     "placeholders": {
-      "subFolderCount": {
-        "content": "$2"
-      },
       "folderName": {
-        "content": "$1"
+        "content": "$1",
+        "example": "Lišta záložek"
       }
-    },
-    "message": "Chcete smazat adresář $folderName$ a $subFolderCount$ podadresářů v něm?"
+    }
+  },
+  "reportedToDeveloper": {
+    "description": null,
+    "message": null
+  },
+  "reportError": {
+    "message": "Nahlásit chybu"
+  },
+  "reset": {
+    "message": null
+  },
+  "resetSettings": {
+    "message": null
+  },
+  "resetText": {
+    "message": null,
+    "placeholders": {
+      "extName": {
+        "content": null
+      }
+    }
+  },
+  "save": {
+    "message": "Uložit"
+  },
+  "searchBookmarks": {
+    "description": "Text rezervující místo pro pole vyhledávání.",
+    "message": "Prohledat záložky"
+  },
+  "url": {
+    "message": "Adresa"
   }
 }

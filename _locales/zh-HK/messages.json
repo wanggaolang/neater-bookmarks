@@ -1,9 +1,9 @@
 {
   "accessibility": {
-    "message": "Postavke pristupačnosti"
+    "message": null
   },
   "confirmDeleteFolderBookmarks": {
-    "message": "Jeste li sigurni da želite obrisati mapu oznaka \"$folderName$\" koja sadrži $bookmarkCount$ zabilježaka/zabilješke ?",
+    "message": "您確定要刪除文件夾[$folderName$]（包含 $bookmarkCount$ 個書籤）？",
     "placeholders": {
       "bookmarkCount": {
         "content": "$2"
@@ -14,7 +14,7 @@
     }
   },
   "confirmDeleteFolderSubfoldersBookmarks": {
-    "message": "Jeste li sigurni da želite obrisati mapu oznaka \"$folderName$\" koja sadrži $subFolderCount$ podmapa/e/u i $bookmarkCount$ zabilješki/e?",
+    "message": "您確定要刪除文件夾[$folderName$]（包含 $subFolderCount$ 個子目錄和 $bookmarkCount$ 個書籤）？",
     "placeholders": {
       "bookmarkCount": {
         "content": "$3"
@@ -28,7 +28,7 @@
     }
   },
   "confirmDeleteFolderSubfolders": {
-    "message": "Jeste li sigurni da želite obrisati mapu \"$folderName$\" koja sadrži $subFolderCount$ podmapa/e/u ?",
+    "message": "您確定要刪除文件夾[$folderName$]（包含 $subFolderCount$ 個子目錄）？",
     "placeholders": {
       "folderName": {
         "content": "$1"
@@ -39,8 +39,8 @@
     }
   },
   "confirmOpenBookmarks": {
-    "description": "Jeste li sigurni da želite otvoriti sve oznake odjednom ?",
-    "message": "Jeste li sigurni da želite otvoriti $count$ oznaku/e/a odjednom ?",
+    "description": "打開所有書籤時的確認信息",
+    "message": "您確定要打開 $count$ 個書籤？",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -48,8 +48,8 @@
     }
   },
   "confirmOpenBookmarksNewIncognitoWindow": {
-    "description": "Poruka koja se pojavi kada želimo otvoriti sve oznake u novome inkognito prozoru.",
-    "message": "Jeste li sigurni da želite otvoriti $count$ oznaku/e/a u novom inkognito prozoru ?",
+    "description": "在隱身窗口中打開所有書籤時的確認信息",
+    "message": "您確定要在隱身窗口中打開 $count$ 個書籤？",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -57,8 +57,8 @@
     }
   },
   "confirmOpenBookmarksNewWindow": {
-    "description": "Poruka koja se pojavi kada želimo otvoriti sve oznake u novome prozoru.",
-    "message": "Jeste li sigurni da želite otvoriti $count$ oznaka/e/u u novom prozoru ?",
+    "description": "在新窗口中打開所有書籤時的確認信息",
+    "message": "您確定要在新窗口中打開 $count$ 個書籤？",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -78,27 +78,27 @@
     "message": null,
     "placeholders": {
       "linkGithubGist": {
-        "content": null
+        "content": "$1"
       }
     }
   },
   "deleteEllipsis": {
-    "message": "Obriši..."
+    "message": "刪除 ..."
   },
   "delete": {
-    "message": "Obriši"
+    "message": "刪除"
   },
   "editBookmark": {
-    "message": "Uredi oznaku"
+    "message": "編輯書籤"
   },
   "editFolder": {
-    "message": "Uredi mapu"
+    "message": "編輯文件夾"
   },
   "edit": {
-    "message": "Uredi..."
+    "message": "編輯 ..."
   },
   "errorOccured": {
-    "message": "Pojavila se pogreška."
+    "message": "有錯誤出現"
   },
   "extDesc": {
     "description": null,
@@ -109,68 +109,68 @@
     "message": null
   },
   "general": {
-    "message": "Opće postavke"
+    "message": null
   },
   "ignore": {
-    "message": "Zanemari"
+    "message": "忽略"
   },
   "name": {
-    "description": "Ime oznake ili mape",
-    "message": "Ime"
+    "description": "書籤名或文件夾名",
+    "message": "名字"
   },
   "nope": {
-    "message": "Ne"
+    "message": "取消"
   },
   "noTitle": {
-    "description": "Naziv za oznaku(bookmark) koji nema URL-a ili ima neimenovanih prozora",
-    "message": "(neimenovano)"
+    "description": "沒 http(s) 開頭的書籤或沒命名的文件夾的統一標題",
+    "message": "（沒標題）"
   },
   "openBookmarksIncognitoWindow": {
-    "message": "Otvori sve oznake u Inkognito prozoru"
+    "message": "在隱身窗口中打開所有書籤"
   },
   "openBookmarks": {
-    "message": "Otvori sve oznake"
+    "message": "打開所有書籤"
   },
   "openBookmarksNewWindow": {
-    "message": "Otvori sve oznake u novom prozoru"
+    "message": "在新窗口中打開所有書籤"
   },
   "open": {
-    "description": "Opcija koja služi za otvaranje oznaka ( bookmarkov-a)",
-    "message": "Otvori"
+    "description": "打開書籤的動作",
+    "message": "打開"
   },
   "openIncognitoWindow": {
-    "message": "Otvori u Inkognito prozoru"
+    "message": "在隱身窗口中打開"
   },
   "openNewTab": {
-    "message": "Otvori u novoj kartici"
+    "message": "在新標籤頁中打開"
   },
   "openNewWindow": {
-    "message": "Otvori u novom prozoru"
+    "message": "在新窗口中打開"
   },
   "optionClickNewTab": {
-    "message": "Lijevim klikom otvarate oznaku u novoj kartici"
+    "message": "左擊書籤在新標籤頁中打開"
   },
   "optionCloseUnusedFolders": {
-    "message": "Zatvori nekorištene mape kad otvaram novu mapu"
+    "message": "展開文件夾時折疊其他文件夾"
   },
   "optionConfirmOpenFolder": {
-    "message": "Prikaži upozorenje prilikom otvaranja velikog broja oznaka iz mape"
+    "message": "打開多個書籤前需確認"
   },
   "optionOpenNewTab": {
-    "message": "Srednji klik (ili CONTROL+klik ) otvara oznaku u novoj kartici, ali se ne prebacuje automatski na nju."
+    "message": "用鼠標中鍵或按住 Ctrl 鍵左擊在後台打開書籤"
   },
   "optionPopupStays": {
-    "message": "Iskočni prozor ekstenzije će ostati otvoren nakon otvaranja oznake."
+    "message": "打開（鼠標左擊）書籤時 Popup 頁面不關閉"
   },
   "optionRememberPrevState": {
-    "message": "Zapamti prijašnje stanje (poziciju u iskočnom prozoru i mape koje su bile otvorene)"
+    "message": "記住上次狀態（滾動條位置、所打開文件夾）"
   },
   "optionsFooterText1": {
     "description": null,
     "message": null,
     "placeholders": {
       "neaterEmail": {
-        "content": null
+        "content": "$1"
       }
     }
   },
@@ -178,10 +178,10 @@
     "message": null,
     "placeholders": {
       "extName": {
-        "content": null
+        "content": "$1"
       },
       "neaterGithub": {
-        "content": null
+        "content": "$2"
       }
     }
   },
@@ -189,7 +189,7 @@
     "message": null,
     "placeholders": {
       "neaterFaq": {
-        "content": null
+        "content": "$1"
       }
     }
   },
@@ -197,7 +197,7 @@
     "message": null,
     "placeholders": {
       "neaterIssues": {
-        "content": null
+        "content": "$1"
       }
     }
   },
@@ -205,7 +205,7 @@
     "message": null,
     "placeholders": {
       "neaterIcons": {
-        "content": null
+        "content": "$1"
       }
     }
   },
@@ -213,10 +213,10 @@
     "message": null,
     "placeholders": {
       "extName": {
-        "content": null
+        "content": "$1"
       },
       "neaterTranslate": {
-        "content": null
+        "content": "$2"
       }
     }
   },
@@ -224,35 +224,35 @@
     "message": null,
     "placeholders": {
       "linkCheeAun": {
-        "content": null
+        "content": "$2"
       },
       "neatGithub": {
-        "content": null
+        "content": "$1"
       }
     }
   },
   "options": {
-    "message": "Mogućnosti/Opcije"
+    "message": "選項"
   },
   "optionZoom": {
-    "message": "Zoomiranje"
+    "message": "縮放"
   },
   "parentFolder": {
-    "description": "Informacije koje se pojave kada držimo pokazivač miša na oznaci(bookmark-u) u rezultatima pretraživanja a govore nam u kojoj se mapi(folder-u) pronađena oznaka nalazi.",
-    "message": "Pripada mapi \"$folderName$\"",
+    "description": "搜索結果列表中提示書籤所在目錄",
+    "message": "所在目錄：$folderName$",
     "placeholders": {
       "folderName": {
         "content": "$1",
-        "example": "Traka oznaka"
+        "example": "書籤欄"
       }
     }
   },
   "reportedToDeveloper": {
     "description": null,
-    "message": null
+    "message": "此問題已上報給作者"
   },
   "reportError": {
-    "message": "Prijavi grešku"
+    "message": "報告此錯誤"
   },
   "reset": {
     "message": null
@@ -264,18 +264,18 @@
     "message": null,
     "placeholders": {
       "extName": {
-        "content": null
+        "content": "$1"
       }
     }
   },
   "save": {
-    "message": "Spremi"
+    "message": "保存"
   },
   "searchBookmarks": {
-    "description": "Sivi (placeholder) tekst koji se pojavi kada otvorimo NeatBookmarks pored ikone za pretraživanje, uglavnom je odmah u fokusu, tako da trebamo kliknuti na prazan prostor u ekstenziji ili na neku od mapa.",
-    "message": "Pretraži oznake"
+    "description": "搜索框裡的提示文字",
+    "message": "書籤搜索"
   },
   "url": {
-    "message": "URL"
+    "message": "網址"
   }
 }

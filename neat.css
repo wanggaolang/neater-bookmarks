@@ -11,6 +11,7 @@ body{
 	overflow: hidden;
 	width: 320px;
 	height: 530px;
+	max-height: 530px; /* prevent double scrollbars in popup */
 }
 body.linux{
 	font-size: 12px;
@@ -81,6 +82,7 @@ body.linux input{
 	box-flex: 1;
 	text-shadow: 0 1px #f6f6f6;
 	position: relative;
+    overflow-y: auto;
 }
 #results ul,
 #results ul li,

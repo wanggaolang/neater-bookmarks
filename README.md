@@ -39,7 +39,3 @@ No idea. That's why Neater Bookmarks exists.
 # Technical Details
 
 Neater Bookmarks was powered by [MooTools](http://mootools.net/), but is now powered by Neatools, a custom-coded smaller subset of MooTools. [CodeMirror](http://codemirror.net/) is used for the Custom CSS section.
-
-# Additional Credits
-
-Thanks to [Vyacheslav Grischuk](https://plus.google.com/102311113806447158021) for posting the popup scrollbar fix [here](https://chrome.google.com/webstore/detail/pnbmhmngmdppipkoognikjonljicbhnl/reviews).

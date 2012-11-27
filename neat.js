@@ -12,6 +12,7 @@ function init() {
 	var navigator = window.navigator;
 	var body = document.body;
 	var _m = chrome.i18n.getMessage;
+	var _b = chrome.extension.getBackgroundPage().console;
 	
 	// Error alert
 	var AlertDialog = {
@@ -25,6 +26,7 @@ function init() {
 		}
 	};
 	window.addEventListener('error', function(){
+		// comment below line to disable overlay when an error occurs; dev still gets info and users don't find it as annoying
 		AlertDialog.open('<strong>' + _m('errorOccured') + '</strong><br>' + _m('reportedToDeveloper'));
 	}, false);
 	
@@ -79,7 +81,7 @@ function init() {
 	// Adaptive bookmark tooltips
 	var adaptBookmarkTooltips = function(){
 		var bookmarks = document.querySelectorAll('li.child a');
-		for (var i=0, l=bookmarks.length; i<l; i++){
+		for (var i = 0, l = bookmarks.length; i < l; i++){
 			var bookmark = bookmarks[i];
 			if (bookmark.hasClass('titled')){
 				if (bookmark.scrollWidth <= bookmark.offsetWidth){
@@ -109,17 +111,16 @@ function init() {
 		tooltipURL = tooltipURL.htmlspecialchars();
 		var name = title.htmlspecialchars() || (httpsPattern.test(url) ? url.replace(httpsPattern, '') : _m('noTitle'));
 		return '<a href="' + u + '"' + ' title="' + tooltipURL + '" tabindex="0" ' + extras + '>'
-			+ '<img src="' + favicon + '" width="16" height="16" alt=""><i>' + name + '</i>'
-			+ '</a>';
+			+ '<img src="' + favicon + '" width="16" height="16" alt=""><i>' + name + '</i>' + '</a>';
 	};
 	
 	var generateHTML = function(data, level){
 		if (!level) level = 0;
-		var paddingStart = 14*level;
+		var paddingStart = 14 * level;
 		var group = (level == 0) ? 'tree' : 'group';
 		var html = '<ul role="' + group + '" data-level="' + level + '">';
 		
-		for (var i=0, l=data.length; i<l; i++){
+		for (var i = 0, l = data.length; i < l; i++){
 			var d = data[i];
 			var children = d.children;
 			var title = d.title.htmlspecialchars();
@@ -137,15 +138,14 @@ function init() {
 				}
 				html += '<li class="parent' + open + '"' + idHTML + ' role="treeitem" aria-expanded="' + isOpen + '" data-parentid="' + parentID + '">'
 					+ '<span tabindex="0" style="-webkit-padding-start: ' + paddingStart + 'px"><b class="twisty"></b>'
-					+ '<img src="folder.png" width="16" height="16" alt=""><i>' + (title || _m('noTitle')) + '</i>'
-					+ '</span>';
+					+ '<img src="folder.png" width="16" height="16" alt=""><i>' + (title || _m('noTitle')) + '</i>' + '</span>';
 				if (isOpen){
 					if (children){
-						html += generateHTML(children, level+1);
+						html += generateHTML(children, level + 1);
 					} else {
 						(function(_id){
 							chrome.bookmarks.getChildren(_id, function(children){
-								var html = generateHTML(children, level+1);
+								var html = generateHTML(children, level + 1);
 								var div = document.createElement('div');
 								div.innerHTML = html;
 								var ul = div.querySelector('ul');
@@ -165,11 +165,13 @@ function init() {
 		return html;
 	};
 	
+	//var $tree = new Object($('tree'));
 	var $tree = $('tree');
 	chrome.bookmarks.getTree(function(tree){
 		var html = generateHTML(tree[0].children);
 		$tree.innerHTML = html;
 		
+		// try to recall scroll position (from top of popup) when tree opened, otherwise set to 0
 		if (rememberState) $tree.scrollTop = localStorage.scrollTop || 0;
 		
 		var focusID = localStorage.focusID;
@@ -195,8 +197,8 @@ function init() {
 	});
 	
 	// Events for the tree
-	$tree.addEventListener('mousewheel', function(){
-		localStorage.scrollTop = $tree.scrollTop; // store "depth" of scroll (from top of popup) at each scroll event
+	$tree.addEventListener('scroll', function(){
+		localStorage.scrollTop = $tree.scrollTop; // store scroll position at each scroll event
 	});
 	$tree.addEventListener('focus', function(e){
 		var el = e.target;
@@ -225,7 +227,7 @@ function init() {
 		if (!children){
 			var id = parent.id.replace('neat-tree-item-', '');
 			chrome.bookmarks.getChildren(id, function(children){
-				var html = generateHTML(children, parseInt(parent.parentNode.dataset.level)+1);
+				var html = generateHTML(children, parseInt(parent.parentNode.dataset.level) + 1);
 				var div = document.createElement('div');
 				div.innerHTML = html;
 				var ul = div.querySelector('ul');
@@ -236,7 +238,7 @@ function init() {
 		}
 		if (closeUnusedFolders && expanded){
 			var siblings = parent.getSiblings('li');
-			for (var i=0, l=siblings.length; i<l; i++){
+			for (var i = 0, l = siblings.length; i < l; i++){
 				var li = siblings[i];
 				if (li.hasClass('parent')){
 					li.removeClass('open').setAttribute('aria-expanded', false);
@@ -300,7 +302,7 @@ function init() {
 				results = results.slice(0, 100); // 100 is enough
 			}
 			var html = '<ul role="list">';
-			for (var i=0, l=results.length; i<l; i++){
+			for (var i = 0, l = results.length; i < l; i++){
 				var result = results[i];
 				var id = result.id;
 				html += '<li data-parentid="' + result.parentId + '" id="results-item-' + id + '" role="listitem">'
@@ -386,11 +388,11 @@ function init() {
 	
 	// Popup auto-height
 	var resetHeight = function(){
-		var zoomLevel = localStorage.zoom ? localStorage.zoom.toInt()/100 : 1;
+		var zoomLevel = localStorage.zoom ? localStorage.zoom.toInt() / 100 : 1;
 		setTimeout(function(){
 			var neatTree = $tree.firstElementChild;
-			if (neatTree.offsetHeight == null) neatTree.offsetHeight = 0;
-			var fullHeight = (neatTree.offsetHeight + $tree.offsetTop + 16)*zoomLevel;
+			if ((neatTree.offsetHeight == null) || !neatTree.offsetHeight) neatTree.offsetHeight = 0;
+			var fullHeight = (neatTree.offsetHeight + $tree.offsetTop + 16) * zoomLevel;
 			// Slide up faster than down
 			body.style.webkitTransitionDuration = (fullHeight < window.innerHeight) ? '.3s' : '.1s';
 			var maxHeight = screen.height - window.screenY - 50;
@@ -482,7 +484,6 @@ function init() {
 	var bookmarkClickStayOpen = !!localStorage.bookmarkClickStayOpen;
 	var openBookmarksLimit = 10;
 	var actions = {
-		
 		openBookmark: function(url){
 			chrome.tabs.getSelected(null, function(tab){
 				chrome.tabs.update(tab.id, {
@@ -529,7 +530,7 @@ function init() {
 					url: urls.shift(),
 					selected: selected // first tab will be selected
 				});
-				for (var i=0, l=urls.length; i<l; i++){
+				for (var i = 0, l = urls.length; i < l; i++){
 					chrome.tabs.create({
 						url: urls[i],
 						selected: false
@@ -664,7 +665,6 @@ function init() {
 				if (nearLi) nearLi.querySelector('a, span').focus();
 			}
 		}
-		
 	};
 	
 	var middleClickBgTab = !!localStorage.middleClickBgTab;
@@ -1045,16 +1045,16 @@ function init() {
 				keyBufferTimer = setTimeout(function(){ keyBuffer = ''; }, 500);
 				var lis = this.querySelectorAll('ul>li');
 				var items = [];
-				for (var i=0, l=lis.length; i<l; i++){
+				for (var i = 0, l = lis.length; i < l; i++){
 					var li = lis[i];
 					if (li.parentNode.offsetHeight) items.push(li.firstElementChild);
 				}
-				var pattern = new RegExp('^'+keyBuffer.escapeRegExp(), 'i');
+				var pattern = new RegExp('^' + keyBuffer.escapeRegExp(), 'i');
 				var batch = [];
 				var startFind = false;
 				var found = false;
 				var activeElement = document.activeElement;
-				for (var i=0, l=items.length; i<l; i++){
+				for (var i = 0, l = items.length; i < l; i++){
 					var item = items[i];
 					if (item == activeElement){
 						startFind = true;
@@ -1069,7 +1069,7 @@ function init() {
 					}
 				}
 				if (!found){
-					for (var i=0, l=batch.length; i<l; i++){
+					for (var i = 0, l = batch.length; i < l; i++){
 						var item = batch[i];
 						if (pattern.test(item.textContent.trim())){
 							item.focus();
@@ -1194,7 +1194,7 @@ function init() {
 			e.preventDefault();
 			draggedOut = false;
 			draggedBookmark = el;
-			if (localStorage.zoom) zoomLevel = localStorage.zoom.toInt()/100;
+			if (localStorage.zoom) zoomLevel = (localStorage.zoom.toInt() / 100);
 			bookmarkClone.innerHTML = el.innerHTML;
 			el.focus();
 		}
@@ -1229,14 +1229,14 @@ function init() {
 		var treeScrollHeight = $tree.scrollHeight, treeOffsetHeight = $tree.offsetHeight;
 		if (treeScrollHeight > treeOffsetHeight){ // only scroll when it's scrollable
 			var treeScrollTop = $tree.scrollTop;
-			if (clientY <= treeTop+scrollTreeSpot){
+			if (clientY <= treeTop + scrollTreeSpot){
 				if (treeScrollTop == 0){
 					stopScrollTree();
 				} else if (!scrollTree) scrollTree = setInterval(function(){
 					$tree.scrollByLines(-1);
 					dropOverlay.style.left = '-999px';
 				}, scrollTreeInterval);
-			} else if (clientY >= treeBottom-scrollTreeSpot){
+			} else if (clientY >= treeBottom - scrollTreeSpot){
 				if (treeScrollTop == (treeScrollHeight - treeOffsetHeight)){
 					stopScrollTree();
 				} else if (!scrollTree) scrollTree = setInterval(function(){
@@ -1257,11 +1257,11 @@ function init() {
 		if (el.tagName == 'A'){
 			canDrop = true;
 			bookmarkClone.style.top = clientY + 'px';
-			bookmarkClone.style.left = (rtl ? (clientX-bookmarkClone.offsetWidth) : clientX) + 'px';
+			bookmarkClone.style.left = (rtl ? (clientX - bookmarkClone.offsetWidth) : clientX) + 'px';
 			var elRect = el.getBoundingClientRect();
-			var elRectTop = elRect.top+document.body.scrollTop;
-			var elRectBottom = elRect.bottom+document.body.scrollTop;
-			var top = (clientY >= elRectTop+elRect.height/2) ? elRectBottom : elRectTop;
+			var elRectTop = elRect.top + document.body.scrollTop;
+			var elRectBottom = elRect.bottom + document.body.scrollTop;
+			var top = (clientY >= elRectTop + elRect.height / 2) ? elRectBottom : elRectTop;
 			dropOverlay.className = 'bookmark';
 			dropOverlay.style.top = top + 'px';
 			dropOverlay.style.left = rtl ? '0px' : el.style.webkitPaddingStart.toInt() + 16 + 'px';
@@ -1276,9 +1276,9 @@ function init() {
 			var top = null;
 			var elParent = el.parentNode;
 			if (elParent.dataset.parentid != '0'){
-				if (clientY < elRectTop+elRectHeight*.3){
+				if (clientY < elRectTop + elRectHeight * .3){
 					top = elRectTop;
-				} else if (clientY > elRectTop+elRectHeight*.7 && !elParent.hasClass('open')){
+				} else if (clientY > (elRectTop + elRectHeight * .7) && !elParent.hasClass('open')){
 					top = elRectBottom;
 				}
 			}
@@ -1322,11 +1322,11 @@ function init() {
 		}
 		var draggedBookmarkParent = draggedBookmark.parentNode;
 		var draggedID = draggedBookmarkParent.id.replace('neat-tree-item-', '');
-		var clientY = (e.clientY + document.body.scrollTop)/zoomLevel;
+		var clientY = (e.clientY + document.body.scrollTop) / zoomLevel;
 		if (el.tagName == 'A'){
 			var elRect = el.getBoundingClientRect();
 			var elRectTop = elRect.top + document.body.scrollTop;
-			var moveBottom = (clientY >= elRectTop+elRect.height/2);
+			var moveBottom = (clientY >= elRectTop + elRect.height / 2);
 			chrome.bookmarks.get(id, function(node){
 				if (!node || !node.length) return;
 				node = node[0];
@@ -1348,9 +1348,9 @@ function init() {
 			var elRectTop = elRect.top, elRectHeight = elRect.height;
 			var elParent = el.parentNode;
 			if (elParent.dataset.parentid != '0'){
-				if (clientY < elRectTop+elRectHeight*.3){
+				if (clientY < elRectTop + elRectHeight * .3){
 					move = 1;
-				} else if (clientY > elRectTop+elRectHeight*.7 && !elParent.hasClass('open')){
+				} else if (clientY > elRectTop + elRectHeight * .7 && !elParent.hasClass('open')){
 					move = 2;
 				}
 			}
@@ -1376,8 +1376,8 @@ function init() {
 					parentId: id
 				}, function(){
 					var ul = elParent.querySelector('ul');
-					var level = parseInt(elParent.parentNode.dataset.level)+1;
-					draggedBookmark.style.webkitPaddingStart = (14*level) + 'px';
+					var level = parseInt(elParent.parentNode.dataset.level) + 1;
+					draggedBookmark.style.webkitPaddingStart = (14 * level) + 'px';
 					if (ul){
 						draggedBookmarkParent.inject(ul);
 					} else {
@@ -1420,7 +1420,7 @@ function init() {
 		adaptBookmarkTooltips();
 	});
 	// Code for right-side resizing when used as a sidebar (in CoolNovo, nee Chrome Plus)
-	// Unused in Chrome, and in fact make the popup auto-resize to bookmark name length which is annoying
+	// Unused in Chrome, and makes the popup auto-resize to bookmark name length
 	/*setTimeout(function(){ // delaying execution due to stupid Chrome Linux bug
 		window.addEventListener('resize', function(){ // in case there's a resizer *outside* the popup page
 			if (resizerDown) return;
@@ -1465,7 +1465,7 @@ function init() {
 			delete body.dataset.zoom;
 			localStorage.removeItem('zoom');
 		} else {
-			var z = (val>0) ? currentZoom+10 : currentZoom-10;
+			var z = (val>0) ? currentZoom + 10 : currentZoom - 10;
 			z = Math.min(150, Math.max(90, z));
 			body.dataset.zoom = z;
 			localStorage.zoom = z;

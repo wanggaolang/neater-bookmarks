@@ -172,7 +172,7 @@
       "neaterEmail": {
         "content": "$1"
       }
-	}
+    }
   },
   "optionsFooterText2": {
     "message": "$extName$ is open source! $neaterGithub$",
@@ -183,7 +183,7 @@
       "neaterGithub": {
         "content": "$2"
       }
-  	}
+    }
   },
   "optionsFooterText3": {
     "message": "FAQ: $neaterFaq$",
@@ -191,7 +191,7 @@
       "neaterFaq": {
         "content": "$1"
       }
-	}
+    }
   },
   "optionsFooterText4": {
     "message": "View issues or submit a new one: $neaterIssues$",
@@ -199,7 +199,7 @@
       "neaterIssues": {
         "content": "$1"
       }
-	}
+    }
   },
   "optionsFooterText5": {
     "message": "Browse custom icons: $neaterIcons$",
@@ -207,7 +207,7 @@
       "neaterIcons": {
         "content": "$1"
       }
-	}
+    }
   },
   "optionsFooterText6": {
     "message": "Help translate $extName$ at $neaterTranslate$",
@@ -218,18 +218,18 @@
       "neaterTranslate": {
         "content": "$2"
       }
-	}
+    }
   },
   "optionsFooterText7": {
     "message": "Based on $neatGithub$ by $linkCheeAun$",
     "placeholders": {
-      "neatGithub": {
-        "content": "$1"
-      },
       "linkCheeAun": {
         "content": "$2"
+      },
+      "neatGithub": {
+        "content": "$1"
       }
-	}
+    }
   },
   "options": {
     "message": "Options"
@@ -266,7 +266,7 @@
       "extName": {
         "content": "$1"
       }
-	}
+    }
   },
   "save": {
     "message": "Save"

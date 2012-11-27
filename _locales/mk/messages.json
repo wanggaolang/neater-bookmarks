@@ -39,8 +39,8 @@
     }
   },
   "confirmOpenBookmarks": {
-    "message": "Дали сте сигурни дека сакате да го отворите сите $count$ обележувачи?",
     "description": "Confirmation message for opening all bookmarks.",
+    "message": "Дали сте сигурни дека сакате да го отворите сите $count$ обележувачи?",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -48,8 +48,8 @@
     }
   },
   "confirmOpenBookmarksNewIncognitoWindow": {
-    "message": "Дали сте сигурни дека сакате да го отворите сите $count$ обележувачи во нов прозорец инкогнито?",
     "description": "Confirmation message for opening all bookmarks in a new incognito window.",
+    "message": "Дали сте сигурни дека сакате да го отворите сите $count$ обележувачи во нов прозорец инкогнито?",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -57,8 +57,8 @@
     }
   },
   "confirmOpenBookmarksNewWindow": {
-    "message": "Дали сте сигурни дека сакате да го отворите сите $count$ обележувачи во нов прозорец?",
     "description": "Confirmation message for opening all bookmarks in a new window.",
+    "message": "Дали сте сигурни дека сакате да го отворите сите $count$ обележувачи во нов прозорец?",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -101,12 +101,12 @@
     "message": "Упс, грешка грешка."
   },
   "extDesc": {
-    "message": "А neater обележувачи дрво скокачки прозорец.",
-    "description": "The extension description."
+    "description": "The extension description.",
+    "message": "А neater обележувачи дрво скокачки прозорец."
   },
   "extName": {
-    "message": "Neater Ознаки",
-    "description": "The extension name."
+    "description": "The extension name.",
+    "message": "Neater Ознаки"
   },
   "general": {
     "message": "Општи поставувања"
@@ -115,15 +115,15 @@
     "message": "Игнорирај"
   },
   "name": {
-    "message": "Име",
-    "description": "Name of bookmark or folder."
+    "description": "Name of bookmark or folder.",
+    "message": "Име"
   },
   "nope": {
     "message": "Не бе"
   },
   "noTitle": {
-    "message": "(Нема наслов)",
-    "description": "The title for untitled bookmarks with no http(s) URL or untitled folders."
+    "description": "The title for untitled bookmarks with no http(s) URL or untitled folders.",
+    "message": "(Нема наслов)"
   },
   "openBookmarksIncognitoWindow": {
     "message": "Отвори ги сите обележувачи во инкогнито прозорецот"
@@ -135,8 +135,8 @@
     "message": "Отвори ги сите обележувачи во нов прозорец"
   },
   "open": {
-    "message": "Отворете",
-    "description": "Action to open bookmarks."
+    "description": "Action to open bookmarks.",
+    "message": "Отворете"
   },
   "openIncognitoWindow": {
     "message": "Отвори во инкогнито прозорецот"
@@ -166,8 +166,8 @@
     "message": "Запомни претходната состојба (дојдете позиција и го отвори папки)."
   },
   "optionsFooterText1": {
-    "message": "Е-пошта на инвеститорот во $neaterEmail$",
     "description": "Footer text for the Options page",
+    "message": "Е-пошта на инвеститорот во $neaterEmail$",
     "placeholders": {
       "neaterEmail": {
         "content": "$1"
@@ -223,11 +223,11 @@
   "optionsFooterText7": {
     "message": "Врз основа на $neatGithub$ од $linkCheeAun$",
     "placeholders": {
-      "neatGithub": {
-        "content": "$1"
-      },
       "linkCheeAun": {
         "content": "$2"
+      },
+      "neatGithub": {
+        "content": "$1"
       }
     }
   },
@@ -238,8 +238,8 @@
     "message": "Зум"
   },
   "parentFolder": {
-    "message": "Папка: \" $folderName$ \"",
     "description": "Parent folder information displayed in the tooltip of bookmarks in search results list.",
+    "message": "Папка: \" $folderName$ \"",
     "placeholders": {
       "folderName": {
         "content": "$1",
@@ -248,8 +248,8 @@
     }
   },
   "reportedToDeveloper": {
-    "message": "Ова е забележано на инвеститорот.",
-    "description": "A message for an error occured in the extension, has been reported to the developer."
+    "description": "A message for an error occured in the extension, has been reported to the developer.",
+    "message": "Ова е забележано на инвеститорот."
   },
   "reportError": {
     "message": "Извештај Грешка"
@@ -272,8 +272,8 @@
     "message": "Зачувај"
   },
   "searchBookmarks": {
-    "message": "Пребарување Ознаки",
-    "description": "Placeholder text for search field."
+    "description": "Placeholder text for search field.",
+    "message": "Пребарување Ознаки"
   },
   "url": {
     "message": "Рачно"
