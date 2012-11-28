@@ -25,8 +25,8 @@ function init() {
 			body.removeClass('needAlert');
 		}
 	};
+	// popdown toast when an error occurs
 	window.addEventListener('error', function(){
-		// comment below line to disable overlay when an error occurs; dev still gets info and users don't find it as annoying
 		AlertDialog.open('<strong>' + _m('errorOccured') + '</strong><br>' + _m('reportedToDeveloper'));
 	}, false);
 	
@@ -165,7 +165,6 @@ function init() {
 		return html;
 	};
 	
-	//var $tree = new Object($('tree'));
 	var $tree = $('tree');
 	chrome.bookmarks.getTree(function(tree){
 		var html = generateHTML(tree[0].children);
@@ -391,14 +390,15 @@ function init() {
 		var zoomLevel = localStorage.zoom ? localStorage.zoom.toInt() / 100 : 1;
 		setTimeout(function(){
 			var neatTree = $tree.firstElementChild;
-			if ((neatTree.offsetHeight == null) || !neatTree.offsetHeight) neatTree.offsetHeight = 0;
-			var fullHeight = (neatTree.offsetHeight + $tree.offsetTop + 16) * zoomLevel;
-			// Slide up faster than down
-			body.style.webkitTransitionDuration = (fullHeight < window.innerHeight) ? '.3s' : '.1s';
-			var maxHeight = screen.height - window.screenY - 50;
-			var height = Math.max(200, Math.min(fullHeight, maxHeight));
-			body.style.height = height + 'px';
-			localStorage.popupHeight = height;
+			if (neatTree){
+				var fullHeight = (neatTree.offsetHeight + $tree.offsetTop + 16) * zoomLevel;
+				// Slide up faster than down
+				body.style.webkitTransitionDuration = (fullHeight < window.innerHeight) ? '.3s' : '.1s';
+				var maxHeight = screen.height - window.screenY - 50;
+				var height = Math.max(200, Math.min(fullHeight, maxHeight));
+				body.style.height = height + 'px';
+				localStorage.popupHeight = height;
+			}
 		}, 100);
 	};
 	if (!searchMode) resetHeight();
@@ -1272,8 +1272,10 @@ function init() {
 			bookmarkClone.style.top = clientY + 'px';
 			bookmarkClone.style.left = clientX + 'px';
 			var elRect = el.getBoundingClientRect();
-			var elRectHeight = elRect.height;
 			var top = null;
+			var elRectTop = elRect.top + document.body.scrollTop;
+			var elRectHeight = elRect.height;
+			var elRectBottom = elRect.bottom + document.body.scrollTop;
 			var elParent = el.parentNode;
 			if (elParent.dataset.parentid != '0'){
 				if (clientY < elRectTop + elRectHeight * .3){
@@ -1332,15 +1334,17 @@ function init() {
 				node = node[0];
 				var index = node.index;
 				var parentId = node.parentId;
-				chrome.bookmarks.move(draggedID, {
-					parentId: parentId,
-					index: moveBottom ? ++index : index
-				}, function(){
-					draggedBookmarkParent.inject(elParent, moveBottom ? 'after' : 'before');
-					draggedBookmark.style.webkitPaddingStart = el.style.webkitPaddingStart;
-					draggedBookmark.focus();
-					onDrop();
-				});
+				if (draggedID){
+					chrome.bookmarks.move(draggedID, {
+						parentId: parentId,
+						index: moveBottom ? ++index : index
+					}, function(){
+						draggedBookmarkParent.inject(elParent, moveBottom ? 'after' : 'before');
+						draggedBookmark.style.webkitPaddingStart = el.style.webkitPaddingStart;
+						draggedBookmark.focus();
+						onDrop();
+					});
+				}
 			});
 		} else if (el.tagName == 'SPAN'){
 			var elRect = el.getBoundingClientRect();
