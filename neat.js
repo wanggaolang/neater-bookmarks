@@ -170,7 +170,7 @@ function init() {
 		var html = generateHTML(tree[0].children);
 		$tree.innerHTML = html;
 		
-		// try to recall scroll position (from top of popup) when tree opened, otherwise set to 0
+		// recall scroll position (from top of popup) when tree opened
 		if (rememberState) $tree.scrollTop = localStorage.scrollTop || 0;
 		
 		var focusID = localStorage.focusID;
@@ -486,8 +486,13 @@ function init() {
 	var actions = {
 		openBookmark: function(url){
 			chrome.tabs.getSelected(null, function(tab){
+				try {
+                    decodedURL = decodeURIComponent(url);
+                } catch (e) {
+                    return;
+                }
 				chrome.tabs.update(tab.id, {
-					url: decodeURIComponent(url)
+					url: decodedURL
 				});
 				if (!bookmarkClickStayOpen) setTimeout(window.close, 200);
 			});
@@ -1423,17 +1428,6 @@ function init() {
 		resizerDown = false;
 		adaptBookmarkTooltips();
 	});
-	// Code for right-side resizing when used as a sidebar (in CoolNovo, nee Chrome Plus)
-	// Unused in Chrome, and makes the popup auto-resize to bookmark name length
-	/*setTimeout(function(){ // delaying execution due to stupid Chrome Linux bug
-		window.addEventListener('resize', function(){ // in case there's a resizer *outside* the popup page
-			if (resizerDown) return;
-			var width = window.innerWidth;
-			//body.style.width = width + 'px';
-			localStorage.popupWidth = width;
-			clearMenu();
-		});
-	}, 1000);*/
 	
 	// Closing dialogs on escape
 	var closeDialogs = function(){
