@@ -65,23 +65,6 @@
       }
     }
   },
-  "customIcon": {
-    "message": null
-  },
-  "customIconText": {
-    "message": null
-  },
-  "customStyles": {
-    "message": null
-  },
-  "customStylesText": {
-    "message": null,
-    "placeholders": {
-      "linkGithubGist": {
-        "content": null
-      }
-    }
-  },
   "deleteEllipsis": {
     "message": "Obriši..."
   },
@@ -99,14 +82,6 @@
   },
   "errorOccured": {
     "message": "Pojavila se pogreška."
-  },
-  "extDesc": {
-    "description": null,
-    "message": null
-  },
-  "extName": {
-    "description": null,
-    "message": null
   },
   "general": {
     "message": "Opće postavke"
@@ -165,72 +140,6 @@
   "optionRememberPrevState": {
     "message": "Zapamti prijašnje stanje (poziciju u iskočnom prozoru i mape koje su bile otvorene)"
   },
-  "optionsFooterText1": {
-    "description": null,
-    "message": null,
-    "placeholders": {
-      "neaterEmail": {
-        "content": null
-      }
-    }
-  },
-  "optionsFooterText2": {
-    "message": null,
-    "placeholders": {
-      "extName": {
-        "content": null
-      },
-      "neaterGithub": {
-        "content": null
-      }
-    }
-  },
-  "optionsFooterText3": {
-    "message": null,
-    "placeholders": {
-      "neaterFaq": {
-        "content": null
-      }
-    }
-  },
-  "optionsFooterText4": {
-    "message": null,
-    "placeholders": {
-      "neaterIssues": {
-        "content": null
-      }
-    }
-  },
-  "optionsFooterText5": {
-    "message": null,
-    "placeholders": {
-      "neaterIcons": {
-        "content": null
-      }
-    }
-  },
-  "optionsFooterText6": {
-    "message": null,
-    "placeholders": {
-      "extName": {
-        "content": null
-      },
-      "neaterTranslate": {
-        "content": null
-      }
-    }
-  },
-  "optionsFooterText7": {
-    "message": null,
-    "placeholders": {
-      "linkCheeAun": {
-        "content": null
-      },
-      "neatGithub": {
-        "content": null
-      }
-    }
-  },
   "options": {
     "message": "Mogućnosti/Opcije"
   },
@@ -247,26 +156,8 @@
       }
     }
   },
-  "reportedToDeveloper": {
-    "description": null,
-    "message": null
-  },
   "reportError": {
     "message": "Prijavi grešku"
-  },
-  "reset": {
-    "message": null
-  },
-  "resetSettings": {
-    "message": null
-  },
-  "resetText": {
-    "message": null,
-    "placeholders": {
-      "extName": {
-        "content": null
-      }
-    }
   },
   "save": {
     "message": "Spremi"

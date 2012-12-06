@@ -2,9 +2,11 @@
 
 A neat bookmarks tree popup extension for Google Chrome. Licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
 
-Translation help is welcomed through [WebTranslateIt](https://webtranslateit.com/en/projects/4222-Neater-Bookmarks).
-
 Based on [Neat Bookmarks](https://github.com/cheeaun/neat-bookmarks) by [Lim Chee Aun](http://cheeaun.com/).
+
+Some code has been inspired by, or copied from, [vBookmarks](https://github.com/windviki/vBookmarks). Thanks windviki!
+
+Translation help is welcomed through [WebTranslateIt](https://webtranslateit.com/en/projects/4222-Neater-Bookmarks).
 
 # FAQ
 
