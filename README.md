@@ -4,7 +4,7 @@ A neat bookmarks tree popup extension for Google Chrome. Licensed under the [MIT
 
 Based on [Neat Bookmarks](https://github.com/cheeaun/neat-bookmarks) by [Lim Chee Aun](http://cheeaun.com/).
 
-Some code has been inspired by, or copied from, [vBookmarks](https://github.com/windviki/vBookmarks). Thanks windviki!
+Some code has been inspired by (or even copied from!) [vBookmarks](https://github.com/windviki/vBookmarks). Thanks windviki!
 
 Translation help is welcomed through [WebTranslateIt](https://webtranslateit.com/en/projects/4222-Neater-Bookmarks).
 
@@ -24,7 +24,7 @@ Check out [this issue](http://crbug.com/51084).
 
 ### Is there a keyboard shortcut to open Neater Bookmarks (popup)?
 
-Currently, there's no way to implement it. Check out [this issue](http://crbug.com/27702).
+One can be added by going to the [Extensions tab](chrome://extensions/) and clicking the "Configure commands" link at the bottom of the page. In the popup, type a keyboard command (such as Ctrl+B) in the box next to "Neater Bookmarks". The keyboard command will open the popup with focus on the search box; typing will immediately search bookmarks while pressing the arrow keys will navigate the bookmark tree.
 
 ### Does Neater Bookmarks support Google Bookmarks?
 

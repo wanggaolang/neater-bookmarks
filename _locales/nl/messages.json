@@ -1,9 +1,9 @@
 {
   "accessibility": {
-    "message": "Accessibility Settings"
+    "message": "Toegankelijkheid Instellingen"
   },
   "confirmDeleteFolderBookmarks": {
-    "message": "Are you sure you want to delete $folderName$ folder and $bookmarkCount$ bookmark(s) in it?",
+    "message": "Weet je zeker dat je de $folderName$ folder en $boobmarkCount$ bladwijzer(s) wilt verwijderen?",
     "placeholders": {
       "bookmarkCount": {
         "content": "$2"
@@ -14,7 +14,7 @@
     }
   },
   "confirmDeleteFolderSubfoldersBookmarks": {
-    "message": "Are you sure you want to delete $folderName$ folder, $subFolderCount$ sub-folder(s) and $bookmarkCount$ bookmark(s) in it?",
+    "message": "Weet je zeker dat je de $folderName$ folder, $subFolderCount$ sub-folder(s) en $bookmarkCount$ bladwijzer(s) wilt verwijderen?",
     "placeholders": {
       "bookmarkCount": {
         "content": "$3"
@@ -28,7 +28,7 @@
     }
   },
   "confirmDeleteFolderSubfolders": {
-    "message": "Are you sure you want to delete $folderName$ folder and $subFolderCount$ sub-folder(s) in it?",
+    "message": "Weet je zeker dat je de $folderName$ folder en $subFolderCount$ sub-folder(s) wilt verwijderen?",
     "placeholders": {
       "folderName": {
         "content": "$1"
@@ -40,7 +40,7 @@
   },
   "confirmOpenBookmarks": {
     "description": "Confirmation message for opening all bookmarks.",
-    "message": "Are you sure you want to open all $count$ bookmarks?",
+    "message": "Weet je zeker dat je alle $count$ bladwijzers wilt openen?",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -49,7 +49,7 @@
   },
   "confirmOpenBookmarksNewIncognitoWindow": {
     "description": "Confirmation message for opening all bookmarks in a new incognito window.",
-    "message": "Are you sure you want to open all $count$ bookmarks in a new incognito window?",
+    "message": "Weet je zeker dat je alle $count$ bladwijzers in een nieuw incognito venster wilt openen?",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -58,7 +58,7 @@
   },
   "confirmOpenBookmarksNewWindow": {
     "description": "Confirmation message for opening all bookmarks in a new window.",
-    "message": "Are you sure you want to open all $count$ bookmarks in a new window?",
+    "message": "Weet je zeker dat je alle $count$ bladwijzers in een nieuw venster wilt openen?",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -66,16 +66,16 @@
     }
   },
   "customIcon": {
-    "message": "Custom Icon"
+    "message": "Aangespast Symbool"
   },
   "customIconText": {
-    "message": "The icon must be 19&times;19 or it will be resized."
+    "message": "Het symbool moet 19&times;19 zijn, of het zal herschaald worden."
   },
   "customStyles": {
-    "message": "Custom Styles"
+    "message": "Aangepaste Stijlen"
   },
   "customStylesText": {
-    "message": "This requires some CSS skills. Hack at your own risk. Code sharing is encouraged via $linkGithubGist$.",
+    "message": "Dit vereist wat CSS vaardigheden. Hack op je eigen risico. Het delen van de code wordt aangemoedigd via $linkGithubGist$.",
     "placeholders": {
       "linkGithubGist": {
         "content": "$1"
@@ -83,87 +83,87 @@
     }
   },
   "deleteEllipsis": {
-    "message": "Delete..."
+    "message": "Verwijderen..."
   },
   "delete": {
-    "message": "Delete"
+    "message": "Verwijderen"
   },
   "editBookmark": {
-    "message": "Edit bookmark"
+    "message": "Bladwijzer bewerken"
   },
   "editFolder": {
-    "message": "Edit folder"
+    "message": "Folder bewerken"
   },
   "edit": {
-    "message": "Edit..."
+    "message": "Bewerken..."
   },
   "errorOccured": {
-    "message": "Oops, an error occurred."
+    "message": "Oeps, er heeft zich een fout voorgedaan."
   },
   "extDesc": {
     "description": "The extension description.",
-    "message": "A neater bookmarks tree popup."
+    "message": "Een nettere bladwijzers-tree pop-up."
   },
   "extName": {
     "description": "The extension name.",
-    "message": "Neater Bookmarks"
+    "message": "Nettere Bladwijzers"
   },
   "general": {
-    "message": "General Settings"
+    "message": "Algemene Instellingen"
   },
   "ignore": {
-    "message": "Ignore"
+    "message": "Negeren"
   },
   "name": {
     "description": "Name of bookmark or folder.",
-    "message": "Name"
+    "message": "Naam"
   },
   "nope": {
-    "message": "Nope"
+    "message": "Nee hoor"
   },
   "noTitle": {
     "description": "The title for untitled bookmarks with no http(s) URL or untitled folders.",
-    "message": "(no title)"
+    "message": "(geen titel)"
   },
   "openBookmarksIncognitoWindow": {
-    "message": "Open All Bookmarks in Incognito Window"
+    "message": "Open Alle Bladwijzers in Incognito Venster"
   },
   "openBookmarks": {
-    "message": "Open All Bookmarks"
+    "message": "Open Alle Bladwijzers"
   },
   "openBookmarksNewWindow": {
-    "message": "Open All Bookmarks in New Window"
+    "message": "Open Alle Bladwijzers in Nieuw Venster"
   },
   "open": {
     "description": "Action to open bookmarks.",
-    "message": "Open"
+    "message": "Openen"
   },
   "openIncognitoWindow": {
-    "message": "Open in Incognito Window"
+    "message": "Open in Incognito Venster"
   },
   "openNewTab": {
-    "message": "Open in New Tab"
+    "message": "Open in Nieuw Tabblad"
   },
   "openNewWindow": {
-    "message": "Open in New Window"
+    "message": "Open in Nieuw Venster"
   },
   "optionClickNewTab": {
-    "message": "Left-click opens bookmark in new tab."
+    "message": "Linker-muisknop opent bladwijzers in een nieuw tabblad."
   },
   "optionCloseUnusedFolders": {
-    "message": "Close unused folders when opening a folder."
+    "message": "Sluit onbenutte folders wanneer een nieuwe folder geopend wordt."
   },
   "optionConfirmOpenFolder": {
-    "message": "Display confirmation when opening a lot of bookmarks from a folder."
+    "message": "Toon bevestiging wanneer er een heleboel bladwijzers uit een folder geopend wordt."
   },
   "optionOpenNewTab": {
-    "message": "Middle-click or control-click opens bookmark in new background tab (instead of foreground)."
+    "message": "Middel-klik of control-klik opent bladwijzers in een nieuw tabblad op de achtergrond (inplaats van op de voorgrond)."
   },
   "optionPopupStays": {
-    "message": "Popup stays open when opening (left-clicking) bookmarks."
+    "message": "Pop-up blijft open wanneer bladwijzers (via linker-muisknop) geopend worden."
   },
   "optionRememberPrevState": {
-    "message": "Remember previous state (scroll position and opened folders)."
+    "message": "Onthoudt vorige staat (scroll-positie en geopende folders)."
   },
   "optionsFooterText1": {
     "description": "Footer text for the Options page",
@@ -232,14 +232,14 @@
     }
   },
   "options": {
-    "message": "Options"
+    "message": "Opties"
   },
   "optionZoom": {
-    "message": "Zoom"
+    "message": "Zoomen"
   },
   "parentFolder": {
     "description": "Parent folder information displayed in the tooltip of bookmarks in search results list.",
-    "message": "Parent folder: \"$folderName$\"",
+    "message": "Bovenliggende map: \"$folderName$\"",
     "placeholders": {
       "folderName": {
         "content": "$1",
@@ -248,20 +248,20 @@
     }
   },
   "reportedToDeveloper": {
-    "description": "A message for an error occurred in the extension, has been reported to the developer.",
-    "message": "This has been reported to the developer."
+    "description": "A message for an error occured in the extension, has been reported to the developer.",
+    "message": "Dit is gemeld aan de ontwikkelaar."
   },
   "reportError": {
-    "message": "Report Error"
+    "message": "Fout Rapporteren"
   },
   "reset": {
-    "message": "Reset"
+    "message": "Resetten"
   },
   "resetSettings": {
-    "message": "Reset Settings"
+    "message": "Reset Instellingen"
   },
   "resetText": {
-    "message": "Reset all $extName$ options to default.",
+    "message": "Reset alle $extName$ opties naar standaard.",
     "placeholders": {
       "extName": {
         "content": "$1"
@@ -269,11 +269,11 @@
     }
   },
   "save": {
-    "message": "Save"
+    "message": "Bewaren"
   },
   "searchBookmarks": {
     "description": "Placeholder text for search field.",
-    "message": "Search Bookmarks"
+    "message": "Zoek Bladwijzers"
   },
   "url": {
     "message": "URL"
