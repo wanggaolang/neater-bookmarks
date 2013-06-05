@@ -3,7 +3,7 @@
     "message": "Toegankelijkheid Instellingen"
   },
   "confirmDeleteFolderBookmarks": {
-    "message": "Weet je zeker dat je de $folderName$ folder en $boobmarkCount$ bladwijzer(s) wilt verwijderen?",
+    "message": "Weet je zeker dat je de $folderName$ folder en $bookmarkCount$ bladwijzer(s) wilt verwijderen?",
     "placeholders": {
       "bookmarkCount": {
         "content": "$2"
@@ -167,7 +167,7 @@
   },
   "optionsFooterText1": {
     "description": "Footer text for the Options page",
-    "message": "Email the developer at $neaterEmail$",
+    "message": "Email de ontwikkelaar op $neaterEmail$",
     "placeholders": {
       "neaterEmail": {
         "content": "$1"
@@ -194,7 +194,7 @@
     }
   },
   "optionsFooterText4": {
-    "message": "View issues or submit a new one: $neaterIssues$",
+    "message": "Bekijk vraagstukken of verstuur een nieuwe: $neaterIssues$",
     "placeholders": {
       "neaterIssues": {
         "content": "$1"
@@ -202,7 +202,7 @@
     }
   },
   "optionsFooterText5": {
-    "message": "Browse custom icons: $neaterIcons$",
+    "message": "Blader door aangepaste iconen: $neaterIcons$",
     "placeholders": {
       "neaterIcons": {
         "content": "$1"
@@ -210,7 +210,7 @@
     }
   },
   "optionsFooterText6": {
-    "message": "Help translate $extName$ at $neaterTranslate$",
+    "message": "Help met het vertalen van $extName$ op $neaterTranslate$",
     "placeholders": {
       "extName": {
         "content": "$1"
@@ -221,7 +221,7 @@
     }
   },
   "optionsFooterText7": {
-    "message": "Based on $neatGithub$ by $linkCheeAun$",
+    "message": "Gebaseerd op $neatGithub$ door $linkCheeAun$",
     "placeholders": {
       "linkCheeAun": {
         "content": "$2"
