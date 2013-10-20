@@ -12,7 +12,11 @@ Translation help is welcomed through [WebTranslateIt](https://webtranslateit.com
 
 ### Can I resize the width and height of the popup?
 
-For the width, yes, by dragging on the left (or right for RTL systems) edge of the popup. For the height, no, because it resizes automatically based on the bookmarks displayed. Note that Google Chrome sets a maximum limit on the popup width and height, so it may not expand that far for high resolution screens.
+For the width, yes, by dragging on the left (or right for RTL systems) edge of the popup. For the height, no, because it resizes automatically based on the bookmark tree height. Note that Google Chrome sets a maximum limit of 800x600 on extension popups.
+
+### Can the "*" shortcut key be changed to some other key?
+
+Yes! The key can be changed by going to Chrome > Settings > Search > [Manage search engines](chrome://settings/searchEngines) > Search engines added by extensions.
 
 ### Why not use a better (more native-looking) toolbar icon?
 
