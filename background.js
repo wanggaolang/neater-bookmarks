@@ -110,18 +110,27 @@ if (chrome.omnibox){
 		});
 	});
 
-	chrome.omnibox.onInputEntered.addListener(function(text){
+	chrome.omnibox.onInputEntered.addListener(function(text, disposition){
 		if (!text || !firstResult){
 			resetSuggest();
 			return;
 		}
+		disposition = disposition || 'currentTab';
 		var url = (text == omniboxValue) ? firstResult.url : text;
-		chrome.tabs.getSelected(null, function(tab){
-			chrome.tabs.update(tab.id, {
-				url: url,
-				selected: true
+		if (disposition === 'currentTab') {
+			chrome.tabs.getSelected(null, function(tab){
+				chrome.tabs.update(tab.id, {
+					url: url,
+					active: true
+				});
 			});
-		});
+		} else {
+			var openInForeground = (disposition === 'newForegroundTab');
+			chrome.tabs.create({
+				url: url,
+				active: openInForeground
+			});
+		}
 	});
 }
 
