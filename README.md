@@ -36,7 +36,7 @@ No. There are no plans to support it, because it's lacking an official public AP
 
 ### How do I report bugs or suggest features?
 
-Preferably via the [issue tracker](https://github.com/evanshultz/neater-bookmarks/issues) or [email](neaterbookmarks@gmail.com). If you're reporting bugs, please include at least the version/build of Chrome and your OS.
+Preferably via the [issue tracker](https://github.com/evanshultz/neater-bookmarks/issues) or <neaterbookmarks@gmail.com>. If you're reporting bugs, please include at least the version/build of Chrome and your OS.
 
 ### Why isn't this built into Google Chrome by default?
 
