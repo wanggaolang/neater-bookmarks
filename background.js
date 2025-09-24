@@ -1,22 +1,24 @@
 var reportError = function(msg, url, line){
 	var txt = '_s=3f41da182f664057b74bd124b53958a0&_r=img'
-		+ '&Msg=' + escape(msg)
-		+ '&URL=' + escape(url)
+		+ '&Msg=' + encodeURIComponent(msg)
+		+ '&URL=' + encodeURIComponent(url)
 		+ '&Line=' + line
-		+ '&Platform=' + escape(navigator.platform)
-		+ '&UserAgent=' + escape(navigator.userAgent);
-	var i = document.createElement('img');
-	i.setAttribute('src', (('https:' == document.location.protocol) ? 'https://errorstack.appspot.com' : 'http://www.errorstack.com') + '/submit?' + txt);
-	document.body.appendChild(i);
-	i.onload = function(){
-		document.body.removeChild(i);
-	};
+		+ '&Platform=' + encodeURIComponent(navigator.platform)
+		+ '&UserAgent=' + encodeURIComponent(navigator.userAgent);
+	
+	fetch((('https:' == location.protocol) ? 'https://errorstack.appspot.com' : 'http://www.errorstack.com') + '/submit?' + txt)
+		.catch(() => {
+			// 静默失败，不影响插件功能
+		});
 };
 
-window.onerror = reportError;
+self.addEventListener('error', (event) => {
+	reportError(event.error.message, event.filename, event.lineno);
+});
 
-chrome.extension.onRequest.addListener(function(request){
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 	if (request.error) reportError.apply(null, request.error);
+	return true;
 });
 
 if (chrome.omnibox){
@@ -118,11 +120,13 @@ if (chrome.omnibox){
 		disposition = disposition || 'currentTab';
 		var url = (text == omniboxValue) ? firstResult.url : text;
 		if (disposition === 'currentTab') {
-			chrome.tabs.getSelected(null, function(tab){
-				chrome.tabs.update(tab.id, {
-					url: url,
-					active: true
-				});
+			chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+				if (tabs.length > 0) {
+					chrome.tabs.update(tabs[0].id, {
+						url: url,
+						active: true
+					});
+				}
 			});
 		} else {
 			var openInForeground = (disposition === 'newForegroundTab');
@@ -134,11 +138,21 @@ if (chrome.omnibox){
 	});
 }
 
-if (localStorage.customIcon){
-	var canvas = document.createElement('canvas');
-	var ctx = canvas.getContext('2d');
-	var customIcon = JSON.parse(localStorage.customIcon);
-	var imageData = ctx.getImageData(0, 0, 19, 19);
-	for (var key in customIcon) imageData.data[key] = customIcon[key];
-	chrome.browserAction.setIcon({imageData: imageData});
-}
+// 处理自定义图标功能 - 需要从storage中读取
+chrome.storage.local.get(['customIcon'], function(result) {
+	if (result.customIcon) {
+		try {
+			var customIcon = JSON.parse(result.customIcon);
+			var canvas = new OffscreenCanvas(19, 19);
+			var ctx = canvas.getContext('2d');
+			var imageData = ctx.getImageData(0, 0, 19, 19);
+			for (var key in customIcon) {
+				imageData.data[key] = customIcon[key];
+			}
+			chrome.action.setIcon({imageData: imageData});
+		} catch (e) {
+			console.error('Failed to set custom icon:', e);
+		}
+	}
+});
+

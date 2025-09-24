@@ -12,7 +12,7 @@ function init() {
 	var navigator = window.navigator;
 	var body = document.body;
 	var _m = chrome.i18n.getMessage;
-	var _b = chrome.extension.getBackgroundPage().console;
+	var _b = console; // 使用本地console替代background page console
 	
 	// Error alert
 	var AlertDialog = {
@@ -99,10 +99,22 @@ function init() {
 		}
 	};
 	
+	// 使用 Manifest V3 的 _favicon API 生成图标 URL
+	var faviconURL = function(u, size){
+		try {
+			var url = new URL(chrome.runtime.getURL('/_favicon/'));
+			url.searchParams.set('pageUrl', u);
+			url.searchParams.set('size', String(size || 16));
+			return url.toString();
+		} catch (e){
+			return 'document-code.png';
+		}
+	};
+	
 	var generateBookmarkHTML = function(title, url, extras){
 		if (!extras) extras = '';
 		var u = url.htmlspecialchars();
-		var favicon = 'chrome://favicon/' + u;
+		var favicon = faviconURL(url, 16);
 		var tooltipURL = url;
 		if (/^javascript:/i.test(url)){
 			if (url.length > 140) tooltipURL = url.slice(0, 140) + '...';
@@ -485,16 +497,18 @@ function init() {
 	var openBookmarksLimit = 10;
 	var actions = {
 		openBookmark: function(url){
-			chrome.tabs.getSelected(null, function(tab){
-				try {
-                    decodedURL = decodeURIComponent(url);
-                } catch (e) {
-                    return;
-                }
-				chrome.tabs.update(tab.id, {
-					url: decodedURL
-				});
-				if (!bookmarkClickStayOpen) setTimeout(window.close, 200);
+			chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+				if (tabs.length > 0) {
+					try {
+	                    decodedURL = decodeURIComponent(url);
+	                } catch (e) {
+	                    return;
+	                }
+					chrome.tabs.update(tabs[0].id, {
+						url: decodedURL
+					});
+					if (!bookmarkClickStayOpen) setTimeout(window.close, 200);
+				}
 			});
 		},
 		
@@ -506,9 +520,9 @@ function init() {
 				});
 			};
 			if (blankTabCheck){
-				chrome.tabs.getSelected(null, function(tab){
-					if (/^chrome:\/\/newtab/i.test(tab.url)){
-						chrome.tabs.update(tab.id, {
+				chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+					if (tabs.length > 0 && /^chrome:\/\/newtab/i.test(tabs[0].url)){
+						chrome.tabs.update(tabs[0].id, {
 							url: url
 						});
 						if (!bookmarkClickStayOpen) setTimeout(window.close, 200);
@@ -1513,5 +1527,5 @@ function init() {
 })(window);
 
 onerror = function(){
-	chrome.extension.sendRequest({error: [].slice.call(arguments)})
+	chrome.runtime.sendMessage({error: [].slice.call(arguments)})
 };
