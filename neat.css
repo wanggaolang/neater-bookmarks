@@ -400,3 +400,18 @@ menu[type=context].hide-editables #folder-delete{
 	border-bottom: 1px solid rgba(0,0,0,0.07);
 	border-left: 1px solid rgba(0,0,0,0.1);
 }*/
+#results ul li{
+	position: relative;
+}
+#results ul li b.result-index{
+	position: absolute;
+	left: 4px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-size: 9px;
+	font-weight: normal;
+	color: #888;
+	pointer-events: none;
+	line-height: 1;
+}

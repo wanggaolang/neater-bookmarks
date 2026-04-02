@@ -313,11 +313,12 @@ function init() {
 				results = results.slice(0, 100); // 100 is enough
 			}
 			var html = '<ul role="list">';
-			for (var i = 0, l = results.length; i < l; i++){
-				var result = results[i];
-				var id = result.id;
-				html += '<li data-parentid="' + result.parentId + '" id="results-item-' + id + '" role="listitem">'
-					+ generateBookmarkHTML(result.title, result.url);
+		for (var i = 0, l = results.length; i < l; i++){
+			var result = results[i];
+			var id = result.id;
+			var badge = (i < 9) ? '<b class="result-index">' + (i + 1) + '</b>' : '';
+			html += '<li data-parentid="' + result.parentId + '" id="results-item-' + id + '" role="listitem">'
+				+ badge + generateBookmarkHTML(result.title, result.url);
 			}
 			html += '</ul>';
 			$tree.style.display = 'none';
@@ -379,6 +380,22 @@ function init() {
 			e.preventDefault();
 			searchInput.value = '';
 			search();
+		} else if (e.altKey && searchMode &&
+				((key >= 49 && key <= 57) || (key >= 97 && key <= 105))){ // alt+1-9
+			e.preventDefault();
+			var n = (key >= 97) ? (key - 97) : (key - 49);
+			var item = $results.querySelectorAll('ul>li')[n];
+			if (item){
+				var a = item.querySelector('a');
+				if (a){
+					a.focus();
+					setTimeout(function(){
+						var event = document.createEvent('MouseEvents');
+						event.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+						a.dispatchEvent(event);
+					}, 30);
+				}
+			}
 		}
 	});
 	

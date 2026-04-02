@@ -38,6 +38,12 @@ No. There are no plans to support it, because it's lacking an official public AP
 
 Preferably via the [issue tracker](https://github.com/evanshultz/neater-bookmarks/issues) or <neaterbookmarks@gmail.com>. If you're reporting bugs, please include at least the version/build of Chrome and your OS.
 
+### Are there keyboard shortcuts for search results?
+
+When searching bookmarks, the first 9 results are labeled 1–9 on the left.
+Press **Alt+1** through **Alt+9** (Windows/Linux) or **Option+1** through **Option+9** (Mac)
+to instantly open the corresponding result.
+
 ### Why isn't this built into Google Chrome by default?
 
 No idea. That's why Neater Bookmarks exists.
