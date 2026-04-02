@@ -38,6 +38,18 @@ No. There are no plans to support it, because it's lacking an official public AP
 
 Preferably via the [issue tracker](https://github.com/evanshultz/neater-bookmarks/issues) or <neaterbookmarks@gmail.com>. If you're reporting bugs, please include at least the version/build of Chrome and your OS.
 
+### Does the search support filtering by title or URL?
+
+Yes. The search box supports a prefix syntax to control what gets searched:
+
+| Input | Behavior |
+|---|---|
+| `github` | Search both bookmark titles and URLs (default) |
+| `t:github` | Search **titles only** — a red "Title mode" hint appears below the search box |
+| `u:github.com` | Search **URLs only** — a red "URL mode" hint appears below the search box |
+
+Spaces act as **AND** — all terms must match. For example `t:ab bc` returns only bookmarks whose title contains both "ab" and "bc". The prefix is case-insensitive (`T:` and `U:` also work), and a space after the colon is allowed (`t: github`).
+
 ### Are there keyboard shortcuts for search results?
 
 When searching bookmarks, the first 9 results are labeled 1–9 on the left.
