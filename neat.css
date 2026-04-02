@@ -415,3 +415,10 @@ menu[type=context].hide-editables #folder-delete{
 	pointer-events: none;
 	line-height: 1;
 }
+#search-mode-hint{
+	display: none;
+	padding: 0 4px 2px;
+	font-size: 10px;
+	color: #c0392b;
+	line-height: 1.2;
+}
