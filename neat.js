@@ -213,6 +213,15 @@ function init() {
 		
 		setTimeout(adaptBookmarkTooltips, 100);
 		
+		// Restore saved search query after allBookmarks is populated
+		if (rememberState && localStorage.searchQuery){
+			searchInput.value = localStorage.searchQuery;
+			prevValue = ''; // reset so search() doesn't short-circuit
+			search();
+			searchInput.select();
+			searchInput.scrollLeft = 0;
+		}
+		
 		tree = null;
 	});
 	
@@ -453,13 +462,8 @@ function init() {
 		body.removeClass('searchFocus');
 	});
 	
-	// Saved search query
-	if (rememberState && localStorage.searchQuery){
-		searchInput.value = localStorage.searchQuery;
-		search();
-		searchInput.select();
-		searchInput.scrollLeft = 0;
-	}
+	// Saved search query is now restored inside the getTree callback
+	// to ensure allBookmarks is populated before searching.
 	
 	// Popup auto-height
 	var resetHeight = function(){
