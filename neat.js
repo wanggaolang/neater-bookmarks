@@ -178,9 +178,18 @@ function init() {
 	};
 	
 	var $tree = $('tree');
+	var allBookmarks = [];
+	var flattenBookmarks = function(nodes){
+		for (var i = 0; i < nodes.length; i++){
+			var node = nodes[i];
+			if (node.url) allBookmarks.push(node);
+			if (node.children) flattenBookmarks(node.children);
+		}
+	};
 	chrome.bookmarks.getTree(function(tree){
 		var html = generateHTML(tree[0].children);
 		$tree.innerHTML = html;
+		flattenBookmarks(tree[0].children);
 		
 		// recall scroll position (from top of popup) when tree opened
 		if (rememberState) $tree.scrollTop = localStorage.scrollTop || 0;
@@ -203,6 +212,15 @@ function init() {
 		}
 		
 		setTimeout(adaptBookmarkTooltips, 100);
+		
+		// Restore saved search query after allBookmarks is populated
+		if (rememberState && localStorage.searchQuery){
+			searchInput.value = localStorage.searchQuery;
+			prevValue = ''; // reset so search() doesn't short-circuit
+			search();
+			searchInput.select();
+			searchInput.scrollLeft = 0;
+		}
 		
 		tree = null;
 	});
@@ -276,55 +294,94 @@ function init() {
 	var searchMode = false;
 	var searchInput = $('search-input');
 	var prevValue = '';
-	
+
+	var parseQuery = function(value){
+		var mode = 'both';
+		var raw = value;
+		var prefixMatch = value.match(/^(t|u)\s*:\s*/i);
+		if (prefixMatch){
+			mode = prefixMatch[1].toLowerCase() === 't' ? 'title' : 'url';
+			raw = value.slice(prefixMatch[0].length);
+		}
+		var terms = raw.toLowerCase().split(/\s+/).filter(function(t){ return t.length > 0; });
+		return { mode: mode, terms: terms };
+	};
+
+	var customSearch = function(value, callback){
+		var q = parseQuery(value);
+		if (q.terms.length === 0){ callback([]); return; }
+		var results = allBookmarks.filter(function(bm){
+			var title = (bm.title || '').toLowerCase();
+			var url   = (bm.url   || '').toLowerCase();
+			return q.terms.every(function(term){
+				var mt = title.indexOf(term) >= 0;
+				var mu = url.indexOf(term) >= 0;
+				if (q.mode === 'title') return mt;
+				if (q.mode === 'url')   return mu;
+				return mt || mu;
+			});
+		});
+		if (results.length > 1){
+			var firstTerm = q.terms[0];
+			results.sort(function(a, b){
+				var aStr = (q.mode === 'url' ? (a.url || '') : (a.title || '')).toLowerCase();
+				var bStr = (q.mode === 'url' ? (b.url || '') : (b.title || '')).toLowerCase();
+				var aIdx = aStr.indexOf(firstTerm);
+				var bIdx = bStr.indexOf(firstTerm);
+				if (aIdx >= 0 || bIdx >= 0){
+					if (aIdx < 0) aIdx = Infinity;
+					if (bIdx < 0) bIdx = Infinity;
+					return aIdx - bIdx;
+				}
+				return b.dateAdded - a.dateAdded;
+			});
+			results = results.slice(0, 100);
+		}
+		callback(results);
+	};
+
 	var search = function(){
 		var value = searchInput.value.trim();
 		localStorage.searchQuery = value;
+		var $hint = $('search-mode-hint');
 		if (value == ''){
 			prevValue = '';
 			searchMode = false;
 			$tree.style.display = 'block';
 			$results.style.display = 'none';
+			if ($hint) $hint.style.display = 'none';
 			return;
+		}
+		// update mode hint
+		if ($hint){
+			var q = parseQuery(value);
+			if (q.mode === 'title'){
+				$hint.textContent = '标题模式';
+				$hint.style.display = 'block';
+			} else if (q.mode === 'url'){
+				$hint.textContent = 'URL 模式';
+				$hint.style.display = 'block';
+			} else {
+				$hint.style.display = 'none';
+			}
 		}
 		if (value == prevValue) return;
 		prevValue = value;
 		searchMode = true;
-		chrome.bookmarks.search(value, function(results){
-			var v = value.toLowerCase();
-			var vPattern = new RegExp('^' + value.escapeRegExp().replace(/\s+/g, '.*'), 'ig');
-			if (results.length > 1){
-				results.sort(function(a, b){
-					var aTitle = a.title;
-					var bTitle = b.title;
-					var aIndexTitle = aTitle.toLowerCase().indexOf(v);
-					var bIndexTitle = bTitle.toLowerCase().indexOf(v);
-					if (aIndexTitle >= 0 || bIndexTitle >= 0){
-						if (aIndexTitle < 0) aIndexTitle = Infinity;
-						if (bIndexTitle < 0) bIndexTitle = Infinity;
-						return aIndexTitle - bIndexTitle;
-					}
-					var aTestTitle = vPattern.test(aTitle);
-					var bTestTitle = vPattern.test(bTitle);
-					if (aTestTitle && !bTestTitle) return -1;
-					if (!aTestTitle && bTestTitle) return 1;
-					return b.dateAdded - a.dateAdded;
-				});
-				results = results.slice(0, 100); // 100 is enough
-			}
+		customSearch(value, function(results){
 			var html = '<ul role="list">';
-		for (var i = 0, l = results.length; i < l; i++){
-			var result = results[i];
-			var id = result.id;
-			var badge = (i < 9) ? '<b class="result-index">' + (i + 1) + '</b>' : '';
-			html += '<li data-parentid="' + result.parentId + '" id="results-item-' + id + '" role="listitem">'
-				+ badge + generateBookmarkHTML(result.title, result.url);
+			for (var i = 0, l = results.length; i < l; i++){
+				var result = results[i];
+				var id = result.id;
+				var badge = (i < 9) ? '<b class="result-index">' + (i + 1) + '</b>' : '';
+				html += '<li data-parentid="' + result.parentId + '" id="results-item-' + id + '" role="listitem">'
+					+ badge + generateBookmarkHTML(result.title, result.url);
 			}
 			html += '</ul>';
 			$tree.style.display = 'none';
 			$results.innerHTML = html;
 			$results.style.display = 'block';
-			
+
 			var lis = $results.querySelectorAll('li');
 			Array.forEach(function(li){
 				var parentId = li.dataset.parentid;
@@ -334,9 +391,8 @@ function init() {
 					a.title = _m('parentFolder', node[0].title) + '\n' + a.title;
 				});
 			}, lis);
-			
+
 			results = null;
-			vPattern = null;
 			lis = null;
 		});
 	};
@@ -406,13 +462,8 @@ function init() {
 		body.removeClass('searchFocus');
 	});
 	
-	// Saved search query
-	if (rememberState && localStorage.searchQuery){
-		searchInput.value = localStorage.searchQuery;
-		search();
-		searchInput.select();
-		searchInput.scrollLeft = 0;
-	}
+	// Saved search query is now restored inside the getTree callback
+	// to ensure allBookmarks is populated before searching.
 	
 	// Popup auto-height
 	var resetHeight = function(){
@@ -1008,7 +1059,7 @@ function init() {
 				e.preventDefault();
 				var event = document.createEvent('MouseEvents');
 				event.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, e.ctrlKey, false, e.shiftKey, e.metaKey, 0, null);
-				li.firstElementChild.dispatchEvent(event);
+				item.dispatchEvent(event);
 				break;
 			case 35: // end
 				if (searchMode){
