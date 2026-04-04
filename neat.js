@@ -1055,7 +1055,7 @@ function init() {
 				e.preventDefault();
 				var event = document.createEvent('MouseEvents');
 				event.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, e.ctrlKey, false, e.shiftKey, e.metaKey, 0, null);
-				li.firstElementChild.dispatchEvent(event);
+				item.dispatchEvent(event);
 				break;
 			case 35: // end
 				if (searchMode){
