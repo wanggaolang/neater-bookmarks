@@ -2,6 +2,14 @@
   "accessibility": {
     "message": "Accessibility Settings"
   },
+  "confirmDeleteBookmark": {
+    "message": "Are you sure you want to delete the bookmark $bookmarkName$?",
+    "placeholders": {
+      "bookmarkName": {
+        "content": "$1"
+      }
+    }
+  },
   "confirmDeleteFolderBookmarks": {
     "message": "Are you sure you want to delete $folderName$ folder and $bookmarkCount$ bookmark(s) in it?",
     "placeholders": {

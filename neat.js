@@ -708,16 +708,29 @@ function init() {
 		deleteBookmark: function(id){
 			var li1 = $('neat-tree-item-' + id);
 			var li2 = $('results-item-' + id);
-			chrome.bookmarks.remove(id, function(){
-				if (li1){
-					var nearLi1 = li1.nextElementSibling || li1.previousElementSibling;
-					li1.destroy();
-					if (!searchMode && nearLi1) nearLi1.querySelector('a, span').focus();
-				}
-				if (li2){
-					var nearLi2 = li2.nextElementSibling || li2.previousElementSibling;
-					li2.destroy();
-					if (searchMode && nearLi2) nearLi2.querySelector('a, span').focus();
+			var nameSourceLi = (searchMode && li2) ? li2 : li1;
+			var nameEl = nameSourceLi && nameSourceLi.querySelector('i');
+			var bookmarkName = '<cite>' + ((nameEl && nameEl.textContent.trim()) || '') + '</cite>';
+			ConfirmDialog.open({
+				dialog: _m('confirmDeleteBookmark', [bookmarkName]),
+				button1: '<strong>' + _m('delete') + '</strong>',
+				button2: _m('nope'),
+				fn1: function(){
+					chrome.bookmarks.remove(id, function(){
+						if (li1){
+							var nearLi1 = li1.nextElementSibling || li1.previousElementSibling;
+							li1.destroy();
+							if (!searchMode && nearLi1) nearLi1.querySelector('a, span').focus();
+						}
+						if (li2){
+							var nearLi2 = li2.nextElementSibling || li2.previousElementSibling;
+							li2.destroy();
+							if (searchMode && nearLi2) nearLi2.querySelector('a, span').focus();
+						}
+					});
+				},
+				fn2: function(){
+					if (nameSourceLi) nameSourceLi.querySelector('a, span').focus();
 				}
 			});
 		},

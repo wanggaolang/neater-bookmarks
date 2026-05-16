@@ -2,6 +2,14 @@
   "accessibility": {
     "message": "辅助功能设置"
   },
+  "confirmDeleteBookmark": {
+    "message": "您确定要删除书签 $bookmarkName$？",
+    "placeholders": {
+      "bookmarkName": {
+        "content": "$1"
+      }
+    }
+  },
   "confirmDeleteFolderBookmarks": {
     "message": "您确定要删除文件夹[$folderName$]（包含 $bookmarkCount$ 个书签）？",
     "placeholders": {
