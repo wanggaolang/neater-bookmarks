@@ -423,3 +423,19 @@ body.linux input{
 	color: #c0392b;
 	line-height: 1.2;
 }
+#bookmark-count{
+	position: absolute;
+	right: 6px;
+	bottom: 4px;
+	padding: 1px 6px;
+	font-size: 11px;
+	color: #666;
+	background-color: rgba(255,255,255,.85);
+	border-radius: 3px;
+	pointer-events: none;
+	user-select: none;
+	z-index: 2;
+}
+#bookmark-count.hidden{
+	display: none;
+}

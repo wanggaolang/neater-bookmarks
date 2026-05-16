@@ -191,7 +191,9 @@ function init() {
 		var html = generateHTML(tree[0].children);
 		$tree.innerHTML = html;
 		flattenBookmarks(tree[0].children);
-		
+		var $count = $('bookmark-count');
+		if ($count) $count.textContent = allBookmarks.length;
+
 		// recall scroll position (from top of popup) when tree opened
 		if (rememberState) $tree.scrollTop = localStorage.scrollTop || 0;
 		
@@ -345,14 +347,17 @@ function init() {
 		var value = searchInput.value.trim();
 		localStorage.searchQuery = value;
 		var $hint = $('search-mode-hint');
+		var $count = $('bookmark-count');
 		if (value == ''){
 			prevValue = '';
 			searchMode = false;
 			$tree.style.display = 'block';
 			$results.style.display = 'none';
 			if ($hint) $hint.style.display = 'none';
+			if ($count) $count.classList.remove('hidden');
 			return;
 		}
+		if ($count) $count.classList.add('hidden');
 		// update mode hint
 		if ($hint){
 			var q = parseQuery(value);
