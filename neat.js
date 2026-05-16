@@ -187,6 +187,16 @@ function init() {
 			if (node.children) flattenBookmarks(node.children);
 		}
 	};
+	var refreshBookmarkCache = function(){
+		chrome.bookmarks.getTree(function(tree){
+			allBookmarks.length = 0;
+			flattenBookmarks(tree[0].children);
+			var $count = $('bookmark-count');
+			if ($count) $count.textContent = allBookmarks.length;
+		});
+	};
+	chrome.bookmarks.onRemoved.addListener(refreshBookmarkCache);
+	chrome.bookmarks.onCreated.addListener(refreshBookmarkCache);
 	chrome.bookmarks.getTree(function(tree){
 		var html = generateHTML(tree[0].children);
 		$tree.innerHTML = html;
