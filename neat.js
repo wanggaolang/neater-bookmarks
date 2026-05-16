@@ -1013,7 +1013,10 @@ function init() {
 	var keyBuffer = '', keyBufferTimer;
 	var treeKeyDown = function(e){
 		var item = document.activeElement;
-		if (!/^(a|span)$/i.test(item.tagName)) item = $tree.querySelector('.focus') || $tree.querySelector('li:first-child>span');
+		if (!/^(a|span)$/i.test(item.tagName)){
+			item = this.querySelector('.focus') || this.querySelector('li:first-child>span, li:first-child>a');
+		}
+		if (!item) return;
 		var li = item.parentNode;
 		var keyCode = e.keyCode;
 		var metaKey = e.metaKey;
@@ -1030,12 +1033,21 @@ function init() {
 					if (nextLi){
 						nextLi.querySelector('a, span').focus();
 					} else {
-						do {
-							li = li.parentNode.parentNode;
-							if (li) nextLi = li.nextElementSibling;
-							if (nextLi) LastLi = nextLi.querySelector('a, span');
-							if (LastLi) LastLi.focus(); // down on the last item in tree
-						} while (li && !nextLi);
+						var ancestor = li;
+						while (true){
+							var ul = ancestor.parentNode;
+							var parentLi = ul && ul.parentNode;
+							if (!parentLi || parentLi.tagName !== 'LI'){
+								ancestor = null;
+								break;
+							}
+							ancestor = parentLi;
+							if (ancestor.nextElementSibling) break;
+						}
+						if (ancestor){
+							var lastLi = ancestor.nextElementSibling.querySelector('a, span');
+							if (lastLi) lastLi.focus(); // down on the last item in tree
+						}
 					}
 				}
 				break;
@@ -1059,28 +1071,22 @@ function init() {
 					}
 				}
 				break;
-			case 39: // right (left for RTL)
+			case 37: // left  (= collapse / focus parent;  in RTL = expand)
+			case 39: // right (= expand;                  in RTL = collapse / focus parent)
 				e.preventDefault();
-				if (li.hasClass('parent') && ((!rtl && !li.hasClass('open')) || (rtl && li.hasClass('open')))){
+				if (!li.hasClass('parent')) break; // bookmarks: nothing to do
+				var collapse = (keyCode == 37 && !rtl) || (keyCode == 39 && rtl);
+				var isOpen = li.hasClass('open');
+				if (collapse == isOpen){
 					var event = document.createEvent('MouseEvents');
 					event.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
 					li.firstElementChild.dispatchEvent(event);
-				} else if (rtl){
+				} else if (collapse){
 					var parentID = li.dataset.parentid;
-					if (parentID == '0') return;
-					$('neat-tree-item-' + parentID).querySelector('span').focus();
-				}
-				break;
-			case 37: // left (right for RTL)
-				e.preventDefault();
-				if (li.hasClass('parent') && ((!rtl && li.hasClass('open')) || (rtl && !li.hasClass('open')))){
-					var event = document.createEvent('MouseEvents');
-					event.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-					li.firstElementChild.dispatchEvent(event);
-				} else if (!rtl){
-					var parentID = li.dataset.parentid;
-					if (parentID == '0') return;
-					$('neat-tree-item-' + parentID).querySelector('span').focus();
+					if (parentID == '0') break;
+					var parentEl = $('neat-tree-item-' + parentID);
+					var span = parentEl && parentEl.querySelector('span');
+					if (span) span.focus();
 				}
 				break;
 			case 32: // space
@@ -1092,20 +1098,25 @@ function init() {
 				break;
 			case 35: // end
 				if (searchMode){
-					this.querySelector('li:last-child a').focus();
+					var endA = this.querySelector('li:last-child a');
+					if (endA) endA.focus();
 				} else {
 					var lis = this.querySelectorAll('ul>li:last-child');
-					var li = Array.filter(function(li){
+					var endLi = Array.filter(function(li){
 						return !!li.parentNode.offsetHeight;
 					}, lis).getLast();
-					li.querySelector('span, a').focus();
+					var endItem = endLi && endLi.querySelector('span, a');
+					if (endItem) endItem.focus();
 				}
 				break;
 			case 36: // home
 				if (searchMode){
-					this.querySelector('ul>li:first-child a').focus();
+					var homeA = this.querySelector('ul>li:first-child a');
+					if (homeA) homeA.focus();
 				} else {
-					this.querySelector('ul>li:first-child').querySelector('span, a').focus();
+					var homeLi = this.querySelector('ul>li:first-child');
+					var homeItem = homeLi && homeLi.querySelector('span, a');
+					if (homeItem) homeItem.focus();
 				}
 				break;
 			case 34: // page down
@@ -1117,13 +1128,15 @@ function init() {
 						return !!item.parentElement.offsetHeight && item.offsetTop < bound;
 					}, items).getLast();
 				};
-				var item = getLastItem();
-				if (item != document.activeElement){
+				var pdItem = getLastItem();
+				if (!pdItem) break;
+				if (pdItem != document.activeElement){
 					e.preventDefault();
-					item.focus();
+					pdItem.focus();
 				} else {
 					setTimeout(function(){
-						getLastItem().focus();
+						var next = getLastItem();
+						if (next) next.focus();
 					}, 0);
 				}
 				break;
@@ -1136,13 +1149,15 @@ function init() {
 						return !!item.parentElement.offsetHeight && ((item.offsetTop + item.offsetHeight) > bound);
 					}, items)[0];
 				};
-				var item = getFirstItem();
-				if (item != document.activeElement){
+				var puItem = getFirstItem();
+				if (!puItem) break;
+				if (puItem != document.activeElement){
 					e.preventDefault();
-					item.focus();
+					puItem.focus();
 				} else {
 					setTimeout(function(){
-						getFirstItem().focus();
+						var next = getFirstItem();
+						if (next) next.focus();
 					}, 0);
 				}
 				break;
