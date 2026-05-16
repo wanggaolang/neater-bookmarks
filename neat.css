@@ -19,31 +19,31 @@ body.linux{
 body.transitional{
 	-webkit-transition-property: height;
 }
-body[data-zoom='90']>*:not(menu),
-body[data-zoom='90'] menu[type=context] command{
+body[data-zoom='90']>*:not(.context-menu),
+body[data-zoom='90'] .context-menu li{
 	zoom: .9;
 }
 body[data-zoom='90'] #drop-overlay.bookmark{ /* zooming out makes the line too hard to see */
 	border-top: 0;
 }
-body[data-zoom='110']>*:not(menu),
-body[data-zoom='110'] menu[type=context] command{
+body[data-zoom='110']>*:not(.context-menu),
+body[data-zoom='110'] .context-menu li{
 	zoom: 1.1;
 }
-body[data-zoom='120']>*:not(menu),
-body[data-zoom='120'] menu[type=context] command{
+body[data-zoom='120']>*:not(.context-menu),
+body[data-zoom='120'] .context-menu li{
 	zoom: 1.2;
 }
-body[data-zoom='130']>*:not(menu),
-body[data-zoom='130'] menu[type=context] command{
+body[data-zoom='130']>*:not(.context-menu),
+body[data-zoom='130'] .context-menu li{
 	zoom: 1.3;
 }
-body[data-zoom='140']>*:not(menu),
-body[data-zoom='140'] menu[type=context] command{
+body[data-zoom='140']>*:not(.context-menu),
+body[data-zoom='140'] .context-menu li{
 	zoom: 1.4;
 }
-body[data-zoom='150']>*:not(menu),
-body[data-zoom='150'] menu[type=context] command{
+body[data-zoom='150']>*:not(.context-menu),
+body[data-zoom='150'] .context-menu li{
 	zoom: 1.5;
 }
 input{
@@ -164,7 +164,7 @@ body.linux input{
 #tree ul li span.active,
 #tree ul li a:focus,
 #tree ul li span:focus,
-menu[type=context] command:focus{
+.context-menu li:focus{
 	color: #fff;
 	background-color: #4687cb;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#6fa6de), to(#1e6cbb));
@@ -249,7 +249,7 @@ menu[type=context] command:focus{
 	border-radius: 2px;
 }
 
-menu[type=context]{
+.context-menu{
 	-webkit-transition: opacity .3s;
 	opacity: 0;
 	margin: 0;
@@ -265,7 +265,7 @@ menu[type=context]{
 	outline: 0;
 	max-width: 100%;
 }
-menu[type=context] command{
+.context-menu li{
 	display: block;
 	padding: 0 10px;
 	line-height: 20px;
@@ -273,15 +273,16 @@ menu[type=context] command{
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	cursor: default;
 }
 /* convert title-style to sentence-style capitalization, for Windows */
-.win menu[type=context] command{
+.win .context-menu li{
 	text-transform: lowercase;
 }
-.win menu[type=context] command:first-letter{
+.win .context-menu li:first-letter{
 	text-transform: uppercase;
 }
-menu[type=context] hr{
+.context-menu hr{
 	border: 0;
 	padding: 0;
 	height: 1px;
@@ -290,9 +291,9 @@ menu[type=context] hr{
 	pointer-events: none;
 }
 
-menu[type=context].hide-editables hr,
-menu[type=context].hide-editables #folder-edit,
-menu[type=context].hide-editables #folder-delete{
+.context-menu.hide-editables hr,
+.context-menu.hide-editables #folder-edit,
+.context-menu.hide-editables #folder-delete{
 	display: none;
 }
 

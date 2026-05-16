@@ -63,8 +63,9 @@ function init() {
 		'folder-delete': 'deleteEllipsis',
 		'edit-dialog-button': 'save'
 	}, function(msg, id){
-		var el = $(id), m = _m(msg);
-		if (el.tagName == 'COMMAND') el.label = m;
+		var el = $(id);
+		if (!el) return;
+		var m = _m(msg);
 		el.textContent = m;
 	});
 	
@@ -901,7 +902,7 @@ function init() {
 		e.stopPropagation();
 		if (!currentContext) return;
 		var el = e.target;
-		if (el.tagName != 'COMMAND') return;
+		if (el.tagName != 'LI') return;
 		var url = currentContext.href;
 		switch (el.id){
 			case 'bookmark-new-tab':
@@ -939,7 +940,7 @@ function init() {
 	var folderContextHandler = function(e){
 		if (!currentContext) return;
 		var el = e.target;
-		if (el.tagName != 'COMMAND') return;
+		if (el.tagName != 'LI') return;
 		var li = currentContext.parentNode;
 		var id = li.id.replace('neat-tree-item-', '');
 		chrome.bookmarks.getChildren(id, function(children){
@@ -1205,7 +1206,7 @@ function init() {
 				if (metaKey){ // cmd + down (Mac)
 					menu.lastElementChild.focus();
 				} else {
-					if (item.tagName == 'COMMAND'){
+					if (item.tagName == 'LI'){
 						var nextItem = item.nextElementSibling;
 						if (nextItem && nextItem.tagName == 'HR') nextItem = nextItem.nextElementSibling;
 						if (nextItem){
@@ -1223,7 +1224,7 @@ function init() {
 				if (metaKey){ // cmd + up (Mac)
 					menu.firstElementChild.focus();
 				} else {
-					if (item.tagName == 'COMMAND'){
+					if (item.tagName == 'LI'){
 						var prevItem = item.previousElementSibling;
 						if (prevItem && prevItem.tagName == 'HR') prevItem = prevItem.previousElementSibling;
 						if (prevItem){
